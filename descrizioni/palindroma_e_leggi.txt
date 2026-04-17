@@ -3,7 +3,7 @@ Serve per acquisire input testuali in modo sicuro, limitando la dimensione massi
 Ad esempio, può essere utilizzata per leggere parole, nomi o frasi inserite dall’utente.<br><br>
 
 <b>La funzione è definita come segue:</b><br>
-<code>void LeggiStringa(char stringa[], int dimensione);</code><br><br>
+<code> LeggiStringa(char stringa[], int dimensione);</code><br><br>
 
 Dove:<br>
 - <code>stringa</code> è il vettore di caratteri dove salvare il testo<br>
