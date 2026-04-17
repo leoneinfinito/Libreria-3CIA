@@ -1,40 +1,64 @@
-/* 1. RESET TOTALE */
-* {
-    box-sizing: border-box;
-}
-
+/* ==========================================
+   --- Reset e Base ---
+   ========================================== */
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     background-color: #0f172a;
     color: #e2e8f0;
-    line-height: 1.6;
-    text-align: center; /* Forza tutto al centro di base */
+    text-align: center;
 }
 
-/* 2. LAYOUT CENTRATO */
 header, section, footer {
-    max-width: 1100px;
-    margin: 0 auto !important; /* Centra il blocco nella pagina */
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra il contenuto dei flex-box */
 }
 
-h1, h2, h3 {
+/* ==========================================
+   --- Effetti "Stupidi" (Animazioni) ---
+   ========================================== */
+/* Effetto di galleggiamento continuo per i titoli */
+h1, h2 {
     color: #7dd3fc;
-    width: 100%;
+    transition: 0.3s;
+    cursor: default;
 }
 
-/* 3. SISTEMAZIONE GRID (Card) */
+h2:hover {
+    transform: scale(1.1) rotate(1deg); /* Si ingrandisce e ruota un filo */
+    text-shadow: 0 0 15px #38bdf8;
+}
+
+/* ==========================================
+   --- Card Download (Larga e Centrale) ---
+   ========================================== */
+.download-card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #334155;
+    width: 80%; /* Bella larga */
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.download-card:hover {
+    transform: translateY(-10px); /* Salta su */
+    border-color: #22c55e;
+    box-shadow: 0 20px 40px rgba(34, 197, 94, 0.2);
+}
+
+/* ==========================================
+   --- Griglia Funzioni (Le 3 Card) ---
+   ========================================== */
 .grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centra le card orizzontalmente */
-    gap: 20px;
-    width: 100%;
-    margin-top: 20px;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
 }
 
 .card {
@@ -42,63 +66,64 @@ h1, h2, h3 {
     padding: 25px;
     border-radius: 16px;
     border: 1px solid #334155;
-    width: 320px; /* Larghezza fissa per non farle scappare */
-    text-align: left; /* Testo interno card a sinistra per leggibilità */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 320px; /* Larghezza fissa per simmetria */
+    text-align: left;
+    transition: 0.3s ease;
+    cursor: pointer;
 }
 
-/* 4. BOTTONI (Visibili e Colorati) */
-.btn, .btn-download, .btn-sm {
-    display: inline-block !important;
-    padding: 12px 24px !important;
-    margin: 10px !important;
-    border-radius: 10px !important;
-    font-weight: bold !important;
-    text-decoration: none !important;
-    transition: 0.3s !important;
-    cursor: pointer !important;
-    border: none !important;
+.card:hover {
+    transform: scale(1.05) rotate(-2deg); /* Si inclina un po' a sinistra */
+    background: #243347;
+    border-color: #38bdf8;
 }
 
-/* Download - VERDE testo SCURO */
+/* ==========================================
+   --- Bottoni (Colori e Animazioni) ---
+   ========================================== */
+.btn-download, .btn, .btn-sm {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Effetto molla */
+    border: none;
+}
+
 .btn-download {
-    background-color: #22c55e !important;
-    color: #052e16 !important; 
+    background-color: #22c55e;
+    color: #052e16 !important;
 }
 
-/* Altri Bottoni - AZZURRO testo SCURO */
+.btn-download:hover {
+    transform: scale(1.2); /* Diventa gigante */
+}
+
 .btn, .btn-sm {
-    background-color: #38bdf8 !important;
+    background-color: #38bdf8;
     color: #082f49 !important;
 }
 
-.btn-download:hover, .btn:hover {
-    transform: translateY(-3px) !important;
-    filter: brightness(1.1);
+.btn:hover {
+    letter-spacing: 2px; /* Il testo si allarga */
 }
 
-/* 5. CODICE */
+/* ==========================================
+   --- Codice ---
+   ========================================== */
 pre {
     background: #020617;
     color: #93c5fd;
     padding: 15px;
     border-radius: 10px;
-    width: 100%;
-    overflow-x: auto;
     text-align: left;
     border: 1px solid #1e293b;
+    transition: 0.3s;
 }
 
-/* 6. NAVIGAZIONE */
-nav {
-    background: #0f172a;
-    padding: 20px;
-    border-bottom: 1px solid #1e293b;
-}
-
-nav a {
-    color: #7dd3fc;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
+.card:hover pre {
+    background: #0f172a; /* Il codice cambia colore quando passi sulla card */
+    color: #fff;
 }
