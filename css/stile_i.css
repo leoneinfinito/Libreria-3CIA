@@ -1,5 +1,5 @@
 /* ==========================================
-   --- Impostazioni Generali ---
+   --- RESET E BASE ---
    ========================================== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,12 +9,12 @@ body {
     line-height: 1.6;
 }
 
-/* Centratura Header e Sezioni */
+/* Centratura Header e Sezioni principali */
 header, section, footer {
     max-width: 1000px;
     margin: auto;
     padding: 60px 20px;
-    text-align: center; /* Fondamentale per centrare h1, p e bottoni */
+    text-align: center; /* Centra tutto il contenuto */
 }
 
 h1, h2, h3 {
@@ -22,7 +22,7 @@ h1, h2, h3 {
 }
 
 /* ==========================================
-   --- Navigazione ---
+   --- NAVIGAZIONE ---
    ========================================== */
 nav {
     position: sticky;
@@ -48,54 +48,73 @@ nav a:hover {
 }
 
 /* ==========================================
-   --- Pulsanti (Sistemati per visibilità) ---
+   --- PULSANTI (BLINDATI) ---
    ========================================== */
-.btn, .btn-download {
-    display: inline-block;
-    padding: 14px 28px;
-    margin: 10px;
-    text-decoration: none !important;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: none;
-    font-size: 1rem;
+/* Regola generale per tutti i bottoni nell'header */
+header a.btn, 
+header a.btn-download {
+    display: inline-block !important;
+    padding: 14px 28px !important;
+    margin: 10px !important;
+    text-decoration: none !important; /* Toglie il blu sottolineato */
+    border-radius: 10px !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    font-size: 1rem !important;
 }
 
-/* Tasto Download (Verde con testo scuro per leggibilità) */
+/* Tasto DOWNLOAD (Verde) */
 .btn-download {
     background-color: #22c55e !important;
-    color: #064e3b !important; /* Verde scurissimo, quasi nero, per leggere bene */
-    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+    color: #064e3b !important; /* Testo verde scuro per leggibilità */
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3) !important;
 }
 
 .btn-download:hover {
     background-color: #16a34a !important;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5);
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5) !important;
 }
 
-/* Tasto Guida (Azzurro con testo scuro) */
+/* Tasto GUIDA (Azzurro) */
 .btn {
-    background-color: #38bdf8;
-    color: #0c4a6e !important; /* Blu scuro per contrasto */
+    background-color: #38bdf8 !important;
+    color: #0c4a6e !important; /* Testo blu scuro */
 }
 
 .btn:hover {
-    background-color: #7dd3fc;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
+    background-color: #7dd3fc !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4) !important;
+}
+
+/* Tasto piccolo nelle card */
+.btn-sm {
+    display: inline-block;
+    padding: 6px 14px;
+    background: transparent;
+    color: #7dd3fc;
+    text-decoration: none;
+    border: 1px solid #38bdf8;
+    border-radius: 8px;
+    font-size: 0.85em;
+    transition: 0.2s;
+}
+
+.btn-sm:hover {
+    background: #38bdf8;
+    color: #0f172a;
 }
 
 /* ==========================================
-   --- Card e Codice (Allineati a sinistra) ---
+   --- CARD E GRIGLIA ---
    ========================================== */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    text-align: left; /* Il contenuto delle card deve stare a sinistra */
+    text-align: left; /* Il contenuto delle card torna a sinistra */
 }
 
 .card {
@@ -104,8 +123,12 @@ nav a:hover {
     border-radius: 16px;
     border: 1px solid #334155;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
 }
 
+/* ==========================================
+   --- CODICE ---
+   ========================================== */
 pre, code {
     background: #020617;
     color: #93c5fd;
@@ -115,22 +138,25 @@ pre, code {
     overflow-x: auto;
     font-family: 'Consolas', 'Monaco', monospace;
     border: 1px solid #1e293b;
-    text-align: left; /* Il codice non va centrato */
+    text-align: left;
 }
 
 /* ==========================================
-   --- Footer ---
+   --- FOOTER ---
    ========================================== */
 footer {
     opacity: 0.5;
     border-top: 1px solid #1e293b;
 }
 
-/* Responsive Mobile */
+/* ==========================================
+   --- RESPONSIVE (MOBILE) ---
+   ========================================== */
 @media (max-width: 768px) {
-    .btn, .btn-download {
-        display: block;
-        margin: 15px auto;
-        width: 90%;
+    header a.btn, 
+    header a.btn-download {
+        display: block !important;
+        margin: 15px auto !important;
+        width: 80% !important;
     }
 }
