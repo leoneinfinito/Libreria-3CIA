@@ -1,58 +1,141 @@
 /* ==========================================
-   --- Reset e Base ---
+   --- 1. Reset e Base ---
    ========================================== */
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
     margin: 0;
     background-color: #0f172a;
     color: #e2e8f0;
     text-align: center;
+    line-height: 1.6;
 }
 
 header, section, footer {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
-/* ==========================================
-   --- Effetti "Stupidi" (Animazioni) ---
-   ========================================== */
-/* Effetto di galleggiamento continuo per i titoli */
 h1, h2 {
     color: #7dd3fc;
     transition: 0.3s;
     cursor: default;
 }
 
-h2:hover {
-    transform: scale(1.1) rotate(1deg); /* Si ingrandisce e ruota un filo */
-    text-shadow: 0 0 15px #38bdf8;
+/* Animazione di galleggiamento per il titolo principale */
+header h1 {
+    font-size: 3.5rem;
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
 }
 
 /* ==========================================
-   --- Card Download (Larga e Centrale) ---
+   --- 2. Navigazione (Menu in alto) ---
    ========================================== */
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(15, 23, 42, 0.9);
+    padding: 15px;
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    border-bottom: 1px solid #1e293b;
+}
+
+/* Link del menu: puliti e semplici */
+nav a {
+    color: #e2e8f0 !important;
+    margin: 0 15px;
+    text-decoration: none !important;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #7dd3fc !important;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   --- 3. Pulsanti (Grandi e Piccini) ---
+   ========================================== */
+
+/* Bottoni Grandi (Download e Guida nell'Header) */
+.btn-download, .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none !important;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-download {
+    background-color: #22c55e;
+    color: #052e16 !important;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+.btn {
+    background-color: #38bdf8;
+    color: #082f49 !important;
+}
+
+.btn-download:hover, .btn:hover {
+    transform: scale(1.1) translateY(-5px);
+}
+
+/* BOTTONCINI PICCINI (btn-sm) - Quelli nelle card o link secondari */
+.btn-sm {
+    display: inline-block !important;
+    padding: 8px 16px !important;
+    margin-top: 15px !important;
+    background: transparent !important;
+    color: #7dd3fc !important;
+    border: 1px solid #38bdf8 !important;
+    border-radius: 8px !important;
+    font-size: 0.85rem !important;
+    text-decoration: none !important;
+    transition: 0.3s ease !important;
+}
+
+.btn-sm:hover {
+    background: rgba(56, 189, 248, 0.1) !important;
+    transform: translateX(5px) !important;
+}
+
+/* ==========================================
+   --- 4. Card Layout ---
+   ========================================== */
+
+/* Card Download (Larga e Centrale) */
 .download-card {
     background: #1e293b;
-    padding: 30px;
+    padding: 40px;
     border-radius: 20px;
     border: 1px solid #334155;
-    width: 80%; /* Bella larga */
+    width: 90%;
+    max-width: 850px;
     margin: 20px auto;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 0.4s ease;
 }
 
 .download-card:hover {
-    transform: translateY(-10px); /* Salta su */
+    transform: translateY(-5px);
     border-color: #22c55e;
-    box-shadow: 0 20px 40px rgba(34, 197, 94, 0.2);
 }
 
-/* ==========================================
-   --- Griglia Funzioni (Le 3 Card) ---
-   ========================================== */
+/* Griglia Funzioni (Le 3 Card) */
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -66,52 +149,18 @@ h2:hover {
     padding: 25px;
     border-radius: 16px;
     border: 1px solid #334155;
-    width: 320px; /* Larghezza fissa per simmetria */
+    width: 320px;
     text-align: left;
     transition: 0.3s ease;
-    cursor: pointer;
 }
 
 .card:hover {
-    transform: scale(1.05) rotate(-2deg); /* Si inclina un po' a sinistra */
-    background: #243347;
+    transform: scale(1.03) rotate(-1deg);
     border-color: #38bdf8;
 }
 
 /* ==========================================
-   --- Bottoni (Colori e Animazioni) ---
-   ========================================== */
-.btn-download, .btn, .btn-sm {
-    display: inline-block;
-    padding: 15px 30px;
-    margin: 10px;
-    border-radius: 12px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Effetto molla */
-    border: none;
-}
-
-.btn-download {
-    background-color: #22c55e;
-    color: #052e16 !important;
-}
-
-.btn-download:hover {
-    transform: scale(1.2); /* Diventa gigante */
-}
-
-.btn, .btn-sm {
-    background-color: #38bdf8;
-    color: #082f49 !important;
-}
-
-.btn:hover {
-    letter-spacing: 2px; /* Il testo si allarga */
-}
-
-/* ==========================================
-   --- Codice ---
+   --- 5. Codice e Footer ---
    ========================================== */
 pre {
     background: #020617;
@@ -120,10 +169,22 @@ pre {
     border-radius: 10px;
     text-align: left;
     border: 1px solid #1e293b;
-    transition: 0.3s;
+    overflow-x: auto;
+    font-family: 'Consolas', monospace;
 }
 
-.card:hover pre {
-    background: #0f172a; /* Il codice cambia colore quando passi sulla card */
-    color: #fff;
+footer {
+    opacity: 0.6;
+    font-size: 0.9rem;
+    padding: 60px;
+    border-top: 1px solid #1e293b;
+}
+
+/* Responsive per cellulari */
+@media (max-width: 768px) {
+    .btn, .btn-download {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
 }
