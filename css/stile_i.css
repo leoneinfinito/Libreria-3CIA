@@ -160,3 +160,37 @@ footer {
         width: 80% !important;
     }
 }
+
+
+/* ==========================================
+   --- FIX PER I BOTTONI "ALTRO..." ---
+   ========================================== */
+
+/* Colpisce tutti i link che hanno la classe btn-sm */
+a.btn-sm {
+    display: inline-block !important;
+    padding: 8px 16px !important;
+    background-color: transparent !important;
+    color: #7dd3fc !important; /* Colore azzurro */
+    text-decoration: none !important; /* TOGLIE IL BLU */
+    border: 1px solid #38bdf8 !important;
+    border-radius: 8px !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+    margin-top: 10px !important;
+}
+
+/* Effetto quando passi sopra con il mouse */
+a.btn-sm:hover {
+    background-color: #38bdf8 !important;
+    color: #0f172a !important; /* Testo scuro su fondo azzurro */
+    transform: translateX(5px) !important; /* Leggero scivolamento a destra */
+}
+
+/* Fix per il contenitore (se li vuoi allineati bene) */
+.link-container {
+    text-align: left !important;
+    margin-top: 15px !important;
+    display: block !important;
+}
