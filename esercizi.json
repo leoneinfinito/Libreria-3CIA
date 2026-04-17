@@ -23,7 +23,7 @@
     {
         "id": "code-es4",
         "titolo": "4. Somma e Fattoriale",
-        "fileC": "../file.c/somma_fattoriale.c",
+        "fileC": "../file.c/somma_fatoriale.c",
         "fileTxt": "../descrizioni/somma_e_fattoriale.txt",
         "descrizione": "Operazioni matematiche."
     }
