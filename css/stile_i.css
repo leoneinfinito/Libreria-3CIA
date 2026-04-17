@@ -179,3 +179,42 @@ footer {
         padding-left: 0;
     }
 }
+
+
+/* Stile base per tutti i bottoni */
+.btn, .btn-download, .btn-sm {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #0ea5e9; /* Azzurro */
+    color: white !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin: 10px 5px;
+}
+
+/* Effetto al passaggio del mouse (Hover) */
+.btn:hover, .btn-download:hover {
+    background-color: #0284c7;
+    transform: translateY(-3px); /* Si alza leggermente */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Stile specifico per il tasto Download (magari lo facciamo verde?) */
+.btn-download {
+    background-color: #22c55e; /* Verde */
+}
+
+.btn-download:hover {
+    background-color: #16a34a;
+}
+
+/* Bottone più piccolo per i link "Altro..." */
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    background-color: #64748b;
+}
