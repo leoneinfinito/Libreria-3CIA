@@ -9,11 +9,12 @@ body {
     line-height: 1.6;
 }
 
+/* Centratura Header e Sezioni */
 header, section, footer {
     max-width: 1000px;
     margin: auto;
-    padding: 40px 20px;
-    text-align: center; /* Centra tutto il contenuto nelle sezioni principali */
+    padding: 60px 20px;
+    text-align: center; /* Fondamentale per centrare h1, p e bottoni */
 }
 
 h1, h2, h3 {
@@ -26,7 +27,7 @@ h1, h2, h3 {
 nav {
     position: sticky;
     top: 0;
-    background: rgba(15, 23, 42, 0.9);
+    background: rgba(15, 23, 42, 0.95);
     padding: 15px;
     text-align: center;
     backdrop-filter: blur(8px);
@@ -47,93 +48,89 @@ nav a:hover {
 }
 
 /* ==========================================
-   --- Pulsanti (Centrati e corretti) ---
+   --- Pulsanti (Sistemati per visibilità) ---
    ========================================== */
 .btn, .btn-download {
     display: inline-block;
-    padding: 12px 24px;
-    margin: 10px 5px;
+    padding: 14px 28px;
+    margin: 10px;
     text-decoration: none !important;
     border-radius: 10px;
     font-weight: bold;
     transition: all 0.3s ease;
     cursor: pointer;
     border: none;
+    font-size: 1rem;
 }
 
-/* Tasto Download (Verde) */
+/* Tasto Download (Verde con testo scuro per leggibilità) */
 .btn-download {
     background-color: #22c55e !important;
-    color: #ffffff !important;
+    color: #064e3b !important; /* Verde scurissimo, quasi nero, per leggere bene */
     box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
 }
 
 .btn-download:hover {
     background-color: #16a34a !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5);
 }
 
-/* Tasto Guida (Azzurro) */
+/* Tasto Guida (Azzurro con testo scuro) */
 .btn {
     background-color: #38bdf8;
-    color: #0f172a !important;
+    color: #0c4a6e !important; /* Blu scuro per contrasto */
 }
 
 .btn:hover {
     background-color: #7dd3fc;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
 }
 
 /* ==========================================
-   --- Layout Blocchi (Card & Grid) ---
+   --- Card e Codice (Allineati a sinistra) ---
    ========================================== */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
-    text-align: left; /* Le card all'interno della grid tornano allineate a sinistra */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    text-align: left; /* Il contenuto delle card deve stare a sinistra */
 }
 
 .card {
     background: #1e293b;
-    padding: 20px;
+    padding: 25px;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     border: 1px solid #334155;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* ==========================================
-   --- Codice ---
-   ========================================== */
 pre, code {
     background: #020617;
     color: #93c5fd;
-    padding: 15px;
+    padding: 18px;
     border-radius: 10px;
     display: block;
     overflow-x: auto;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Consolas', 'Monaco', monospace;
     border: 1px solid #1e293b;
-    text-align: left; /* Il codice non va mai centrato */
+    text-align: left; /* Il codice non va centrato */
 }
 
 /* ==========================================
    --- Footer ---
    ========================================== */
 footer {
-    opacity: 0.6;
+    opacity: 0.5;
     border-top: 1px solid #1e293b;
 }
 
-/* ==========================================
-   --- Responsive ---
-   ========================================== */
+/* Responsive Mobile */
 @media (max-width: 768px) {
     .btn, .btn-download {
         display: block;
-        width: 80%;
-        margin: 10px auto;
+        margin: 15px auto;
+        width: 90%;
     }
 }
