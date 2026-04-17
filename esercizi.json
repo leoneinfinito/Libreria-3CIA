@@ -1,0 +1,30 @@
+[
+    {
+        "id": "code-es1",
+        "titolo": "1. Prezzo Scontato",
+        "fileC": "FILE_C/prezzo.c",
+        "fileTxt": "descrizioni/Sconto.txt",
+        "descrizione": "Calcolo dello sconto percentuale."
+    },
+    {
+        "id": "code-es2",
+        "titolo": "2. Differenza Assoluta",
+        "fileC": "FILE_C/Diferenza.c",
+        "fileTxt": "descrizioni/Diferenza_asoluta.txt",
+        "descrizione": "Calcolo distanza tra due numeri."
+    },
+    {
+        "id": "code-es3",
+        "titolo": "3. Palindroma",
+        "fileC": "FILE_C/Palindroma.c",
+        "fileTxt": "descrizioni/Palindroma.txt",
+        "descrizione": "Controllo stringhe palindrome."
+    },
+    {
+        "id": "code-es4",
+        "titolo": "4. Somma e Fattoriale",
+        "fileC": "FILE_C/somma_fatoriale.c",
+        "fileTxt": "descrizioni/Somma_Fattoriale.txt",
+        "descrizione": "Operazioni matematiche."
+    }
+]

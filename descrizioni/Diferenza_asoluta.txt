@@ -1,0 +1,6 @@
+La funzione <code>DifferenzaAssoluta</code> calcola la distanza tra due numeri. Prende due numeri come input e restituisce il valore positivo della loro differenza, indipendentemente dall'ordine.<br><br>
+Se fornisci 5 e 3, restituisce 2. Se fornisci 3 e 5, restituisce comunque 2.<br><br>
+<b>Definizione della funzione:</b><br>
+<code>int DifferenzaAssoluta(int a, int b);</code><br><br>
+È molto utile quando devi calcolare uno scarto tra due valori e non vuoi preoccuparti di quale dei due sia il maggiore.<br><br>
+Buon coding! : )

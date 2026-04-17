@@ -1,38 +1,46 @@
-/* --- Funzione per caricare il codice dai file .c --- */
-function caricaEsempio(file, elementId) {
-    // Fetch esegue una richiesta per leggere il contenuto del file
-    fetch(file)
-        .then(response => {
-            // Se il file non viene trovato, lancia un errore
-            if (!response.ok) throw new Error('File non trovato');
-            return response.text();
-        })
-        .then(data => {
-            /* TRASFORMAZIONE CARATTERI:
-               Dobbiamo sostituire < e > perché altrimenti il browser 
-               pensa che #include <stdio.h> sia un tag HTML e lo nasconde.
-            */
-            const cleanedCode = data
-                .replace(/&/g, "&amp;") // Protegge le &
-                .replace(/</g, "&lt;")  // Trasforma < in testo
-                .replace(/>/g, "&gt;"); // Trasforma > in testo
+async function inizializzaEsempi() {
+    const contenitore = document.getElementById('esempi');
+    if (!contenitore) return;
 
-            // Inserisce il codice pulito nel tag <pre> corrispondente
-            document.getElementById(elementId).innerHTML = cleanedCode;
-        })
-        .catch(error => {
-            // Messaggio mostrato se qualcosa va storto
-            document.getElementById(elementId).innerText = "Errore: impossibile caricare " + file;
-            console.error(error);
-        });
+    try {
+        const response = await fetch('./esercizi.json');
+        const dati = await response.json();
+
+        contenitore.innerHTML = ""; 
+
+        for (const es of dati) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            
+            // AGGIUNTO: Un div con un ID specifico per la descrizione (es: desc-es1)
+            card.innerHTML = `
+                <h3>${es.titolo}</h3>
+                <pre id="${es.id}">Caricamento codice...</pre>
+                <div id="desc-${es.id}">Caricamento spiegazione...</div>
+            `;
+            contenitore.appendChild(card);
+
+            // 1. Carica il codice .c
+            caricaContenutoC(es.fileC, es.id);
+            
+            // 2. NOVITÀ: Carica la spiegazione .txt
+            // Passiamo il percorso del file txt e l'id del div dove metterlo
+            caricaSpiegazioneTxt(es.fileTxt, `desc-${es.id}`);
+        }
+    } catch (error) {
+        console.error("Errore:", error);
+    }
 }
 
-/* Esecuzione: carichiamo i file negli ID definiti nell'HTML.
-   Assicurati che i nomi dei file Es1.c, ecc. siano corretti.
-*/
-document.addEventListener("DOMContentLoaded", () => {
-    caricaEsempio('FILE_C/prezzo.c', 'code-es1');
-    caricaEsempio('FILE_C/Diferenza.c', 'code-es2');
-    caricaEsempio('FILE_C/Palindroma.c', 'code-es3');
-    caricaEsempio('FILE_C/somma_fatoriale.c', 'code-es4');
-});
+// Funzione aggiuntiva per il file TXT
+async function caricaSpiegazioneTxt(percorso, idElemento) {
+    try {
+        const res = await fetch(percorso);
+        if (!res.ok) throw new Error();
+        let testo = await res.text();
+        // Usiamo innerHTML così se metti <b> o <br> nel txt funzionano!
+        document.getElementById(idElemento).innerHTML = testo;
+    } catch (err) {
+        document.getElementById(idElemento).innerText = "Spiegazione non trovata.";
+    }
+}

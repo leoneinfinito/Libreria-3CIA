@@ -1,0 +1,17 @@
+In questo esempio vediamo l'azione combinata di due funzioni della libreria <code>3cia.h</code>: il controllo dei palindromi e la gestione sicura dell'input.<br><br>
+
+<b>1. Funzione <code>LeggiStringa</code>:</b><br>
+Prima di verificare la parola, dobbiamo acquisirla. In C, usare <code>scanf</code> può essere pericoloso. La nostra funzione:<br>
+<code>void LeggiStringa(char stringa[], int max_lunghezza);</code><br>
+pulisce il buffer e impedisce all'utente di inserire più caratteri di quelli consentiti, evitando crash del programma.<br><br>
+
+<b>2. Funzione <code>Palindroma</code>:</b><br>
+Una volta acquisito l'input, verifichiamo se la parola è leggibile allo stesso modo in entrambi i sensi (come "radar" o "otto").<br>
+<code>int Palindroma(char stringa[]);</code><br>
+La funzione restituisce <b>1</b> (vero) se la parola è palindroma, oppure <b>0</b> (falso) se non lo è.<br><br>
+
+<b>Esempio d'uso:</b><br>
+Se l'utente inserisce "anna", il programma stamperà "La stringa è palindroma". Se inserisce "ciao", stamperà "La stringa non è palindroma".<br><br>
+
+Questo esercizio è perfetto per capire come la libreria semplifica la manipolazione degli array di caratteri e il controllo dei cicli.<br><br>
+Buon coding! : )

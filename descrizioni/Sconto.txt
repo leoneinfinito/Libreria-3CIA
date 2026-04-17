@@ -1,0 +1,6 @@
+Questa funzione calcola il prezzo scontato di un prodotto. Inserisci il prezzo originale e lo sconto come parametri.<br><br>
+Ad esempio, se un prodotto costa 100 euro e ha uno sconto del 20%, la funzione restituirà 80 euro.<br><br>
+<b>La funzione è definita come segue:</b><br>
+<code>float PrezzoScontato(float prezzo, int sconto);</code><br><br>
+Dove <code>prezzo</code> è il valore originale e <code>sconto</code> è la percentuale da applicare (es. 10 per il 10%).<br><br>
+Buon coding! : )
