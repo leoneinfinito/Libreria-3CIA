@@ -1,7 +1,5 @@
 Questa funzione calcola il prezzo scontato di un prodotto applicando una percentuale di sconto al prezzo originale.<br><br>
-
-La funzione riceve in input il prezzo iniziale e la percentuale di sconto, e restituisce il prezzo finale già scontato.<br><br>
-
+Riceve in input il prezzo iniziale e la percentuale di sconto, e restituisce il prezzo finale già scontato.<br><br>
 Ad esempio, se un prodotto costa 100 euro e lo sconto è del 20%, la funzione restituirà 80 euro.<br><br>
 
 <b>La funzione è definita come segue:</b><br>
@@ -10,6 +8,9 @@ Ad esempio, se un prodotto costa 100 euro e lo sconto è del 20%, la funzione re
 Dove:<br>
 - <code>prezzo</code> è il prezzo originale del prodotto<br>
 - <code>sconto</code> è la percentuale di sconto da applicare (es. 10 per il 10%)<br><br>
+
+<b>Esempio di utilizzo:</b><br>
+<code>prezzo_scontato = PrezzoScontato(prezzo, sconto);</code><br><br>
 
 La funzione restituisce il prezzo finale dopo aver applicato lo sconto.<br><br>
 
