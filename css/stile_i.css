@@ -1,137 +1,121 @@
 /* ==========================================
-   --- 1. RESET E BASE ---
+   --- Impostazioni Generali ---
    ========================================== */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    background: #0f172a !important;
-    color: #e2e8f0 !important;
+    background: #0f172a;
+    color: #e2e8f0;
     line-height: 1.6;
 }
 
-/* Centratura generale per Header e Section */
-header, section, footer {
-    max-width: 1100px;
+/* Header: Tutto al centro */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 1000px;
     margin: auto;
-    padding: 60px 20px;
+}
+
+/* Sezioni: Titoli centrati, ma contenuto flessibile */
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+section h2 {
     text-align: center;
+    color: #7dd3fc;
+    margin-bottom: 30px;
 }
 
-h1, h2, h3 { color: #7dd3fc !important; }
-
 /* ==========================================
-   --- 2. NAVIGAZIONE ---
+   --- I Bottoni (Senza errori stavolta!) ---
    ========================================== */
-nav {
-    position: sticky;
-    top: 0;
-    background: rgba(15, 23, 42, 0.95);
-    padding: 15px;
-    text-align: center;
-    backdrop-filter: blur(8px);
-    z-index: 1000;
-    border-bottom: 1px solid #1e293b;
+.btn, .btn-download {
+    display: inline-block;
+    padding: 14px 28px;
+    margin: 10px;
+    text-decoration: none !important;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    border: none;
 }
 
-nav a {
-    color: #e2e8f0 !important;
-    margin: 0 15px;
-    text-decoration: none !important;
-    font-weight: 500;
+.btn-download {
+    background-color: #22c55e !important;
+    color: #052e16 !important;
+}
+
+.btn {
+    background-color: #38bdf8;
+    color: #082f49 !important;
+}
+
+/* Bottoni piccini (Scopri di più / Altro) */
+.btn-sm {
+    display: inline-block;
+    padding: 8px 16px;
+    background: transparent;
+    color: #7dd3fc !important;
+    border: 1px solid #38bdf8;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    transition: 0.2s;
+}
+
+.btn-sm:hover {
+    background: #38bdf8;
+    color: #0f172a !important;
 }
 
 /* ==========================================
-   --- 3. BOTTONI GRANDI (HEADER) ---
-   ========================================== */
-.btn-download, .btn {
-    display: inline-block !important;
-    padding: 14px 28px !important;
-    margin: 10px !important;
-    text-decoration: none !important;
-    border-radius: 10px !important;
-    font-weight: bold !important;
-    border: none !important;
-    cursor: pointer !important;
-}
-
-.btn-download { background-color: #22c55e !important; color: #064e3b !important; }
-.btn { background-color: #38bdf8 !important; color: #0c4a6e !important; }
-
-/* ==========================================
-   --- 4. GRID "FUNZIONI DISPONIBILI" ---
+   --- La Griglia delle 3 Figure (Cards) ---
    ========================================== */
 .grid {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 20px !important;
-    margin-top: 30px !important;
+    display: flex;             /* Usiamo Flexbox invece di Grid per più controllo */
+    flex-wrap: wrap;           /* Se non ci stanno, vanno sotto */
+    justify-content: center;   /* Centra le card nella pagina */
+    gap: 20px;                 /* Spazio tra le card */
 }
 
 .card {
-    background: #1e293b !important;
-    padding: 25px !important;
-    border-radius: 16px !important;
-    border: 1px solid #334155 !important;
-    width: 300px !important; /* Larghezza fissa per simmetria perfetta */
-    display: flex !important;
-    flex-direction: column !important;
-    text-align: left !important; /* Testo interno a sinistra */
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #334155;
+    width: 280px;              /* Larghezza fissa per farle uguali */
+    text-align: left;          /* TESTO DENTRO LE CARD A SINISTRA */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;    /* Mette contenuto e bottone in colonna */
+    justify-content: space-between;
 }
 
 /* ==========================================
-   --- 5. FIX CODICE (NERO E SINISTRA) ---
+   --- Codice ---
    ========================================== */
-/* Questo sistema l'Esempio Completo e i codici nelle card */
-pre, code {
-    background-color: #020617 !important; /* Sfondo nero */
-    color: #93c5fd !important;           /* Testo azzurro */
-    padding: 15px !important;
-    border-radius: 10px !important;
-    border: 1px solid #1e293b !important;
-    display: block !important;
-    text-align: left !important;         /* FORZA SEMPRE A SINISTRA */
-    font-family: 'Consolas', 'Monaco', monospace !important;
-    font-size: 0.9em !important;
-    margin: 20px 0 !important;
-    overflow-x: auto !important;
+pre {
+    background: #020617;
+    color: #93c5fd;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    overflow-x: auto;
+    font-size: 0.9rem;
 }
 
-/* Nelle card il codice si espande per pareggiare l'altezza */
-.card pre {
-    flex-grow: 1 !important;
+/* Navigazione */
+nav {
+    text-align: center;
+    background: rgba(15, 23, 42, 0.9);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-
-/* ==========================================
-   --- 6. SKIN TASTI "ALTRO" (PIENI) ---
-   ========================================== */
-/* Rimuove il blu da tutti i link dentro le card e mette la skin azzurra */
-.card a, .btn-sm, .link-container a {
-    display: inline-block !important;
-    background-color: #38bdf8 !important; /* Colore pieno */
-    color: #0c4a6e !important;           /* Testo scuro */
-    padding: 10px 20px !important;
-    text-decoration: none !important;    /* Toglie la linea blu */
-    border-radius: 8px !important;
-    font-weight: bold !important;
-    font-size: 0.85em !important;
-    margin-top: auto !important;         /* Spinge in fondo alla card */
-    width: fit-content !important;
-    border: none !important;
-    transition: 0.2s !important;
-}
-
-.card a:hover {
-    background-color: #7dd3fc !important;
-    transform: scale(1.05) !important;
-}
-
-/* ==========================================
-   --- 7. FOOTER E RESPONSIVE ---
-   ========================================== */
-footer { opacity: 0.5; border-top: 1px solid #1e293b; }
-
-@media (max-width: 600px) {
-    .card { width: 100% !important; }
-    .btn-download, .btn { display: block !important; margin: 10px auto !important; }
-}
+nav a { color: #e2e8f0; margin: 0 15px; text-decoration: none; font-weight: 600; }
