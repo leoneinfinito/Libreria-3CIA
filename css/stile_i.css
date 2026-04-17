@@ -7,7 +7,7 @@ body {
     background-color: #0f172a;
     color: #e2e8f0;
     text-align: center;
-    overflow-x: hidden; /* Evita scivolamenti strani */
+    overflow-x: hidden;
 }
 
 header, section, footer {
@@ -29,7 +29,7 @@ nav {
     border-bottom: 1px solid #1e293b;
 }
 
-/* Effetto stupido sui link del menu */
+/* Effetto sui link del menu */
 nav a {
     all: unset; 
     color: #e2e8f0 !important;
@@ -43,7 +43,7 @@ nav a {
 
 nav a:hover {
     color: #7dd3fc !important;
-    transform: scale(1.2) rotate(5deg); /* Si ingrandisce e ruota */
+    transform: scale(1.2) rotate(5deg);
 }
 
 /* ==========================================
@@ -58,7 +58,6 @@ nav a:hover {
     text-decoration: none !important;
     border: none;
     cursor: pointer;
-    /* Effetto molla potente */
     transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -74,11 +73,11 @@ nav a:hover {
 }
 
 .btn-download:hover, .btn:hover {
-    transform: scale(1.15) translateY(-8px); /* Salto più alto */
+    transform: scale(1.15) translateY(-8px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* Bottoncini piccini nelle card */
+/* Bottoncini piccini (btn-sm) */
 .btn-sm {
     display: inline-block !important;
     padding: 8px 16px !important;
@@ -94,25 +93,23 @@ nav a:hover {
 .btn-sm:hover {
     background: #38bdf8 !important;
     color: #082f49 !important;
-    transform: translateX(10px); /* Scivola a destra */
+    transform: translateX(10px);
 }
 
 /* ==========================================
-   --- 4. Card e Layout (Effetti Stupidi) ---
+   --- 4. Header (TITOLO FISSO) ---
    ========================================== */
 header h1 {
     font-size: 4rem;
     color: #7dd3fc;
-    animation: floating 3s ease-in-out infinite;
-    text-shadow: 0 0 20px rgba(125, 211, 252, 0.3);
+    margin-bottom: 10px;
+    /* Rimosso l'effetto floating */
+    text-shadow: 0 0 20px rgba(125, 211, 252, 0.2);
 }
 
-@keyframes floating {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(2deg); }
-    100% { transform: translateY(0px) rotate(0deg); }
-}
-
+/* ==========================================
+   --- 5. Card e Layout ---
+   ========================================== */
 .download-card {
     background: #1e293b;
     padding: 40px;
@@ -148,17 +145,9 @@ header h1 {
 }
 
 .card:hover {
-    transform: scale(1.05) rotate(-3deg); /* Inclinazione card */
+    transform: scale(1.05) rotate(-3deg);
     background: #243347;
     border-color: #38bdf8;
-}
-
-/* Effetto sul codice quando passi sulla card */
-.card:hover pre {
-    background: #0f172a;
-    border-color: #7dd3fc;
-    color: #fff;
-    transform: scale(0.98);
 }
 
 pre {
