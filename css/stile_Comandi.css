@@ -1,0 +1,159 @@
+/* --- Impostazioni Generali del Corpo della Pagina --- */
+body {
+    font-family: Arial, sans-serif; /* Font leggibile e standard */
+    margin: 0;                     /* Rimuove i margini predefiniti del browser */
+    background: #0f172a;           /* Sfondo blu scuro profondo */
+    color: #e2e8f0;                /* Testo grigio chiaro per non affaticare gli occhi */
+    line-height: 1.6;              /* Aumenta l'interlinea per una migliore leggibilità */
+}
+
+/* --- Contenitori Principali (Layout) --- */
+header,
+section,
+footer {
+    max-width: 1000px;             /* Larghezza massima dei contenuti */
+    margin: auto;                  /* Centra i contenitori nella pagina */
+    padding: 40px 20px;            /* Spaziatura interna */
+}
+
+/* --- Stile dei Titoli --- */
+h1,
+h2,
+h3 {
+    color: #7dd3fc;                /* Azzurro brillante per far risaltare i titoli */
+}
+
+/* --- Navigazione Superiore (Resta fissa in alto) --- */
+nav {
+    position: sticky;              /* Rende la barra fissa durante lo scroll */
+    top: 0;                        /* La ancora alla parte superiore */
+    background: #0f172acc;         /* Sfondo blu semitrasparente */
+    padding: 10px;
+    text-align: center;            /* Centra i link del menu */
+    backdrop-filter: blur(8px);    /* Effetto sfocato moderno sotto la barra */
+    z-index: 1000;                 /* Assicura che la nav stia sopra tutto il resto */
+}
+
+/* --- Link della Navigazione --- */
+nav a {
+    color: #e2e8f0;
+    margin: 0 15px;
+    text-decoration: none;         /* Rimuove la sottolineatura dai link */
+    font-weight: 500;
+    transition: 0.2s;              /* Animazione fluida per il cambio colore */
+}
+
+/* --- Effetto Hover sui Link della Navigazione --- */
+nav a:hover {
+    color: #7dd3fc;                /* Il link diventa azzurro al passaggio del mouse */
+}
+
+/* --- Intestazione della Pagina (Header) --- */
+header {
+    text-align: center;
+    padding-top: 60px;
+}
+
+/* --- Stile dei Pulsanti Principali --- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #38bdf8;           /* Colore azzurro acceso */
+    color: #00111a;                /* Testo molto scuro per contrasto */
+    text-decoration: none;
+    border-radius: 10px;           /* Bordi arrotondati */
+    font-weight: bold;
+    margin: 8px;
+    transition: 0.2s;              /* Animazione per l'hover */
+}
+
+/* --- Effetto al passaggio sul Pulsante --- */
+.btn:hover {
+    transform: translateY(-3px);   /* Alza leggermente il pulsante */
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4); /* Aggiunge un bagliore azzurro */
+}
+
+/* --- Contenitore per il link "Scoprile tutte" (Allineato a sinistra) --- */
+.link-container {
+    display: block;
+    text-align: left;              /* Forza l'allineamento a sinistra */
+    margin-top: 25px;
+    padding-left: 5px; 
+}
+
+/* --- Stile del Pulsante Piccolo (Secondario) --- */
+.btn-sm {
+    display: inline-block;
+    padding: 8px 16px;
+    background: transparent;       /* Sfondo trasparente */
+    color: #7dd3fc;
+    text-decoration: none;
+    border: 1px solid #38bdf8;     /* Solo il bordo azzurro */
+    border-radius: 8px;
+    font-size: 0.9em;
+    transition: 0.2s;
+}
+
+/* --- Effetto al passaggio sul Pulsante Piccolo --- */
+.btn-sm:hover {
+    background: rgba(56, 189, 248, 0.1); /* Leggero sfondo azzurro al passaggio */
+    transform: translateX(5px);          /* Si sposta leggermente a destra */
+}
+
+/* --- Sistema a Griglia per le Card --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adatta le colonne in automatico */
+    gap: 20px;                      /* Spazio tra le card */
+}
+
+/* --- Stile delle Card (Riquadri Contenuti) --- */
+.card {
+    background: #1e293b;           /* Sfondo leggermente più chiaro del body */
+    margin: 15px 0;                /* Margine per separare le card (modificato da 40px per non essere troppo grande) */
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Ombra per dare profondità */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Bordo sottilissimo quasi invisibile */
+}
+
+/* --- Blocchi di Codice (Esempi in C) --- */
+code,
+pre {
+    background: #020617;           /* Sfondo quasi nero per il codice */
+    color: #93c5fd;                /* Testo azzurro chiaro tipico dei terminali */
+    padding: 15px;
+    border-radius: 10px;
+    display: block;
+    overflow-x: auto;              /* Barra di scorrimento se il codice è troppo lungo */
+    font-family: 'Courier New', Courier, monospace; /* Font a larghezza fissa */
+    font-size: 0.95em;
+    border: 1px solid #1e293b;     /* Bordo scuro per staccare dal fondo della card */
+    margin: 15px 0;
+}
+
+/* --- Piè di Pagina (Footer) --- */
+footer {
+    opacity: 0.7;                  /* Testo leggermente sbiadito */
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 0.9em;
+}
+
+/* --- Adattamento per Cellulari (Responsive) --- */
+@media (max-width: 768px) {
+    header { padding-top: 30px; }
+    
+    /* I pulsanti diventano a tutta larghezza sul cellulare */
+    .btn {
+        display: block;
+        margin: 10px auto;
+        max-width: 280px;
+    }
+
+    /* Il contenitore del link si centra sui dispositivi mobili */
+    .link-container {
+        text-align: center; 
+        padding-left: 0;
+    }
+}

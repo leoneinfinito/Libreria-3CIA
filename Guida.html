@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installazione - 3cia.h</title>
+    <link rel="stylesheet" href="css\stile_Guida.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="installazione.html" style="color: #7dd3fc;">Installazione</a>
+        <a href="comandi.html">Guida Comandi</a>
+    </nav>
+
+    <header>
+        <h1>Guida all'Installazione</h1>
+        <p>Segui questi passaggi per configurare correttamente la libreria 3cia.h nel tuo progetto C.</p>
+    </header>
+
+    <section id="installazione">
+
+        <div class="card">
+            <h3>1. Scarica la libreria</h3>
+            <p>Ottieni il file <code>3cia.h</code> dalla sezione download della Home. Questo file contiene tutte le funzioni necessarie.</p>
+        </div>
+
+        <div class="card">
+            <h3>2. Prepara la cartella del progetto</h3>
+            <p>Per un corretto funzionamento, devi organizzare i file in questo modo:</p>
+            <ul>
+                <li>Crea una cartella per il tuo progetto (es. "MioProgetto").</li>
+                <li>Copia il file <b>3cia.h</b> all'interno di questa cartella.</li>
+                <li>Crea il tuo file sorgente C es: <code>Esercizio.c</code> nella stessa cartella.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>3. Importazione nel codice</h3>
+            <p>Apri il tuo file <code>.c</code> e aggiungi la dichiarazione di inclusione della libreria in alto.</p>
+            <p><strong>Nota importante:</strong> Trattandosi di una libreria locale, usa le virgolette <code>"3cia.h"</code> e non le parentesi angolari <code>X &lt;Libreria.h&gt; X</code>Ricapitolando:</p>
+            
+            <pre>// Corretto: cerca il file nella cartella del progetto
+#include "3cia.h"
+
+// Errato: cercherebbe tra le librerie di sistema
+// #include &lt;3cia.h&gt;</pre>
+        </div>
+
+    </section>
+
+     <footer>
+        <p>© Classe 3CIA - Polo Manetti Porciatti</p>
+    </footer>
+</body>
+</html>

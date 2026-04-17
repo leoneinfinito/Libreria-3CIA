@@ -1,0 +1,157 @@
+/* ==========================================
+   1. IMPOSTAZIONI GENERALI
+   ========================================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+header,
+section,
+footer {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h1,
+h2,
+h3 {
+    color: #7dd3fc;
+}
+
+/* ==========================================
+   2. NAVIGAZIONE (STICKY)
+   ========================================== */
+nav {
+    position: sticky;
+    top: 0;
+    background: #0f172acc;
+    padding: 10px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+nav a {
+    color: #e2e8f0;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #7dd3fc;
+}
+
+/* ==========================================
+   3. HEADER E PULSANTI
+   ========================================== */
+header {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #38bdf8;
+    color: #00111a;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 8px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+}
+
+/* Contenitore per tasto "Scoprile tutte" a sinistra */
+.link-container {
+    display: block;
+    text-align: left;
+    margin-top: 25px;
+    padding-left: 5px;
+}
+
+.btn-sm {
+    display: inline-block;
+    padding: 8px 16px;
+    background: transparent;
+    color: #7dd3fc;
+    text-decoration: none;
+    border: 1px solid #38bdf8;
+    border-radius: 8px;
+    font-size: 0.9em;
+    transition: 0.2s;
+}
+
+.btn-sm:hover {
+    background: rgba(56, 189, 248, 0.1);
+    transform: translateX(5px);
+}
+
+/* ==========================================
+   4. LAYOUT: GRID E CARD
+   ========================================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    margin: 40px 0;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================
+   5. CODICE (PRE/CODE)
+   ========================================== */
+code,
+pre {
+    background: #020617;
+    color: #93c5fd;
+    padding: 15px;
+    border-radius: 10px;
+    display: block;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95em;
+    border: 1px solid #1e293b;
+    margin: 15px 0;
+}
+
+/* ==========================================
+   6. FOOTER E RESPONSIVE
+   ========================================== */
+footer {
+    opacity: 0.7;
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .btn {
+        display: block;
+        margin: 10px auto;
+        max-width: 280px;
+    }
+
+    .link-container {
+        text-align: center;
+        padding-left: 0;
+    }
+}
