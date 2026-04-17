@@ -1,6 +1,20 @@
-La funzione <code>DifferenzaAssoluta</code> calcola la distanza tra due numeri. Prende due numeri come input e restituisce il valore positivo della loro differenza, indipendentemente dall'ordine.<br><br>
-Se fornisci 5 e 3, restituisce 2. Se fornisci 3 e 5, restituisce comunque 2.<br><br>
-<b>Definizione della funzione:</b><br>
-<code>int DifferenzaAssoluta(int a, int b);</code><br><br>
-È molto utile quando devi calcolare uno scarto tra due valori e non vuoi preoccuparti di quale dei due sia il maggiore.<br><br>
-Buon coding! : )
+Questa funzione calcola la differenza assoluta tra due numeri interi, ignorando il segno del risultato.<br><br>
+In pratica restituisce sempre un valore positivo o nullo, indipendentemente dall’ordine dei parametri inseriti.<br><br>
+Ad esempio, tra 10 e 3 la differenza è 7, ma anche tra 3 e 10 il risultato sarà sempre 7.<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>int DifferenzaAssoluta(int num1, int num2);</code><br><br>
+
+Dove:<br>
+- <code>num1</code> è il primo numero intero<br>
+- <code>num2</code> è il secondo numero intero<br><br>
+
+La funzione restituisce un intero che rappresenta la distanza numerica tra i due valori senza segno.<br><br>
+
+<b>Esempio di utilizzo:</b><br>
+<code>risultato = DifferenzaAssoluta(num1, num2);</code><br><br>
+
+Oppure direttamente:<br>
+<code>printf("%d", DifferenzaAssoluta(num1, num2));</code><br><br>
+
+Buon coding! :)

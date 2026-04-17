@@ -14,4 +14,4 @@ Dove:<br>
 
 La funzione restituisce il prezzo finale dopo aver applicato lo sconto.<br><br>
 
-Buon coding! :)
+Buon coding! : )
