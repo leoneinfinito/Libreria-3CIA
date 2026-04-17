@@ -3,7 +3,7 @@ async function inizializzaEsempi() {
     if (!contenitore) return;
 
     try {
-        const response = await fetch('./esercizi.json');
+        const response = await fetch('../esercizi.json');
         const dati = await response.json();
 
         contenitore.innerHTML = ""; 
