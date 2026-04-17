@@ -1,37 +1,33 @@
 /* ==========================================
-   --- 1. RESET E IMPOSTAZIONI BASE ---
+   --- 1. RESET E BASE ---
    ========================================== */
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     background: #0f172a;
     color: #e2e8f0;
     line-height: 1.6;
 }
 
-/* Contenitore principale centrato */
 header, section, footer {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
     padding: 60px 20px;
-    text-align: center;
+    text-align: center; /* Centra i titoli e i paragrafi */
 }
 
-h1, h2, h3 {
-    color: #7dd3fc;
-    margin-bottom: 20px;
-}
+h1, h2, h3 { color: #7dd3fc; }
 
 /* ==========================================
-   --- 2. NAVIGAZIONE (MENU) ---
+   --- 2. NAVIGAZIONE ---
    ========================================== */
 nav {
     position: sticky;
     top: 0;
-    background: rgba(15, 23, 42, 0.9);
+    background: rgba(15, 23, 42, 0.95);
     padding: 15px;
     text-align: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
     z-index: 1000;
     border-bottom: 1px solid #1e293b;
 }
@@ -40,46 +36,33 @@ nav a {
     color: #e2e8f0;
     margin: 0 15px;
     text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
+    font-weight: 500;
 }
 
-nav a:hover {
-    color: #38bdf8;
-}
+nav a:hover { color: #38bdf8; }
 
 /* ==========================================
-   --- 3. PULSANTI PRINCIPALI (HEADER) ---
+   --- 3. PULSANTI HEADER (DOWNLOAD/GUIDA) ---
    ========================================== */
 .btn-download, .btn {
     display: inline-block !important;
-    padding: 14px 30px !important;
+    padding: 14px 28px !important;
     margin: 10px !important;
     text-decoration: none !important;
-    border-radius: 12px !important;
+    border-radius: 10px !important;
     font-weight: bold !important;
-    transition: all 0.3s ease !important;
+    transition: 0.3s !important;
     border: none !important;
-    cursor: pointer !important;
 }
 
-/* Bottone Download (Verde) */
-.btn-download {
-    background-color: #22c55e !important;
-    color: #052e16 !important; /* Testo scuro per contrasto */
-    box-shadow: 0 4px 14px rgba(34, 197, 94, 0.4) !important;
+.btn-download { 
+    background-color: #22c55e !important; 
+    color: #064e3b !important; 
 }
 
-/* Bottone Guida (Azzurro) */
-.btn {
-    background-color: #38bdf8 !important;
-    color: #082f49 !important;
-    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3) !important;
-}
-
-.btn-download:hover, .btn:hover {
-    transform: translateY(-3px) !important;
-    filter: brightness(1.1) !important;
+.btn { 
+    background-color: #38bdf8 !important; 
+    color: #0c4a6e !important; 
 }
 
 /* ==========================================
@@ -87,54 +70,58 @@ nav a:hover {
    ========================================== */
 .grid {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important; /* 3 colonne perfette */
-    gap: 25px !important;
-    margin-top: 40px !important;
-    text-align: left !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* 3 colonne uguali su PC */
+    gap: 20px !important;
+    margin-top: 30px !important;
+    align-items: stretch !important; /* Pareggia l'altezza delle card */
 }
 
 .card {
     background: #1e293b !important;
-    padding: 30px !important;
-    border-radius: 20px !important;
+    padding: 25px !important;
+    border-radius: 16px !important;
     border: 1px solid #334155 !important;
     display: flex !important;
-    flex-direction: column !important; /* Allineamento verticale */
-    transition: 0.3s !important;
-}
-
-.card:hover {
-    border-color: #38bdf8 !important;
-    transform: translateY(-5px) !important;
-}
-
-/* Codice dentro le card (per pareggiare l'altezza) */
-.card pre {
-    background: #020617 !important;
-    color: #93c5fd !important;
-    padding: 15px !important;
-    border-radius: 10px !important;
-    font-size: 0.85em !important;
-    margin: 20px 0 !important;
-    flex-grow: 1 !important; /* Fa sì che tutte le card siano alte uguali */
-    overflow-x: auto !important;
+    flex-direction: column !important; /* Contenuto in verticale */
+    text-align: left !important; /* Testo delle card a sinistra */
 }
 
 /* ==========================================
-   --- 5. PULSANTI "ALTRO" (PICCOLI E PIENI) ---
+   --- 5. BLOCCHI DI CODICE (FIX NERO E SINISTRA) ---
+   ========================================== */
+pre, code {
+    background: #020617 !important; /* Sfondo nero */
+    color: #93c5fd !important;    /* Testo azzurro codice */
+    padding: 15px !important;
+    border-radius: 10px !important;
+    border: 1px solid #1e293b !important;
+    display: block !important;
+    text-align: left !important;  /* FORZA ALLINEAMENTO A SINISTRA */
+    font-family: 'Consolas', 'Monaco', monospace !important;
+    font-size: 0.9em !important;
+    overflow-x: auto !important;  /* Scroll per codice lungo */
+    margin: 20px 0 !important;
+}
+
+/* Fa sì che i blocchi di codice nelle card si allunghino per allineare i tasti */
+.card pre {
+    flex-grow: 1 !important;
+}
+
+/* ==========================================
+   --- 6. BOTTONI "ALTRO" (AZZURRI E PIENI) ---
    ========================================== */
 .btn-sm, .card a {
     display: inline-block !important;
     padding: 10px 20px !important;
-    background-color: #38bdf8 !important; /* Skin azzurra piena */
-    color: #082f49 !important;
+    margin-top: auto !important; /* Spinge il tasto sempre in fondo */
+    background-color: #38bdf8 !important;
+    color: #0c4a6e !important;
     text-decoration: none !important;
     border-radius: 8px !important;
     font-weight: bold !important;
-    font-size: 0.85rem !important;
-    width: fit-content !important;
-    margin-top: auto !important; /* Lo spinge sempre in fondo alla card */
     transition: 0.2s !important;
+    width: fit-content !important;
     border: none !important;
 }
 
@@ -144,29 +131,22 @@ nav a:hover {
 }
 
 /* ==========================================
-   --- 6. FOOTER E RESPONSIVE ---
-   ========================================= */
-footer {
-    border-top: 1px solid #1e293b;
-    margin-top: 50px;
-    opacity: 0.6;
+   --- 7. FOOTER E RESPONSIVE ---
+   ========================================== */
+footer { 
+    opacity: 0.5; 
+    border-top: 1px solid #1e293b; 
 }
 
-/* Schermi medi (Tablet) */
-@media (max-width: 992px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr) !important;
+@media (max-width: 900px) {
+    .grid { 
+        grid-template-columns: 1fr !important; /* Una sola colonna su cellulare */
     }
-}
-
-/* Schermi piccoli (Smartphone) */
-@media (max-width: 600px) {
-    .grid {
-        grid-template-columns: 1fr !important;
-    }
-    .btn-download, .btn {
+    
+    header a.btn, 
+    header a.btn-download {
         display: block !important;
-        width: 100% !important;
-        box-sizing: border-box;
+        width: 80% !important;
+        margin: 15px auto !important;
     }
 }
