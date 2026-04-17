@@ -13,6 +13,7 @@ header, section, footer {
     max-width: 1000px;
     margin: auto;
     padding: 40px 20px;
+    text-align: center; /* Centra tutto il contenuto nelle sezioni principali */
 }
 
 h1, h2, h3 {
@@ -25,7 +26,7 @@ h1, h2, h3 {
 nav {
     position: sticky;
     top: 0;
-    background: rgba(15, 23, 42, 0.8);
+    background: rgba(15, 23, 42, 0.9);
     padding: 15px;
     text-align: center;
     backdrop-filter: blur(8px);
@@ -46,46 +47,34 @@ nav a:hover {
 }
 
 /* ==========================================
-   --- Pulsanti (Stile Unificato) ---
+   --- Pulsanti (Centrati e corretti) ---
    ========================================== */
 .btn, .btn-download {
     display: inline-block;
     padding: 12px 24px;
     margin: 10px 5px;
-    text-decoration: none;
+    text-decoration: none !important;
     border-radius: 10px;
     font-weight: bold;
     transition: all 0.3s ease;
     cursor: pointer;
     border: none;
-    text-align: center;
 }
 
-/* Forza lo stile del bottone per evitare il link blu di default */
-header a.btn-download, 
-section a.btn-download {
-    display: inline-block;
-    background-color: #22c55e; /* Verde */
-    color: #ffffff !important;   /* Testo bianco forzato */
-    padding: 14px 28px;
-    text-decoration: none !important; /* Rimuove la sottolineatura blu */
-    border-radius: 10px;
-    font-weight: bold;
-    margin: 10px;
-    border: none;
+/* Tasto Download (Verde) */
+.btn-download {
+    background-color: #22c55e !important;
+    color: #ffffff !important;
     box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
-    transition: all 0.3s ease;
 }
 
-header a.btn-download:hover {
-    background-color: #16a34a;
+.btn-download:hover {
+    background-color: #16a34a !important;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
-    color: #ffffff !important;
-}
 }
 
-/* Tasto Standard / Guida (Azzurro - Azione Secondaria) */
+/* Tasto Guida (Azzurro) */
 .btn {
     background-color: #38bdf8;
     color: #0f172a !important;
@@ -97,24 +86,6 @@ header a.btn-download:hover {
     box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
 }
 
-/* Tasto Piccolo */
-.btn-sm {
-    display: inline-block;
-    padding: 6px 14px;
-    background: transparent;
-    color: #7dd3fc;
-    text-decoration: none;
-    border: 1px solid #38bdf8;
-    border-radius: 8px;
-    font-size: 0.85em;
-    transition: 0.2s;
-}
-
-.btn-sm:hover {
-    background: #38bdf8;
-    color: #0f172a;
-}
-
 /* ==========================================
    --- Layout Blocchi (Card & Grid) ---
    ========================================== */
@@ -122,6 +93,7 @@ header a.btn-download:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 18px;
+    text-align: left; /* Le card all'interno della grid tornano allineate a sinistra */
 }
 
 .card {
@@ -144,15 +116,14 @@ pre, code {
     overflow-x: auto;
     font-family: 'Courier New', Courier, monospace;
     border: 1px solid #1e293b;
+    text-align: left; /* Il codice non va mai centrato */
 }
 
 /* ==========================================
    --- Footer ---
    ========================================== */
 footer {
-    text-align: center;
     opacity: 0.6;
-    padding: 40px;
     border-top: 1px solid #1e293b;
 }
 
