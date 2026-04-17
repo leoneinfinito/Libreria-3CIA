@@ -180,17 +180,18 @@ footer {
     }
 }
 
+/* Questo resetta la scritta blu e la trasforma in bottone */
 .btn-download {
-    display: inline-block !important; /* Forza la visualizzazione */
-    padding: 12px 24px;
-    background-color: #22c55e !important; /* Verde */
+    display: inline-block !important;
+    background-color: #22c55e !important; /* VERDE */
     color: white !important;
-    text-decoration: none;
-    border-radius: 12px;
-    font-weight: bold;
-    margin: 10px;
-    transition: all 0.3s;
-    border: none;
+    padding: 15px 25px !important;
+    text-decoration: none !important;
+    border-radius: 10px !important;
+    font-weight: bold !important;
+    margin: 10px !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4) !important;
 }
 
 .btn-download:hover {
