@@ -180,4 +180,27 @@ footer {
     }
 }
 
+/* --- Stile Speciale per il Bottone Download --- */
+.btn-download {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #22c55e;           /* Verde brillante per il download */
+    color: #ffffff !important;     /* Forza il testo bianco */
+    text-decoration: none;
+    border-radius: 12px;           /* Arrotondamento diverso */
+    font-weight: bold;
+    margin: 8px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+    border: none;
+}
 
+.btn-download:hover {
+    background: #16a34a;           /* Verde più scuro */
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5);
+}
+
+.btn-download:active {
+    transform: scale(0.95);        /* Effetto "premuto" */
+}
