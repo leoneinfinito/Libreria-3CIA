@@ -97,14 +97,14 @@ nav a:hover {
 }
 
 /* ==========================================
-   --- 4. Header (TITOLO FISSO) ---
+   --- 4. Header (TITOLO FISSO - NO ANIMAZIONE) ---
    ========================================== */
 header h1 {
     font-size: 4rem;
     color: #7dd3fc;
     margin-bottom: 10px;
-    /* Rimosso l'effetto floating */
     text-shadow: 0 0 20px rgba(125, 211, 252, 0.2);
+    /* L'animazione floating è stata rimossa completamente */
 }
 
 /* ==========================================
