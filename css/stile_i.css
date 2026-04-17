@@ -1,23 +1,19 @@
 /* ==========================================
-   --- 1. RESET E BASE ---
+   1. IMPOSTAZIONI GENERALI (BODY & TITOLI)
    ========================================== */
-* {
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    background-color: #0f172a;
+    background: #0f172a;
     color: #e2e8f0;
     line-height: 1.6;
-    text-align: center; /* Tutto al centro di base */
+    text-align: center; /* Forza la centratura di base */
 }
 
 header, section, footer {
     max-width: 1100px;
-    margin: 0 auto;
-    padding: 60px 20px;
+    margin: auto;
+    padding: 40px 20px;
 }
 
 h1, h2, h3 {
@@ -25,144 +21,148 @@ h1, h2, h3 {
     transition: 0.3s;
 }
 
-/* Effetto stupido sui titoli: ruotano quando ci passi sopra */
+/* Effetto stupido sui titoli: ruotano leggermente quando ci passi sopra */
 h2:hover {
-    transform: scale(1.1) rotate(2deg);
-    text-shadow: 0 0 15px #38bdf8;
+    transform: scale(1.05) rotate(1deg);
+    text-shadow: 0 0 15px rgba(125, 211, 252, 0.5);
 }
 
 /* ==========================================
-   --- 2. NAVIGAZIONE (SISTEMATA!) ---
+   2. NAVIGAZIONE (MENU PULITO)
    ========================================== */
 nav {
     position: sticky;
     top: 0;
-    background: rgba(15, 23, 42, 0.95);
-    padding: 20px 0;
-    backdrop-filter: blur(10px);
+    background: rgba(15, 23, 42, 0.9);
+    padding: 15px;
+    text-align: center;
+    backdrop-filter: blur(8px);
     z-index: 1000;
     border-bottom: 1px solid #1e293b;
 }
 
-/* Link del menu: puliti, senza sfondi strani */
 nav a {
-    color: #e2e8f0 !important;
-    margin: 0 20px !important;
-    text-decoration: none !important;
-    font-weight: 600 !important;
-    font-size: 1.1rem !important;
-    display: inline-block !important;
-    background: none !important;
-    padding: 0 !important;
-    box-shadow: none !important;
-    transition: 0.3s !important;
+    color: #e2e8f0;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #7dd3fc !important;
-    transform: translateY(-3px) scale(1.2) !important; /* Effetto zoom */
+    color: #7dd3fc;
+    transform: translateY(-2px) scale(1.1);
 }
 
 /* ==========================================
-   --- 3. BOTTONI (CON EFFETTI MOLLA) ---
+   3. PULSANTI (TESTO SCURO E ANIMAZIONI)
    ========================================== */
-.btn-download, .btn {
-    display: inline-block !important;
-    padding: 15px 35px !important;
-    margin: 15px !important;
-    border-radius: 12px !important;
-    font-weight: bold !important;
-    text-decoration: none !important;
-    border: none !important;
-    cursor: pointer !important;
-    /* Effetto molla (bounce) */
-    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+.btn, .btn-download {
+    display: inline-block;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    margin: 10px;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Effetto molla */
+    border: none;
+    cursor: pointer;
 }
 
-/* Bottone DOWNLOAD (Verde) */
+/* Tasto Verde Download */
 .btn-download {
-    background-color: #22c55e !important;
-    color: #052e16 !important; /* Testo scuro */
-    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3) !important;
+    background: #22c55e;
+    color: #052e16 !important; /* Testo scuro per contrasto */
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
 }
 
-/* Bottone GUIDA (Azzurro) */
+/* Tasto Azzurro Guida */
 .btn {
-    background-color: #38bdf8 !important;
-    color: #082f49 !important; /* Testo scuro */
+    background: #38bdf8;
+    color: #082f49 !important;
 }
 
-.btn-download:hover, .btn:hover {
-    transform: scale(1.15) !important;
-    filter: brightness(1.1);
+.btn:hover, .btn-download:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* ==========================================
-   --- 4. LAYOUT CARD (DOWNLOAD E FUNZIONI) ---
+   4. LAYOUT CARD (DOWNLOAD LARGA E GRID 3X)
    ========================================== */
 
-/* Card DOWNLOAD (Quella centrale larga) */
-.download-card {
+/* Card Download (Quella che vuoi larga) */
+.card-download {
     background: #1e293b;
-    padding: 40px;
+    margin: 40px auto;
+    padding: 35px;
     border-radius: 20px;
-    border: 1px solid #334155;
-    width: 90%;
-    max-width: 800px;
-    margin: 30px auto;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-    transition: 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 90%; /* Più larga */
+    max-width: 850px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
 }
 
-.download-card:hover {
-    transform: translateY(-10px);
+.card-download:hover {
+    transform: translateY(-5px);
     border-color: #22c55e;
 }
 
-/* GRIGLIA FUNZIONI (Le 3 card affiancate) */
+/* Griglia per le 3 card delle funzioni */
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .card {
     background: #1e293b;
     padding: 25px;
     border-radius: 16px;
-    border: 1px solid #334155;
-    width: 320px;
-    text-align: left; /* Testo interno card a sinistra */
-    transition: 0.3s ease;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: left; /* Testo interno allineato a sinistra */
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.05) rotate(-2deg); /* Si inclina un po' */
+    transform: scale(1.03) rotate(-1deg); /* Inclinazione stupida */
     border-color: #38bdf8;
 }
 
 /* ==========================================
-   --- 5. CODICE C ---
+   5. CODICE (PRE/CODE)
    ========================================== */
-pre {
+code, pre {
     background: #020617;
     color: #93c5fd;
     padding: 15px;
     border-radius: 10px;
-    text-align: left;
-    border: 1px solid #1e293b;
+    display: block;
     overflow-x: auto;
-    font-family: 'Consolas', monospace;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.95em;
+    border: 1px solid #1e293b;
+    text-align: left;
 }
 
 /* ==========================================
-   --- 6. FOOTER ---
+   6. FOOTER E RESPONSIVE
    ========================================== */
 footer {
-    opacity: 0.5;
-    margin-top: 50px;
+    opacity: 0.7;
+    padding: 60px 20px;
+    font-size: 0.9em;
     border-top: 1px solid #1e293b;
+}
+
+@media (max-width: 768px) {
+    .btn, .btn-download {
+        display: block;
+        margin: 10px auto;
+        max-width: 280px;
+    }
 }
