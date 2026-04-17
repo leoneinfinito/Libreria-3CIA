@@ -1,48 +1,79 @@
 /* ==========================================
-   --- 1. BASE E RESET ---
+   --- 1. RESET E BASE ---
    ========================================== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background: #0f172a !important;
-    color: #e2e8f0 !important;
+    background: #0f172a;
+    color: #e2e8f0;
     line-height: 1.6;
 }
 
-/* Centratura Header e Sezioni */
 header, section, footer {
     max-width: 1000px;
     margin: auto;
     padding: 60px 20px;
-    text-align: center;
+    text-align: center; /* Centra i titoli e i paragrafi */
 }
 
+h1, h2, h3 { color: #7dd3fc; }
+
 /* ==========================================
-   --- 2. PULSANTI HEADER (DOWNLOAD/GUIDA) ---
+   --- 2. NAVIGAZIONE ---
    ========================================== */
-header a.btn-download, 
-header a.btn {
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(15, 23, 42, 0.95);
+    padding: 15px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    border-bottom: 1px solid #1e293b;
+}
+
+nav a {
+    color: #e2e8f0;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover { color: #38bdf8; }
+
+/* ==========================================
+   --- 3. PULSANTI HEADER (DOWNLOAD/GUIDA) ---
+   ========================================== */
+.btn-download, .btn {
     display: inline-block !important;
     padding: 14px 28px !important;
     margin: 10px !important;
     text-decoration: none !important;
     border-radius: 10px !important;
     font-weight: bold !important;
+    transition: 0.3s !important;
     border: none !important;
 }
 
-header a.btn-download { background-color: #22c55e !important; color: #064e3b !important; }
-header a.btn { background-color: #38bdf8 !important; color: #0c4a6e !important; }
+.btn-download { 
+    background-color: #22c55e !important; 
+    color: #064e3b !important; 
+}
+
+.btn { 
+    background-color: #38bdf8 !important; 
+    color: #0c4a6e !important; 
+}
 
 /* ==========================================
-   --- 3. GRID E CARD (SISTEMAZIONE FIGURE) ---
+   --- 4. GRID E CARD (FUNZIONI DISPONIBILI) ---
    ========================================== */
 .grid {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* 3 colonne uguali su PC */
     gap: 20px !important;
     margin-top: 30px !important;
+    align-items: stretch !important; /* Pareggia l'altezza delle card */
 }
 
 .card {
@@ -50,57 +81,72 @@ header a.btn { background-color: #38bdf8 !important; color: #0c4a6e !important; 
     padding: 25px !important;
     border-radius: 16px !important;
     border: 1px solid #334155 !important;
-    width: 300px !important; /* Larghezza fissa per simmetria */
     display: flex !important;
-    flex-direction: column !important;
-    text-align: left !important;
+    flex-direction: column !important; /* Contenuto in verticale */
+    text-align: left !important; /* Testo delle card a sinistra */
 }
 
 /* ==========================================
-   --- 4. BLOCCHI DI CODICE (NERO E SINISTRA) ---
+   --- 5. BLOCCHI DI CODICE (FIX NERO E SINISTRA) ---
    ========================================== */
-/* Questo corregge l'Esempio Completo e i codici nelle card */
-pre, code, .card pre {
-    background-color: #020617 !important; /* NERO */
-    color: #93c5fd !important;           /* AZZURRO CODICE */
+pre, code {
+    background: #020617 !important; /* Sfondo nero */
+    color: #93c5fd !important;    /* Testo azzurro codice */
     padding: 15px !important;
     border-radius: 10px !important;
     border: 1px solid #1e293b !important;
     display: block !important;
-    text-align: left !important;         /* FORZA A SINISTRA */
+    text-align: left !important;  /* FORZA ALLINEAMENTO A SINISTRA */
     font-family: 'Consolas', 'Monaco', monospace !important;
     font-size: 0.9em !important;
+    overflow-x: auto !important;  /* Scroll per codice lungo */
     margin: 20px 0 !important;
-    overflow-x: auto !important;
 }
 
-/* Fa sì che i codici nelle card occupino lo stesso spazio */
+/* Fa sì che i blocchi di codice nelle card si allunghino per allineare i tasti */
 .card pre {
     flex-grow: 1 !important;
 }
 
 /* ==========================================
-   --- 5. TASTI "ALTRO" (AZZURRI E PIENI) ---
+   --- 6. BOTTONI "ALTRO" (AZZURRI E PIENI) ---
    ========================================== */
-/* Colpiamo ogni link possibile dentro le card per evitare il blu */
-.card a, 
-.card .btn-sm, 
-.link-container a {
+.btn-sm, .card a {
     display: inline-block !important;
-    background-color: #38bdf8 !important; /* PIENO AZZURRO */
-    color: #0c4a6e !important;           /* TESTO SCURO */
     padding: 10px 20px !important;
-    text-decoration: none !important;    /* NO BLU SOTTOLINEATO */
+    margin-top: auto !important; /* Spinge il tasto sempre in fondo */
+    background-color: #38bdf8 !important;
+    color: #0c4a6e !important;
+    text-decoration: none !important;
     border-radius: 8px !important;
     font-weight: bold !important;
-    margin-top: auto !important;         /* ALLINEA IN BASSO */
+    transition: 0.2s !important;
     width: fit-content !important;
     border: none !important;
 }
 
+.btn-sm:hover, .card a:hover {
+    background-color: #7dd3fc !important;
+    transform: scale(1.05) !important;
+}
+
 /* ==========================================
-   --- 6. FIX FINALE ---
+   --- 7. FOOTER E RESPONSIVE ---
    ========================================== */
-h1, h2, h3 { color: #7dd3fc !important; }
-nav a { color: #e2e8f0 !important; text-decoration: none !important; }
-footer { opacity: 0.5; border-top: 1px solid #1e293b; }
+footer { 
+    opacity: 0.5; 
+    border-top: 1px solid #1e293b; 
+}
+
+@media (max-width: 900px) {
+    .grid { 
+        grid-template-columns: 1fr !important; /* Una sola colonna su cellulare */
+    }
+    
+    header a.btn, 
+    header a.btn-download {
+        display: block !important;
+        width: 80% !important;
+        margin: 15px auto !important;
+    }
+}
