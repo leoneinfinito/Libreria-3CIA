@@ -18,7 +18,7 @@ Oppure direttamente in stampa:<br>
 
 Buon coding! :)
 
----------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------<br><br>
 
 La funzione calcola il fattoriale di un numero intero positivo.<br><br>
 Il fattoriale di un numero è il prodotto di tutti i numeri interi da 1 fino al numero stesso.<br><br>

@@ -14,7 +14,7 @@ Dove:<br>
 
 La funzione modifica direttamente la variabile passata riempiendola con l’input dell’utente.<br><br>
 
-----------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------<br><br>
 La funzione verifica se una stringa è palindroma, cioè se si legge nello stesso modo da sinistra verso destra e da destra verso sinistra.<br><br>
 Serve per controllare la simmetria di una parola o di una sequenza di caratteri.<br><br>
 Ad esempio, stringhe come "anna", "otto" o "radar" sono palindrome, mentre "ciao" non lo è.<br><br>
