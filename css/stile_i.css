@@ -61,17 +61,28 @@ nav a:hover {
     text-align: center;
 }
 
-/* Tasto Download (Verde - Azione Principale) */
-.btn-download {
-    background-color: #22c55e;
-    color: white !important;
+/* Forza lo stile del bottone per evitare il link blu di default */
+header a.btn-download, 
+section a.btn-download {
+    display: inline-block;
+    background-color: #22c55e; /* Verde */
+    color: #ffffff !important;   /* Testo bianco forzato */
+    padding: 14px 28px;
+    text-decoration: none !important; /* Rimuove la sottolineatura blu */
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 10px;
+    border: none;
     box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+    transition: all 0.3s ease;
 }
 
-.btn-download:hover {
+header a.btn-download:hover {
     background-color: #16a34a;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
+    color: #ffffff !important;
+}
 }
 
 /* Tasto Standard / Guida (Azzurro - Azione Secondaria) */
