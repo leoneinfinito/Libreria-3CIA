@@ -1,39 +1,36 @@
 /* ==========================================
-   --- Impostazioni Generali ---
+   --- Layout Base ---
    ========================================== */
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     background: #0f172a;
     color: #e2e8f0;
-    line-height: 1.6;
 }
 
-/* Header: Tutto al centro */
+/* L'Header deve essere l'unico tutto centrato */
 header {
     text-align: center;
     padding: 80px 20px;
-    max-width: 1000px;
-    margin: auto;
 }
 
-/* Sezioni: Titoli centrati, ma contenuto flessibile */
+/* Le sezioni rimangono contenitori neutri */
 section {
     max-width: 1000px;
     margin: auto;
     padding: 40px 20px;
 }
 
+/* Titoli delle sezioni sempre al centro */
 section h2 {
     text-align: center;
     color: #7dd3fc;
-    margin-bottom: 30px;
 }
 
 /* ==========================================
-   --- I Bottoni (Senza errori stavolta!) ---
+   --- I Bottoni (Header) ---
    ========================================== */
-.btn, .btn-download {
+.btn-download, .btn {
     display: inline-block;
     padding: 14px 28px;
     margin: 10px;
@@ -54,62 +51,59 @@ section h2 {
     color: #082f49 !important;
 }
 
-/* Bottoni piccini (Scopri di più / Altro) */
-.btn-sm {
-    display: inline-block;
-    padding: 8px 16px;
-    background: transparent;
-    color: #7dd3fc !important;
-    border: 1px solid #38bdf8;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    margin-top: 15px;
-    transition: 0.2s;
-}
-
-.btn-sm:hover {
-    background: #38bdf8;
-    color: #0f172a !important;
-}
-
 /* ==========================================
-   --- La Griglia delle 3 Figure (Cards) ---
+   --- La Griglia delle Figure (Cards) ---
    ========================================== */
+/* Questo contenitore tiene le card allineate tra loro */
 .grid {
-    display: flex;             /* Usiamo Flexbox invece di Grid per più controllo */
-    flex-wrap: wrap;           /* Se non ci stanno, vanno sotto */
-    justify-content: center;   /* Centra le card nella pagina */
-    gap: 20px;                 /* Spazio tra le card */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra il gruppo di card nella pagina */
+    gap: 20px;
+    margin-top: 30px;
 }
 
+/* La singola card: il testo qui deve tornare a SINISTRA */
 .card {
     background: #1e293b;
     padding: 25px;
     border-radius: 16px;
     border: 1px solid #334155;
-    width: 280px;              /* Larghezza fissa per farle uguali */
-    text-align: left;          /* TESTO DENTRO LE CARD A SINISTRA */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    width: 280px;            /* Larghezza fissa per non farle scazzare */
+    text-align: left;        /* <--- IMPORTANTE: riporta il testo a sinistra */
     display: flex;
-    flex-direction: column;    /* Mette contenuto e bottone in colonna */
-    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* Bottoni dentro le card (quelli piccoli) */
+.btn-sm {
+    align-self: flex-start;  /* Tiene il bottone a sinistra dentro la card */
+    margin-top: 15px;
+    padding: 6px 12px;
+    color: #7dd3fc;
+    border: 1px solid #38bdf8;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.btn-sm:hover {
+    background: #38bdf8;
+    color: #0f172a;
 }
 
 /* ==========================================
-   --- Codice ---
+   --- Extra ---
    ========================================== */
 pre {
     background: #020617;
     color: #93c5fd;
     padding: 15px;
-    border-radius: 10px;
-    text-align: left;
+    border-radius: 8px;
+    text-align: left; /* Il codice non si centra mai */
     overflow-x: auto;
-    font-size: 0.9rem;
 }
 
-/* Navigazione */
 nav {
     text-align: center;
     background: rgba(15, 23, 42, 0.9);
@@ -118,4 +112,5 @@ nav {
     top: 0;
     z-index: 1000;
 }
-nav a { color: #e2e8f0; margin: 0 15px; text-decoration: none; font-weight: 600; }
+
+nav a { color: #e2e8f0; margin: 0 15px; text-decoration: none; }
