@@ -9,12 +9,11 @@ body {
     line-height: 1.6;
 }
 
-/* Centratura Header e Sezioni principali */
 header, section, footer {
     max-width: 1000px;
     margin: auto;
     padding: 60px 20px;
-    text-align: center; /* Centra tutto il contenuto */
+    text-align: center;
 }
 
 h1, h2, h3 {
@@ -48,73 +47,40 @@ nav a:hover {
 }
 
 /* ==========================================
-   --- PULSANTI (BLINDATI) ---
+   --- PULSANTI PRINCIPALI (HEADER) ---
    ========================================== */
-/* Regola generale per tutti i bottoni nell'header */
 header a.btn, 
 header a.btn-download {
     display: inline-block !important;
     padding: 14px 28px !important;
     margin: 10px !important;
-    text-decoration: none !important; /* Toglie il blu sottolineato */
+    text-decoration: none !important;
     border-radius: 10px !important;
     font-weight: bold !important;
     transition: all 0.3s ease !important;
     border: none !important;
-    font-size: 1rem !important;
 }
 
-/* Tasto DOWNLOAD (Verde) */
 .btn-download {
     background-color: #22c55e !important;
-    color: #064e3b !important; /* Testo verde scuro per leggibilità */
-    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3) !important;
+    color: #064e3b !important;
 }
 
-.btn-download:hover {
-    background-color: #16a34a !important;
-    transform: translateY(-3px) !important;
-    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5) !important;
-}
-
-/* Tasto GUIDA (Azzurro) */
 .btn {
     background-color: #38bdf8 !important;
-    color: #0c4a6e !important; /* Testo blu scuro */
-}
-
-.btn:hover {
-    background-color: #7dd3fc !important;
-    transform: translateY(-3px) !important;
-    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4) !important;
-}
-
-/* Tasto piccolo nelle card */
-.btn-sm {
-    display: inline-block;
-    padding: 6px 14px;
-    background: transparent;
-    color: #7dd3fc;
-    text-decoration: none;
-    border: 1px solid #38bdf8;
-    border-radius: 8px;
-    font-size: 0.85em;
-    transition: 0.2s;
-}
-
-.btn-sm:hover {
-    background: #38bdf8;
-    color: #0f172a;
+    color: #0c4a6e !important;
 }
 
 /* ==========================================
-   --- CARD E GRIGLIA ---
+   --- GRID E CARD (SISTEMAZIONE 3 FIGURE) ---
    ========================================== */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    text-align: left; /* Il contenuto delle card torna a sinistra */
+    display: grid !important;
+    /* Forza 3 colonne identiche su desktop */
+    grid-template-columns: repeat(3, 1fr) !important; 
+    gap: 20px !important;
+    text-align: left !important;
+    align-items: stretch !important; /* Le card saranno alte uguali */
 }
 
 .card {
@@ -123,11 +89,47 @@ header a.btn-download {
     border-radius: 16px;
     border: 1px solid #334155;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    margin: 10px 0;
+    display: flex !important;
+    flex-direction: column !important; /* Permette di allineare il contenuto internamente */
+    height: 100%;
+}
+
+/* Sistema il codice nelle card affinché sia allineato */
+.card pre {
+    margin: 15px 0 !important;
+    flex-grow: 1 !important; /* Occupa lo spazio necessario per pareggiare le card */
 }
 
 /* ==========================================
-   --- CODICE ---
+   --- SKIN TASTI "ALTRO" E "ALTRI ESEMPI" ---
+   ========================================== */
+.btn-sm, 
+.card a, 
+.link-container a {
+    display: inline-block !important;
+    padding: 8px 16px !important;
+    background: transparent !important;
+    color: #7dd3fc !important;
+    text-decoration: none !important; /* RIMUOVE IL BLU */
+    border: 1px solid #38bdf8 !important;
+    border-radius: 8px !important;
+    font-size: 0.85em !important;
+    font-weight: 500 !important;
+    transition: 0.2s !important;
+    margin-top: auto !important; /* Spinge il tasto in fondo alla card */
+    width: fit-content !important;
+}
+
+.btn-sm:hover, 
+.card a:hover, 
+.link-container a:hover {
+    background: #38bdf8 !important;
+    color: #0f172a !important;
+    transform: translateX(5px) !important;
+}
+
+/* ==========================================
+   --- CODICE E FOOTER ---
    ========================================== */
 pre, code {
     background: #020617;
@@ -141,9 +143,6 @@ pre, code {
     text-align: left;
 }
 
-/* ==========================================
-   --- FOOTER ---
-   ========================================== */
 footer {
     opacity: 0.5;
     border-top: 1px solid #1e293b;
@@ -152,13 +151,14 @@ footer {
 /* ==========================================
    --- RESPONSIVE (MOBILE) ---
    ========================================== */
-@media (max-width: 768px) {
-    header a.btn, 
-    header a.btn-download {
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr !important; /* Una colonna sola su schermi piccoli */
+    }
+    
+    header a.btn, header a.btn-download {
         display: block !important;
-        margin: 15px auto !important;
         width: 80% !important;
+        margin: 10px auto !important;
     }
 }
-
-
