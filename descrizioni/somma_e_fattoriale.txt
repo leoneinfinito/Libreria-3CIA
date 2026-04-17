@@ -1,17 +1,41 @@
-In questo esempio vediamo come utilizzare la libreria <code>3cia.h</code> per risolvere due problemi matematici classici: il calcolo della somma dei primi N numeri e il fattoriale.<br><br>
+La funzione calcola la somma di tutti i numeri interi da 1 fino al numero inserito.<br><br>
+Serve per ottenere la somma progressiva di una sequenza numerica crescente.<br><br>
+Ad esempio, se il numero inserito è 5, la funzione calcolerà: 1 + 2 + 3 + 4 + 5 = 15.<br><br>
 
-<b>1. Funzione <code>SommaDa</code>:</b><br>
-Questa funzione calcola la somma di tutti i numeri interi partendo da 1 fino al numero scelto dall'utente.<br>
-<code>int SommaDa(int n);</code><br>
-<i>Esempio:</i> Se inserisci 5, la funzione calcolerà 1 + 2 + 3 + 4 + 5 = <b>15</b>.<br><br>
+<b>La funzione è definita come segue:</b><br>
+<code>int SommaDa(int numero);</code><br><br>
 
-<b>2. Funzione <code>Fattoriale</code>:</b><br>
-Il fattoriale è il prodotto di tutti i numeri interi positivi fino a N. È una funzione che cresce velocemente e viene usata spesso nel calcolo delle probabilità.<br>
-<code>long Fattoriale(int n);</code><br>
-<i>Esempio:</i> Se inserisci 5, il calcolo sarà 1 * 2 * 3 * 4 * 5 = <b>120</b>.<br><br>
+Dove:<br>
+- <code>numero</code> è il valore massimo fino al quale effettuare la somma<br><br>
 
-<b>Nota tecnica:</b><br>
-Nel codice sorgente a sinistra, noterai come queste funzioni eliminino la necessità di scrivere manualmente i cicli <code>for</code> all'interno del <code>main</code>, rendendo il codice molto più leggibile e pulito.<br><br>
+La funzione restituisce un intero che rappresenta la somma di tutti i valori da 1 fino al numero indicato.<br><br>
 
-Questo esempio conclude la panoramica delle funzioni base della libreria <code>3cia.h</code>. Sperimentando con questi esempi, avrai una base solida per i tuoi progetti in C!<br><br>
-Buon coding! : )
+<b>Esempio di utilizzo:</b><br>
+<code>risultato = SommaDa(numero);</code><br><br>
+
+Oppure direttamente in stampa:<br>
+<code>printf("%d", SommaDa(numero));</code><br><br>
+
+Buon coding! :)
+
+---------------------------------------------------------------------------------------------
+
+La funzione calcola il fattoriale di un numero intero positivo.<br><br>
+Il fattoriale di un numero è il prodotto di tutti i numeri interi da 1 fino al numero stesso.<br><br>
+Ad esempio, il fattoriale di 5 è: 5 × 4 × 3 × 2 × 1 = 120.<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>int Fattoriale(int numero);</code><br><br>
+
+Dove:<br>
+- <code>numero</code> è il valore di cui calcolare il fattoriale<br><br>
+
+La funzione restituisce un intero che rappresenta il risultato del fattoriale del numero inserito.<br><br>
+
+<b>Esempio di utilizzo:</b><br>
+<code>risultato = Fattoriale(numero);</code><br><br>
+
+Oppure direttamente in output:<br>
+<code>printf("%d", Fattoriale(numero));</code><br><br>
+
+Buon coding! :)
