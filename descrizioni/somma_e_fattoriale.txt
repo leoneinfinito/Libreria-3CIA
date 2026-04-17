@@ -16,7 +16,6 @@ La funzione restituisce un intero che rappresenta la somma di tutti i valori da 
 Oppure direttamente in stampa:<br>
 <code>printf("%d", SommaDa(numero));</code><br><br>
 
-Buon coding! :)<br><br>
 
 --------------------------------------------------------------------------------------------------------------------------------<br><br>
 
