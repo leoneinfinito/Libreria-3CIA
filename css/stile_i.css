@@ -1,31 +1,34 @@
 /* ==========================================
-   --- 1. RESET E BASE ---
+   --- Base e Colori ---
    ========================================== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background: #0f172a !important;
-    color: #e2e8f0 !important;
+    background-color: #0f172a;
+    color: #e2e8f0;
     line-height: 1.6;
 }
 
-/* Centratura generale per Header e Section */
+/* Contenitore universale per centrare tutto */
 header, section, footer {
-    max-width: 1100px;
-    margin: auto;
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 60px 20px;
-    text-align: center;
+    text-align: center; /* Centra titoli e bottoni */
 }
 
-h1, h2, h3 { color: #7dd3fc !important; }
+h1, h2, h3 {
+    color: #7dd3fc;
+    margin-bottom: 20px;
+}
 
 /* ==========================================
-   --- 2. NAVIGAZIONE ---
+   --- Navigazione ---
    ========================================== */
 nav {
     position: sticky;
     top: 0;
-    background: rgba(15, 23, 42, 0.95);
+    background: rgba(15, 23, 42, 0.9);
     padding: 15px;
     text-align: center;
     backdrop-filter: blur(8px);
@@ -34,104 +37,90 @@ nav {
 }
 
 nav a {
-    color: #e2e8f0 !important;
+    color: #e2e8f0;
     margin: 0 15px;
-    text-decoration: none !important;
-    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #38bdf8;
 }
 
 /* ==========================================
-   --- 3. BOTTONI GRANDI (HEADER) ---
+   --- Pulsanti (Belli e leggibili) ---
    ========================================== */
-.btn-download, .btn {
-    display: inline-block !important;
-    padding: 14px 28px !important;
-    margin: 10px !important;
+.btn, .btn-download {
+    display: inline-block;
+    padding: 14px 28px;
+    margin: 10px;
     text-decoration: none !important;
-    border-radius: 10px !important;
-    font-weight: bold !important;
-    border: none !important;
-    cursor: pointer !important;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    border: none;
+    font-size: 1rem;
 }
 
-.btn-download { background-color: #22c55e !important; color: #064e3b !important; }
-.btn { background-color: #38bdf8 !important; color: #0c4a6e !important; }
+/* Tasto Verde (Download) - Testo SCURO per leggerlo */
+.btn-download {
+    background-color: #22c55e !important;
+    color: #052e16 !important; 
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+.btn-download:hover {
+    background-color: #16a34a !important;
+    transform: translateY(-3px);
+}
+
+/* Tasto Azzurro (Guida) - Testo SCURO */
+.btn {
+    background-color: #38bdf8;
+    color: #082f49 !important;
+}
+
+.btn:hover {
+    background-color: #7dd3fc;
+    transform: translateY(-3px);
+}
 
 /* ==========================================
-   --- 4. GRID "FUNZIONI DISPONIBILI" ---
+   --- Card e Griglia ---
    ========================================== */
 .grid {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 20px !important;
-    margin-top: 30px !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
 }
 
 .card {
-    background: #1e293b !important;
-    padding: 25px !important;
-    border-radius: 16px !important;
-    border: 1px solid #334155 !important;
-    width: 300px !important; /* Larghezza fissa per simmetria perfetta */
-    display: flex !important;
-    flex-direction: column !important;
-    text-align: left !important; /* Testo interno a sinistra */
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #334155;
+    text-align: left; /* Il testo dentro le card sta a sinistra */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Codice C */
+pre {
+    background: #020617;
+    color: #93c5fd;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+    overflow-x: auto;
+    text-align: left;
+    font-family: 'Consolas', monospace;
 }
 
 /* ==========================================
-   --- 5. FIX CODICE (NERO E SINISTRA) ---
+   --- Footer ---
    ========================================== */
-/* Questo sistema l'Esempio Completo e i codici nelle card */
-pre, code {
-    background-color: #020617 !important; /* Sfondo nero */
-    color: #93c5fd !important;           /* Testo azzurro */
-    padding: 15px !important;
-    border-radius: 10px !important;
-    border: 1px solid #1e293b !important;
-    display: block !important;
-    text-align: left !important;         /* FORZA SEMPRE A SINISTRA */
-    font-family: 'Consolas', 'Monaco', monospace !important;
-    font-size: 0.9em !important;
-    margin: 20px 0 !important;
-    overflow-x: auto !important;
-}
-
-/* Nelle card il codice si espande per pareggiare l'altezza */
-.card pre {
-    flex-grow: 1 !important;
-}
-
-/* ==========================================
-   --- 6. SKIN TASTI "ALTRO" (PIENI) ---
-   ========================================== */
-/* Rimuove il blu da tutti i link dentro le card e mette la skin azzurra */
-.card a, .btn-sm, .link-container a {
-    display: inline-block !important;
-    background-color: #38bdf8 !important; /* Colore pieno */
-    color: #0c4a6e !important;           /* Testo scuro */
-    padding: 10px 20px !important;
-    text-decoration: none !important;    /* Toglie la linea blu */
-    border-radius: 8px !important;
-    font-weight: bold !important;
-    font-size: 0.85em !important;
-    margin-top: auto !important;         /* Spinge in fondo alla card */
-    width: fit-content !important;
-    border: none !important;
-    transition: 0.2s !important;
-}
-
-.card a:hover {
-    background-color: #7dd3fc !important;
-    transform: scale(1.05) !important;
-}
-
-/* ==========================================
-   --- 7. FOOTER E RESPONSIVE ---
-   ========================================== */
-footer { opacity: 0.5; border-top: 1px solid #1e293b; }
-
-@media (max-width: 600px) {
-    .card { width: 100% !important; }
-    .btn-download, .btn { display: block !important; margin: 10px auto !important; }
+footer {
+    opacity: 0.5;
+    font-size: 0.9rem;
 }
