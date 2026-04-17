@@ -1,86 +1,40 @@
-/* ==========================================
-   --- Impostazioni Generali ---
-   ========================================== */
+/* 1. RESET TOTALE */
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background: #0f172a;
+    background-color: #0f172a;
     color: #e2e8f0;
     line-height: 1.6;
+    text-align: center; /* Forza tutto al centro di base */
 }
 
-/* Header: Tutto al centro */
-header {
-    text-align: center;
-    padding: 80px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-/* Sezioni: Titoli centrati, ma contenuto flessibile */
-section {
-    max-width: 1000px;
-    margin: auto;
+/* 2. LAYOUT CENTRATO */
+header, section, footer {
+    max-width: 1100px;
+    margin: 0 auto !important; /* Centra il blocco nella pagina */
     padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra il contenuto dei flex-box */
 }
 
-section h2 {
-    text-align: center;
+h1, h2, h3 {
     color: #7dd3fc;
-    margin-bottom: 30px;
+    width: 100%;
 }
 
-/* ==========================================
-   --- I Bottoni (Senza errori stavolta!) ---
-   ========================================== */
-.btn, .btn-download {
-    display: inline-block;
-    padding: 14px 28px;
-    margin: 10px;
-    text-decoration: none !important;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: 0.3s ease;
-    border: none;
-}
-
-.btn-download {
-    background-color: #22c55e !important;
-    color: #052e16 !important;
-}
-
-.btn {
-    background-color: #38bdf8;
-    color: #082f49 !important;
-}
-
-/* Bottoni piccini (Scopri di più / Altro) */
-.btn-sm {
-    display: inline-block;
-    padding: 8px 16px;
-    background: transparent;
-    color: #7dd3fc !important;
-    border: 1px solid #38bdf8;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    margin-top: 15px;
-    transition: 0.2s;
-}
-
-.btn-sm:hover {
-    background: #38bdf8;
-    color: #0f172a !important;
-}
-
-/* ==========================================
-   --- La Griglia delle 3 Figure (Cards) ---
-   ========================================== */
+/* 3. SISTEMAZIONE GRID (Card) */
 .grid {
-    display: flex;             /* Usiamo Flexbox invece di Grid per più controllo */
-    flex-wrap: wrap;           /* Se non ci stanno, vanno sotto */
-    justify-content: center;   /* Centra le card nella pagina */
-    gap: 20px;                 /* Spazio tra le card */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra le card orizzontalmente */
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .card {
@@ -88,34 +42,63 @@ section h2 {
     padding: 25px;
     border-radius: 16px;
     border: 1px solid #334155;
-    width: 280px;              /* Larghezza fissa per farle uguali */
-    text-align: left;          /* TESTO DENTRO LE CARD A SINISTRA */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    display: flex;
-    flex-direction: column;    /* Mette contenuto e bottone in colonna */
-    justify-content: space-between;
+    width: 320px; /* Larghezza fissa per non farle scappare */
+    text-align: left; /* Testo interno card a sinistra per leggibilità */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* ==========================================
-   --- Codice ---
-   ========================================== */
+/* 4. BOTTONI (Visibili e Colorati) */
+.btn, .btn-download, .btn-sm {
+    display: inline-block !important;
+    padding: 12px 24px !important;
+    margin: 10px !important;
+    border-radius: 10px !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    transition: 0.3s !important;
+    cursor: pointer !important;
+    border: none !important;
+}
+
+/* Download - VERDE testo SCURO */
+.btn-download {
+    background-color: #22c55e !important;
+    color: #052e16 !important; 
+}
+
+/* Altri Bottoni - AZZURRO testo SCURO */
+.btn, .btn-sm {
+    background-color: #38bdf8 !important;
+    color: #082f49 !important;
+}
+
+.btn-download:hover, .btn:hover {
+    transform: translateY(-3px) !important;
+    filter: brightness(1.1);
+}
+
+/* 5. CODICE */
 pre {
     background: #020617;
     color: #93c5fd;
     padding: 15px;
     border-radius: 10px;
-    text-align: left;
+    width: 100%;
     overflow-x: auto;
-    font-size: 0.9rem;
+    text-align: left;
+    border: 1px solid #1e293b;
 }
 
-/* Navigazione */
+/* 6. NAVIGAZIONE */
 nav {
-    text-align: center;
-    background: rgba(15, 23, 42, 0.9);
-    padding: 15px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background: #0f172a;
+    padding: 20px;
+    border-bottom: 1px solid #1e293b;
 }
-nav a { color: #e2e8f0; margin: 0 15px; text-decoration: none; font-weight: 600; }
+
+nav a {
+    color: #7dd3fc;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
