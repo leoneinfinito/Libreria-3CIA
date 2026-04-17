@@ -110,7 +110,7 @@ header {
 /* --- Stile delle Card (Riquadri Contenuti) --- */
 .card {
     background: #1e293b;           /* Sfondo leggermente più chiaro del body */
-    margin: 40px 0;                /* Margine per separare le card (modificato da 40px per non essere troppo grande) */
+    margin: 15px 0;                /* Margine per separare le card (modificato da 40px per non essere troppo grande) */
     padding: 25px;
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Ombra per dare profondità */
