@@ -2,36 +2,31 @@
    1. IMPOSTAZIONI GENERALI
    ========================================== */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     background: #0f172a;
     color: #e2e8f0;
     line-height: 1.6;
-    text-align: center; /* Centra tutto il testo di base */
+    text-align: center;
 }
 
-header,
-section,
-footer {
-    max-width: 1100px;
+header, section, footer {
+    max-width: 1000px;
     margin: auto;
     padding: 40px 20px;
 }
 
 h1, h2, h3 {
     color: #7dd3fc;
-    transition: 0.3s;
-}
-
-/* Effetto rotazione sulle scritte delle sezioni */
-h2:hover {
-    transform: scale(1.05) rotate(1deg);
-    text-shadow: 0 0 15px rgba(125, 211, 252, 0.4);
 }
 
 /* ==========================================
-   2. I 3 BOTTONI DI NAVIGAZIONE (Invece della striscia)
+   2. NAVIGAZIONE (NO STRISCIA, SOLO BOTTONI)
    ========================================== */
+nav {
+    display: none; /* Elimina la barra in alto */
+}
+
 header {
     padding-top: 60px;
 }
@@ -39,7 +34,6 @@ header {
 header h1 {
     font-size: 3.5rem;
     margin-bottom: 30px;
-    /* TITOLO FERMO - NO ANIMAZIONE */
 }
 
 .nav-buttons {
@@ -50,75 +44,37 @@ header h1 {
     margin-bottom: 40px;
 }
 
+/* Bottoni uguali alla Home */
 .btn-nav {
     display: inline-block;
     padding: 12px 24px;
-    border-radius: 12px;
+    border-radius: 10px;
     font-weight: bold;
-    text-decoration: none !important;
-    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
-/* Colori specifici per i 3 bottoni */
-.btn-nav.download { background-color: #22c55e; color: #052e16 !important; }
-.btn-nav.guida    { background-color: #38bdf8; color: #082f49 !important; }
-.btn-nav.esempi   { background-color: #38bdf8; color: #082f49 !important; }
+.btn-nav.download { background: #22c55e; color: #052e16; }
+.btn-nav.guida    { background: #38bdf8; color: #00111a; }
+.btn-nav.esempi   { background: #38bdf8; color: #00111a; }
 
 .btn-nav:hover {
-    transform: scale(1.15) translateY(-5px) rotate(2deg); /* Effetto stupido rotazione */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* ==========================================
-   3. BOTTONCINI PICCINI (btn-sm)
+   3. CARD E CODICE (STILE PULITO)
    ========================================== */
-.btn-sm {
-    display: inline-block !important;
-    padding: 8px 16px !important;
-    background: transparent !important;
-    color: #7dd3fc !important;
-    border: 1px solid #38bdf8 !important;
-    border-radius: 8px !important;
-    font-size: 0.9em !important;
-    text-decoration: none !important;
-    transition: 0.3s ease !important;
-    margin-top: 10px;
-}
-
-.btn-sm:hover {
-    background: rgba(56, 189, 248, 0.1) !important;
-    transform: translateX(8px) !important; /* Scivola a destra */
-    color: #fff !important;
-}
-
-/* ==========================================
-   4. LAYOUT: GRID E CARD (Con rotazione)
-   ========================================== */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-
 .card {
     background: #1e293b;
+    margin: 20px 0;
     padding: 25px;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.05);
     text-align: left;
-    transition: 0.4s ease;
 }
 
-.card:hover {
-    transform: scale(1.03) rotate(-1.5deg); /* Inclinazione card */
-    border-color: #38bdf8;
-}
-
-/* ==========================================
-   5. CODICE E FOOTER
-   ========================================== */
 code, pre {
     background: #020617;
     color: #93c5fd;
@@ -126,26 +82,12 @@ code, pre {
     border-radius: 10px;
     display: block;
     overflow-x: auto;
-    font-family: 'Consolas', monospace;
+    font-family: 'Courier New', monospace;
     font-size: 0.95em;
     border: 1px solid #1e293b;
-    margin: 15px 0;
-    text-align: left;
 }
 
 footer {
     opacity: 0.7;
-    padding: 60px 20px;
-    font-size: 0.9em;
-    border-top: 1px solid #1e293b;
-}
-
-/* ==========================================
-   6. RESPONSIVE
-   ========================================== */
-@media (max-width: 768px) {
-    .btn-nav {
-        width: 80%;
-        margin: 5px auto;
-    }
+    padding: 40px;
 }
