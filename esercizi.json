@@ -15,7 +15,7 @@
     },
     {
         "id": "code-es3",
-        "titolo": "3. Palindroma",
+        "titolo": "3. Palindroma e funzione input stringa (LeggiStringa)",
         "fileC": "../file.c/palindroma.c",
         "fileTxt": "../descrizioni/palindroma_e_leggi.txt",
         "descrizione": "Controllo stringhe palindrome."
