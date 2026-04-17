@@ -1,208 +1,157 @@
 /* --- Impostazioni Generali del Corpo della Pagina --- */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif; /* Font moderno */
-    margin: 0;
+    font-family: Arial, sans-serif; /* Font leggibile e standard */
+    margin: 0;                     /* Rimuove i margini predefiniti del browser */
     background: #0f172a;           /* Sfondo blu scuro profondo */
-    color: #e2e8f0;                /* Testo grigio chiaro */
-    line-height: 1.6;
-    text-align: center;            /* Forza la centratura di base per i contenuti */
+    color: #e2e8f0;                /* Testo grigio chiaro per non affaticare gli occhi */
+    line-height: 1.6;              /* Aumenta l'interlinea per una migliore leggibilità */
 }
 
 /* --- Contenitori Principali (Layout) --- */
 header,
 section,
 footer {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
+    max-width: 1000px;             /* Larghezza massima dei contenuti */
+    margin: auto;                  /* Centra i contenitori nella pagina */
+    padding: 40px 20px;            /* Spaziatura interna */
 }
 
 /* --- Stile dei Titoli --- */
 h1,
 h2,
 h3 {
-    color: #7dd3fc;                /* Azzurro brillante */
-    transition: 0.3s;
-}
-
-/* Effetto rotazione "stupido" sui titoli delle sezioni */
-h2:hover {
-    transform: scale(1.05) rotate(1deg);
-    text-shadow: 0 0 15px rgba(125, 211, 252, 0.4);
+    color: #7dd3fc;                /* Azzurro brillante per far risaltare i titoli */
 }
 
 /* --- Navigazione Superiore (Resta fissa in alto) --- */
 nav {
-    position: sticky;
-    top: 0;
-    background: rgba(15, 23, 42, 0.9); /* Sfondo blu semitrasparente */
-    padding: 15px;
-    text-align: center;
-    backdrop-filter: blur(8px);    /* Effetto sfocato moderno */
-    z-index: 1000;
-    border-bottom: 1px solid #1e293b;
+    position: sticky;              /* Rende la barra fissa durante lo scroll */
+    top: 0;                        /* La ancora alla parte superiore */
+    background: #0f172acc;         /* Sfondo blu semitrasparente */
+    padding: 10px;
+    text-align: center;            /* Centra i link del menu */
+    backdrop-filter: blur(8px);    /* Effetto sfocato moderno sotto la barra */
+    z-index: 1000;                 /* Assicura che la nav stia sopra tutto il resto */
 }
 
+/* --- Link della Navigazione --- */
 nav a {
     color: #e2e8f0;
     margin: 0 15px;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    transition: 0.3s;
+    text-decoration: none;         /* Rimuove la sottolineatura dai link */
+    font-weight: 500;
+    transition: 0.2s;              /* Animazione fluida per il cambio colore */
 }
 
+/* --- Effetto Hover sui Link della Navigazione --- */
 nav a:hover {
-    color: #7dd3fc;
-    transform: translateY(-2px) scale(1.1); /* Zoom fluido nel menu */
+    color: #7dd3fc;                /* Il link diventa azzurro al passaggio del mouse */
 }
 
 /* --- Intestazione della Pagina (Header) --- */
 header {
     text-align: center;
-    padding: 80px 20px;
-}
-
-header h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-    /* Animazione di galleggiamento applicata qui */
-    animation: floating 3s ease-in-out infinite;
+    padding-top: 60px;
 }
 
 /* --- Stile dei Pulsanti Principali --- */
-.btn, .btn-download {
+.btn {
     display: inline-block;
-    padding: 12px 28px;
+    padding: 12px 24px;
+    background: #38bdf8;           /* Colore azzurro acceso */
+    color: #00111a;                /* Testo molto scuro per contrasto */
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 10px;           /* Bordi arrotondati */
     font-weight: bold;
     margin: 8px;
-    /* Effetto molla/bounce al passaggio del mouse */
-    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    border: none;
-    cursor: pointer;
+    transition: 0.2s;              /* Animazione per l'hover */
 }
 
-/* Variante Verde per il Download */
-.btn-download {
-    background: #22c55e;
-    color: #052e16 !important;
-    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+/* --- Effetto al passaggio sul Pulsante --- */
+.btn:hover {
+    transform: translateY(-3px);   /* Alza leggermente il pulsante */
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4); /* Aggiunge un bagliore azzurro */
 }
 
-/* Variante Azzurra Standard */
-.btn {
-    background: #38bdf8;
-    color: #00111a;
-}
-
-.btn:hover, .btn-download:hover {
-    transform: scale(1.15) translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* --- Link Secondari e Card --- */
+/* --- Contenitore per il link "Scoprile tutte" (Allineato a sinistra) --- */
 .link-container {
     display: block;
-    text-align: left;
+    text-align: left;              /* Forza l'allineamento a sinistra */
     margin-top: 25px;
     padding-left: 5px; 
 }
 
+/* --- Stile del Pulsante Piccolo (Secondario) --- */
 .btn-sm {
     display: inline-block;
     padding: 8px 16px;
-    background: transparent;
+    background: transparent;       /* Sfondo trasparente */
     color: #7dd3fc;
     text-decoration: none;
-    border: 1px solid #38bdf8;
+    border: 1px solid #38bdf8;     /* Solo il bordo azzurro */
     border-radius: 8px;
     font-size: 0.9em;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
+/* --- Effetto al passaggio sul Pulsante Piccolo --- */
 .btn-sm:hover {
-    background: rgba(56, 189, 248, 0.1);
-    transform: translateX(8px);
+    background: rgba(56, 189, 248, 0.1); /* Leggero sfondo azzurro al passaggio */
+    transform: translateX(5px);          /* Si sposta leggermente a destra */
 }
 
 /* --- Sistema a Griglia per le Card --- */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adatta le colonne in automatico */
+    gap: 20px;                      /* Spazio tra le card */
 }
 
-/* Card Speciale per il Download (Più larga e centrale) */
-.card-download {
-    background: #1e293b;
-    margin: 40px auto;
-    padding: 35px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    width: 90%;
-    max-width: 850px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    transition: 0.3s;
-}
-
+/* --- Stile delle Card (Riquadri Contenuti) --- */
 .card {
-    background: #1e293b;
+    background: #1e293b;           /* Sfondo leggermente più chiaro del body */
+    margin: 15px 0;                /* Margine per separare le card (modificato da 40px per non essere troppo grande) */
     padding: 25px;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    text-align: left; /* Testo delle card funzioni allineato a sinistra */
-    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Ombra per dare profondità */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Bordo sottilissimo quasi invisibile */
 }
 
-.card:hover {
-    transform: scale(1.03) rotate(-1deg);
-    border-color: #38bdf8;
-}
-
-/* --- Blocchi di Codice --- */
-code, pre {
-    background: #020617;
-    color: #93c5fd;
+/* --- Blocchi di Codice (Esempi in C) --- */
+code,
+pre {
+    background: #020617;           /* Sfondo quasi nero per il codice */
+    color: #93c5fd;                /* Testo azzurro chiaro tipico dei terminali */
     padding: 15px;
     border-radius: 10px;
     display: block;
-    overflow-x: auto;
-    font-family: 'Consolas', 'Courier New', monospace;
+    overflow-x: auto;              /* Barra di scorrimento se il codice è troppo lungo */
+    font-family: 'Courier New', Courier, monospace; /* Font a larghezza fissa */
     font-size: 0.95em;
-    border: 1px solid #1e293b;
+    border: 1px solid #1e293b;     /* Bordo scuro per staccare dal fondo della card */
     margin: 15px 0;
-    text-align: left;
 }
 
-/* --- Piè di Pagina e Animazioni --- */
+/* --- Piè di Pagina (Footer) --- */
 footer {
-    opacity: 0.7;
+    opacity: 0.7;                  /* Testo leggermente sbiadito */
     text-align: center;
     padding: 60px 20px;
     font-size: 0.9em;
-    border-top: 1px solid #1e293b;
 }
 
-/* Definizione del galleggiamento per h1 */
-@keyframes floating {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
-}
-
-/* --- Adattamento Responsive --- */
+/* --- Adattamento per Cellulari (Responsive) --- */
 @media (max-width: 768px) {
-    header h1 { font-size: 2.5rem; }
+    header { padding-top: 30px; }
     
-    .btn, .btn-download {
+    /* I pulsanti diventano a tutta larghezza sul cellulare */
+    .btn {
         display: block;
         margin: 10px auto;
         max-width: 280px;
     }
 
+    /* Il contenitore del link si centra sui dispositivi mobili */
     .link-container {
         text-align: center; 
         padding-left: 0;
