@@ -122,19 +122,35 @@ header h1 {
 }
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
+    align-items: stretch;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .card {
     background: #1e293b;
     padding: 25px;
     border-radius: 16px;
-    width: 320px;
     text-align: left;
     border: 1px solid #334155;
+    min-height: 220px;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Telefono */
+@media (max-width: 700px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 pre {
