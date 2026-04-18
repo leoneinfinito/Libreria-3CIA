@@ -11,35 +11,47 @@
 <body>
 
     <nav>
-        <a href="index.html">Download</a>
+        <a href="index.html">Home</a>
         <a href="pagine/guida.html">Guida</a>
-        <a href="pagine/comandi.html">Esempi</a>
-       
+        <a href="pagine/comandi.html">Comandi</a>
+        <a href="pagine/download.html">Download</a>
     </nav>
-    
-<header>
-    <h1>3cia.h Per molti una semplice libreria C!</h1>
-    <p>per altri una risorsa preziosa (o un mistero incomprensibile)</p>
 
-    <div class="button-container">
-        <a class="btn-download" href="libreria/3cia.h" download="3cia.h">
-            📥 Scarica 3cia.h
-        </a>
+    <header class="hero">
+        <div class="hero-content">
 
-        <a class="btn" href="pagine/guida.html">
-            📖 Leggi la guida
-        </a>
-    </div>
-</header>
+            <h1>3cia.h</h1>
+            <p>Per molti una semplice libreria C...</p>
+            <p>Per altri una risorsa preziosa (o un mistero incomprensibile).</p>
 
-<section id="download">
-    <h2>Download</h2>
-    <div class="download-card">
-        <p>Scarica il file header e includilo nei tuoi progetti C.</p>
-        <pre>#include "3cia.h"</pre>
-        <a class="btn-download" href="libreria/3cia.h" download>Scarica ora</a>
-    </div>
-</section>
+            <div class="button-container">
+
+                <a class="btn-download" href="libreria/3cia.h" download="3cia.h">
+                    📥 Scarica 3cia.h
+                </a>
+
+                <a class="btn" href="pagine/guida.html">
+                    📖 Leggi la guida
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+    <section id="download">
+        <h2>Download</h2>
+
+        <div class="download-card">
+            <p>Scarica il file header e includilo nei tuoi progetti C.</p>
+
+            <pre>#include "3cia.h"</pre>
+
+            <a class="btn-download" href="libreria/3cia.h" download>
+                Scarica ora
+            </a>
+        </div>
+    </section>
 
     <section id="examples">
         <h2>Esempio completo</h2>
@@ -48,68 +60,74 @@
 #include "3cia.h"
 
 int main() {
-    printf("%d", somma(5,7));
+    printf("%d", Fattoriale(5));
     return 0;
 }</pre>
 
-<div style="text-align: center; margin-top: 20px;">
-        <a href="pagine\comandi.html" class="btn-sm">Altri esempi...</a>
+        <div class="center-btn">
+            <a href="pagine/comandi.html" class="btn-sm">
+                Altri esempi...
+            </a>
+        </div>
     </section>
+
     <section id="guide">
-    <h2>Funzioni disponibili</h2>
+        <h2>Funzioni disponibili</h2>
 
-    <div class="grid">
+        <div class="grid">
 
-        <div class="card">
-            <h3>PrezzoScontato(prezzo, sconto)</h3>
-            <p>Calcola il prezzo finale dopo lo sconto.</p>
-            <pre>float p = PrezzoScontato(100,20); // 80</pre>
+            <div class="card">
+                <h3>PrezzoScontato(prezzo, sconto)</h3>
+                <p>Calcola il prezzo finale dopo lo sconto.</p>
+                <pre>float p = PrezzoScontato(100,20);</pre>
+            </div>
+
+            <div class="card">
+                <h3>Fattoriale(n)</h3>
+                <p>Calcola il fattoriale di un numero.</p>
+                <pre>int f = Fattoriale(5);</pre>
+            </div>
+
+            <div class="card">
+                <h3>Palindroma(stringa)</h3>
+                <p>Controlla se una frase è palindroma.</p>
+                <pre>int p = Palindroma("anna");</pre>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3>Fattoriale(n)</h3>
-            <p>Calcola il fattoriale di un numero.</p>
-            <pre>int f = Fattoriale(5); // 120</pre>
+        <div class="center-btn">
+            <a href="pagine/comandi.html" class="btn-sm">
+                Altro...
+            </a>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>Palindroma(stringa)</h3>
-            <p>Controlla se una frase è palindroma.</p>
-            <pre>int p = Palindroma("anna"); // 1</pre>
+    <section id="pages">
+        <h2>Pagine del sito</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Download</h3>
+                <p>Scarica il file <b>3CIA.h</b> pronto da usare nei tuoi progetti.</p>
+                <a class="btn" href="pagine/download.html">Apri pagina</a>
+            </div>
+
+            <div class="card">
+                <h3>Guida Installazione</h3>
+                <p>Scopri come aggiungere la libreria al tuo progetto C.</p>
+                <a class="btn" href="pagine/guida.html">Apri pagina</a>
+            </div>
+
+            <div class="card">
+                <h3>Guida Comandi</h3>
+                <p>Documentazione completa di tutte le funzioni disponibili.</p>
+                <a class="btn" href="pagine/comandi.html">Apri pagina</a>
+            </div>
+
         </div>
-
-        <div style="text-align: center; margin-top: 20px;">
-        <a href="pagine\comandi.html" class="btn-sm">Altro...</a>
-    </div>
-
-    </div>
-</section>
-
-<section id="pages">
-    <h2>Pagine del sito</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>Download</h3>
-            <p>Scarica il file <b>3CIA.h</b> pronto da usare nei tuoi progetti.</p>
-            <a class="btn" href="index.html">Apri pagina</a>
-        </div>
-
-        <div class="card">
-            <h3>Guida Installazione</h3>
-            <p>Scopri come aggiungere la libreria al tuo progetto C.</p>
-            <a class="btn" href="pagine/guida.html">Apri pagina</a>
-        </div>
-
-        <div class="card">
-            <h3>Guida Comandi</h3>
-            <p>Documentazione completa di tutte le funzioni disponibili.</p>
-            <a class="btn" href="pagine/comandi.html">Apri pagina</a>
-        </div>
-
-    </div>
-</section>
+    </section>
 
     <footer>
         <p>© Classe 3CIA - Polo Manetti Porciatti</p>
