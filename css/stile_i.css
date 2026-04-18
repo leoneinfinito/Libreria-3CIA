@@ -183,6 +183,8 @@ pre {
 /* ==========================================
    9. FOOTER
 ========================================== */
+/* SOSTITUISCI il footer con questo */
+
 footer {
     background: #020617;
     border-top: 1px solid #1e293b;
@@ -190,6 +192,18 @@ footer {
     padding: 40px 20px;
     text-align: center;
     color: #94a3b8;
+
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* rimuovi il limite generale applicato a footer */
+header,
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
 }
 
 footer p {
@@ -201,7 +215,6 @@ footer a {
     text-decoration: none;
     margin: 0 12px;
     font-weight: 600;
-    transition: 0.25s ease;
 }
 
 footer a:hover {
