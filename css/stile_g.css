@@ -1,6 +1,6 @@
 /* ==========================================
    1. IMPOSTAZIONI GENERALI
-   ========================================== */
+========================================== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,12 +9,19 @@ body {
     line-height: 1.6;
 }
 
+/* header e section centrati */
 header,
-section,
-footer {
+section {
     max-width: 1000px;
     margin: auto;
     padding: 40px 20px;
+}
+
+/* footer piena larghezza */
+footer {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 h1,
@@ -25,22 +32,23 @@ h3 {
 
 /* ==========================================
    2. NAVIGAZIONE (STICKY)
-   ========================================== */
+========================================== */
 nav {
     position: sticky;
     top: 0;
-    background: #0f172acc;
-    padding: 10px;
+    background: rgba(15, 23, 42, 0.95);
+    padding: 18px;
     text-align: center;
     backdrop-filter: blur(8px);
     z-index: 1000;
+    border-bottom: 1px solid #1e293b;
 }
 
 nav a {
     color: #e2e8f0;
     margin: 0 15px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: 0.2s;
 }
 
@@ -49,13 +57,29 @@ nav a:hover {
 }
 
 /* ==========================================
-   3. HEADER E PULSANTI
-   ========================================== */
+   3. HEADER STILE INDEX
+========================================== */
 header {
     text-align: center;
-    padding-top: 60px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(125, 211, 252, 0.15);
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin: 8px 0;
+}
+
+/* ==========================================
+   4. BOTTONI
+========================================== */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -65,15 +89,14 @@ header {
     border-radius: 10px;
     font-weight: bold;
     margin: 8px;
-    transition: 0.2s;
+    transition: 0.25s ease;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.35);
 }
 
-/* Contenitore per tasto "Scoprile tutte" a sinistra */
 .link-container {
     display: block;
     text-align: left;
@@ -90,17 +113,18 @@ header {
     border: 1px solid #38bdf8;
     border-radius: 8px;
     font-size: 0.9em;
-    transition: 0.2s;
+    transition: 0.25s ease;
 }
 
 .btn-sm:hover {
-    background: rgba(56, 189, 248, 0.1);
+    background: #38bdf8;
+    color: #00111a;
     transform: translateX(5px);
 }
 
 /* ==========================================
-   4. LAYOUT: GRID E CARD
-   ========================================== */
+   5. GRID E CARD
+========================================== */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -117,8 +141,8 @@ header {
 }
 
 /* ==========================================
-   5. CODICE (PRE/CODE)
-   ========================================== */
+   6. CODICE
+========================================== */
 code,
 pre {
     background: #020617;
@@ -134,15 +158,35 @@ pre {
 }
 
 /* ==========================================
-   6. FOOTER E RESPONSIVE
-   ========================================== */
+   7. FOOTER STILE INDEX
+========================================== */
 footer {
-    opacity: 0.7;
+    background: #020617;
+    border-top: 1px solid #1e293b;
+    margin-top: 80px;
+    padding: 40px 20px;
     text-align: center;
-    padding: 60px 20px;
-    font-size: 0.9em;
+    color: #94a3b8;
 }
 
+footer p {
+    margin-bottom: 18px;
+}
+
+footer a {
+    color: #7dd3fc;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* ==========================================
+   8. RESPONSIVE
+========================================== */
 @media (max-width: 768px) {
     .btn {
         display: block;
@@ -153,5 +197,9 @@ footer {
     .link-container {
         text-align: center;
         padding-left: 0;
+    }
+
+    header h1 {
+        font-size: 2.4rem;
     }
 }
