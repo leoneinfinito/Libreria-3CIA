@@ -126,7 +126,7 @@ nav a:hover {
     justify-content: center;
 
     align-items: flex-start;
-    padding-top: 180px;  /* 👈 più distanza */
+    padding-top: 180px;  /* più distanza */
     overflow-y: auto;
 
     z-index: 9999;
