@@ -141,13 +141,13 @@ nav a:hover {
     width: 85%;
     max-width: 950px;
 
-    margin-top: 140px; /* 👈 DISTANZA GIUSTA DALL’HEADER */
-
     padding: 25px;
     border-radius: 16px;
     border: 1px solid #334155;
 
     animation: pop 0.2s ease;
+    max-height: 85vh;      /* 👈 non esce dallo schermo */
+    overflow-y: auto;      /* 👈 scroll interno se serve */
 }
 
 /* animazione */
