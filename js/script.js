@@ -5,58 +5,104 @@ async function init() {
 
     const container = document.getElementById("esempi");
 
-    const res = await fetch("../esercizi.json");
-    const dati = await res.json();
+    if (!container) {
+        console.error("Container #esempi non trovato");
+        return;
+    }
 
-    container.innerHTML = "";
+    try {
+        const res = await fetch("../esercizi.json");
 
-    dati.forEach(es => {
+        if (!res.ok) {
+            throw new Error("Errore caricamento JSON");
+        }
 
-        const card = document.createElement("div");
-        card.className = "card";
+        const dati = await res.json();
 
-        // 🟦 CARD COME VUOI TU
-        card.innerHTML = `
-            <h3>${es.titolo}</h3>
-            <code>${es.nome}</code>
-            <p>${es.descrizioneBreve}</p>
-        `;
+        container.innerHTML = "";
 
-        // CLICK → MODAL
-        card.onclick = async () => {
+        dati.forEach(es => {
 
-            document.getElementById("modal-titolo").innerText = es.titolo;
+            const card = document.createElement("div");
+            card.className = "card";
 
-            document.getElementById("modal-desc").innerText = es.descrizione;
+            // 🟦 CARD PULITA (NO <code>)
+            card.innerHTML = `
+                <h3>${es.titolo}</h3>
+                <div class="funzione">${es.nome}</div>
+                <p>${es.descrizioneBreve}</p>
+            `;
 
-            let codice = await fetch(es.fileC).then(r => r.text());
+            // CLICK → MODAL
+            card.addEventListener("click", async () => {
+                apriModal(es);
+            });
 
-            codice = codice
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;");
+            container.appendChild(card);
+        });
 
-            document.getElementById("modal-code").innerHTML = codice;
-
-            document.getElementById("modal").classList.remove("hidden");
-        };
-
-        container.appendChild(card);
-    });
+    } catch (err) {
+        console.error("Errore:", err);
+        container.innerHTML = "<p>Errore nel caricamento dei dati.</p>";
+    }
 }
 
-// CHIUDI MODAL
+/* ==========================================
+   MODAL OPEN
+========================================== */
+async function apriModal(es) {
+
+    const modal = document.getElementById("modal");
+
+    document.getElementById("modal-titolo").innerText = es.titolo;
+
+    document.getElementById("modal-desc").innerText = es.descrizione;
+
+    try {
+        const res = await fetch(es.fileC);
+
+        if (!res.ok) {
+            throw new Error("File C non trovato");
+        }
+
+        let codice = await res.text();
+
+        // escape HTML
+        codice = codice
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
+
+        document.getElementById("modal-code").innerHTML = codice;
+
+    } catch (err) {
+        document.getElementById("modal-code").innerText =
+            "Errore caricamento codice.";
+        console.error(err);
+    }
+
+    modal.classList.remove("hidden");
+}
+
+/* ==========================================
+   CHIUDI MODAL
+========================================== */
 function chiudiModal() {
     document.getElementById("modal").classList.add("hidden");
 }
 
-// click fuori
+/* click fuori modal */
 document.addEventListener("click", (e) => {
     const modal = document.getElementById("modal");
-    if (e.target === modal) modal.classList.add("hidden");
+
+    if (e.target === modal) {
+        modal.classList.add("hidden");
+    }
 });
 
-// ESC
+/* ESC per chiudere */
 document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") chiudiModal();
+    if (e.key === "Escape") {
+        chiudiModal();
+    }
 });
