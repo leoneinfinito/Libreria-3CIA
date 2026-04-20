@@ -12,7 +12,7 @@ body {
 /* header e section centrati */
 header,
 section {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
     padding: 40px 20px;
 }
@@ -57,7 +57,7 @@ nav a:hover {
 }
 
 /* ==========================================
-   3. HEADER STILE INDEX
+   3. HEADER
 ========================================== */
 header {
     text-align: center;
@@ -66,100 +66,107 @@ header {
 }
 
 header h1 {
-    font-size: 3.4rem;
+    font-size: 3.2rem;
     margin-bottom: 10px;
-    text-shadow: 0 0 20px rgba(125, 211, 252, 0.15);
 }
 
 header p {
-    font-size: 1.1rem;
     color: #cbd5e1;
-    margin: 8px 0;
+    font-size: 1.1rem;
 }
 
 /* ==========================================
-   4. BOTTONI
+   4. GRIGLIA FUNZIONI
 ========================================== */
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #38bdf8;
-    color: #00111a;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    margin: 8px;
-    transition: 0.25s ease;
-}
-
-.btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.35);
-}
-
-/* bottone piccolo */
-.link-container {
-    display: block;
-    text-align: left;
-    margin-top: 25px;
-    padding-left: 5px;
-}
-
-.btn-sm {
-    display: inline-block;
-    padding: 8px 16px;
-    background: transparent;
-    color: #7dd3fc;
-    text-decoration: none;
-    border: 1px solid #38bdf8;
-    border-radius: 8px;
-    font-size: 0.9em;
-    transition: 0.25s ease;
-}
-
-.btn-sm:hover {
-    background: #38bdf8;
-    color: #00111a;
-    transform: translateX(5px);
-}
-
-/* ==========================================
-   5. GRID E CARD
-========================================== */
-.grid {
+#comandi {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 22px;
+}
+
+/* ==========================================
+   5. CARD FUNZIONI
+========================================== */
+.card {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 22px;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.20);
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(56,189,248,0.12);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.card p {
+    margin: 0;
+    color: #cbd5e1;
+}
+
+/* ==========================================
+   6. CONTENUTO NASCOSTO APRIBILE
+========================================== */
+.dettagli {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    margin-top: 0;
+}
+
+.card.active .dettagli {
+    max-height: 500px;
+    margin-top: 20px;
+}
+
+/* ==========================================
+   7. LAYOUT INTERNO
+========================================== */
+.contenuto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-.card {
-    background: #1e293b;
-    margin: 15px 0;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
 /* ==========================================
-   6. CODICE
+   8. CODICE
 ========================================== */
-code,
-pre {
+pre,
+code {
     background: #020617;
     color: #93c5fd;
     padding: 15px;
     border-radius: 10px;
     display: block;
     overflow-x: auto;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', monospace;
     font-size: 0.95em;
     border: 1px solid #1e293b;
-    margin: 15px 0;
+    margin: 0;
 }
 
 /* ==========================================
-   7. FOOTER STILE INDEX
+   9. DESCRIZIONE
+========================================== */
+.descrizione {
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+    color: #cbd5e1;
+}
+
+/* ==========================================
+   10. FOOTER
 ========================================== */
 footer {
     background: #020617;
@@ -169,10 +176,6 @@ footer {
     text-align: center;
     color: #94a3b8;
     font-size: 0.95em;
-}
-
-footer p {
-    margin-bottom: 18px;
 }
 
 footer a {
@@ -187,26 +190,19 @@ footer a:hover {
 }
 
 /* ==========================================
-   8. RESPONSIVE
+   11. RESPONSIVE
 ========================================== */
 @media (max-width: 768px) {
-    header {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
 
     header h1 {
         font-size: 2.4rem;
     }
 
-    .btn {
-        display: block;
-        margin: 10px auto;
-        max-width: 280px;
+    #comandi {
+        grid-template-columns: 1fr;
     }
 
-    .link-container {
-        text-align: center;
-        padding-left: 0;
+    .contenuto {
+        grid-template-columns: 1fr;
     }
 }
