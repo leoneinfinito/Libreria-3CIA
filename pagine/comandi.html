@@ -1,48 +1,29 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esempi - 3cia.h</title>
+<!-- CONTENITORE CARD -->
+<section id="esempi"></section>
 
-    <link rel="stylesheet" href="../css/stile_c.css">
-    <script src="../js/script.js" defer></script>
-</head>
+<!-- MODAL (FINESTRA DETTAGLIO) -->
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
 
-<body>
+        <span class="close" onclick="chiudiModal()">×</span>
 
-    <!-- NAV -->
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../pagine/guida.html">Guida</a>
-        <a href="../pagine/comandi.html">Comandi</a>
-        <a href="../libreria/3cia.h" download="3cia.h">Download</a>
-    </nav>
+        <h2 id="modal-titolo">Titolo</h2>
 
-    <!-- HEADER -->
-    <header>
-        <h1>Esempi Pratici</h1>
-        <p>La libreria 3CIA.h spiegata in modo semplice e interattivo</p>
-    </header>
+        <div class="modal-grid">
 
-    <!-- CONTENITORE DINAMICO -->
-    <section id="esempi">
-        <!-- JS genera tutto qui dentro -->
-    </section>
+            <!-- SINISTRA: DESCRIZIONE -->
+            <div class="modal-descrizione">
+                <h3>Descrizione</h3>
+                <p id="modal-desc"></p>
+            </div>
 
-    <!-- FOOTER -->
-    <footer>
+            <!-- DESTRA: CODICE -->
+            <div class="modal-codice">
+                <h3>Codice</h3>
+                <pre id="modal-code"></pre>
+            </div>
 
-        <p>© Classe 3CIA - Polo Manetti Porciatti</p>
-
-        <div class="footer-links">
-            <a href="../index.html">Home</a>
-            <a href="../pagine/guida.html">Guida</a>
-            <a href="../pagine/comandi.html">Comandi</a>
-            <a href="../libreria/3cia.h" download="3cia.h">Download</a>
         </div>
 
-    </footer>
-
-</body>
-</html>
+    </div>
+</div>
