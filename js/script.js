@@ -15,15 +15,17 @@ async function init() {
         const card = document.createElement("div");
         card.className = "card";
 
-        // 🔥 SOLO FUNZIONE + MINI DESCRIZIONE
+        // 🟦 CARD COME VUOI TU
         card.innerHTML = `
-            <h3>${es.nome}</h3>
+            <h3>${es.titolo}</h3>
+            <code>${es.nome}</code>
             <p>${es.descrizioneBreve}</p>
         `;
 
+        // CLICK → MODAL
         card.onclick = async () => {
 
-            document.getElementById("modal-titolo").innerText = es.nome;
+            document.getElementById("modal-titolo").innerText = es.titolo;
 
             document.getElementById("modal-desc").innerText = es.descrizione;
 
@@ -48,11 +50,13 @@ function chiudiModal() {
     document.getElementById("modal").classList.add("hidden");
 }
 
+// click fuori
 document.addEventListener("click", (e) => {
     const modal = document.getElementById("modal");
     if (e.target === modal) modal.classList.add("hidden");
 });
 
+// ESC
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") chiudiModal();
 });

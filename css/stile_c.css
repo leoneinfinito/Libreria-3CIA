@@ -1,7 +1,7 @@
 
-/* ==========================================
+/* =========================
    BASE
-========================================== */
+========================= */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -21,9 +21,9 @@ h1, h2, h3 {
     color: #7dd3fc;
 }
 
-/* ==========================================
-   NAVBAR
-========================================== */
+/* =========================
+   NAV
+========================= */
 nav {
     position: sticky;
     top: 0;
@@ -40,72 +40,32 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.2s;
 }
 
 nav a:hover {
     color: #7dd3fc;
 }
 
-/* ==========================================
-   HEADER
-========================================== */
-header {
-    text-align: center;
-    padding-top: 70px;
-    padding-bottom: 50px;
-}
-
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-header p {
-    color: #cbd5e1;
-}
-
-/* ==========================================
-   FOOTER
-========================================== */
-footer {
-    background: #020617;
-    border-top: 1px solid #1e293b;
-    margin-top: 80px;
-    padding: 40px 20px;
-    text-align: center;
-    color: #94a3b8;
-}
-
-footer a {
-    color: #7dd3fc;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer a:hover {
-    color: white;
-}
-
-/* ==========================================
-   GRID COMANDI (QUADRATI)
-========================================== */
+/* =========================
+   GRID CARD
+========================= */
 #esempi {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 18px;
 }
 
-/* CARD COMANDI */
+/* =========================
+   CARD (QUADRATI)
+========================= */
 .card {
     background: #1e293b;
-    border-radius: 14px;
     padding: 18px;
+    border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
     cursor: pointer;
     transition: 0.25s ease;
-    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
 .card:hover {
@@ -115,32 +75,32 @@ footer a:hover {
 
 .card h3 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.card code {
+    display: block;
+    margin: 8px 0;
+    color: #7dd3fc;
+    font-weight: bold;
 }
 
 .card p {
-    margin-top: 10px;
     font-size: 0.9rem;
     color: #cbd5e1;
 }
 
-/* ==========================================
-   MODAL (COMANDI)
-========================================== */
+/* =========================
+   MODAL
+========================= */
 .modal {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
+    inset: 0;
     background: rgba(0,0,0,0.75);
     backdrop-filter: blur(6px);
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     z-index: 9999;
 }
 
@@ -154,26 +114,7 @@ footer a:hover {
     max-width: 950px;
     padding: 25px;
     border-radius: 16px;
-
     border: 1px solid #334155;
-
-    animation: pop 0.2s ease;
-}
-
-@keyframes pop {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-.close {
-    float: right;
-    font-size: 28px;
-    cursor: pointer;
-    color: #7dd3fc;
-}
-
-.close:hover {
-    color: white;
 }
 
 .modal-grid {
@@ -183,6 +124,7 @@ footer a:hover {
     margin-top: 20px;
 }
 
+/* SINISTRA */
 .modal-descrizione {
     background: #0f172a;
     padding: 15px;
@@ -190,10 +132,7 @@ footer a:hover {
     border: 1px solid #334155;
 }
 
-.modal-descrizione p {
-    color: #cbd5e1;
-}
-
+/* DESTRA */
 .modal-codice pre {
     background: #020617;
     padding: 15px;
@@ -201,68 +140,26 @@ footer a:hover {
     color: #93c5fd;
     overflow-x: auto;
     border: 1px solid #334155;
+    margin: 0;
 }
 
-/* ==========================================
-   ESEMPI (SPLIT CODICE + DESCRIZIONE)
-========================================== */
-#esempi-container {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+/* CHIUDI */
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: #7dd3fc;
 }
 
-.esempio {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 14px;
-
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-.esempio pre {
-    background: #020617;
-    padding: 15px;
-    border-radius: 12px;
-    overflow-x: auto;
-    color: #93c5fd;
-    border: 1px solid #334155;
-}
-
-.esempio .desc {
-    background: #0f172a;
-    padding: 15px;
-    border-radius: 12px;
-    border: 1px solid #334155;
-    color: #cbd5e1;
-}
-
-/* ==========================================
+/* =========================
    RESPONSIVE
-========================================== */
+========================= */
 @media (max-width: 768px) {
-
-    header h1 {
-        font-size: 2.2rem;
-    }
-
     #esempi {
         grid-template-columns: 1fr;
     }
 
     .modal-grid {
         grid-template-columns: 1fr;
-    }
-
-    .esempio {
-        grid-template-columns: 1fr;
-    }
-
-    .modal-content {
-        width: 95%;
     }
 }
