@@ -10,11 +10,17 @@ body {
     line-height: 1.6;
 }
 
+/* contenuti centrati */
 header,
 section {
     max-width: 1150px;
     margin: auto;
     padding: 40px 20px;
+}
+
+/* titolo centrato */
+header {
+    text-align: center;
 }
 
 h1, h2, h3 {
@@ -47,7 +53,7 @@ nav a:hover {
 }
 
 /* =========================
-   GRID
+   GRID CARD
 ========================= */
 #esempi {
     display: grid;
@@ -83,10 +89,17 @@ nav a:hover {
     color: #7dd3fc;
 }
 
-.funzione {
+/* 👇 FUNZIONE CON <code> */
+.card code {
+    display: block;
     font-family: monospace;
     color: #93c5fd;
     font-weight: bold;
+
+    background: #0f172a;
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: 1px solid #334155;
 }
 
 .card p {
@@ -122,6 +135,7 @@ nav a:hover {
     border: 1px solid #334155;
 }
 
+/* layout modal */
 .modal-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -129,6 +143,7 @@ nav a:hover {
     margin-top: 20px;
 }
 
+/* sinistra */
 .modal-descrizione {
     background: #0f172a;
     padding: 15px;
@@ -137,6 +152,7 @@ nav a:hover {
     color: #cbd5e1;
 }
 
+/* destra codice */
 .modal-codice pre {
     background: #020617;
     padding: 15px;
@@ -159,6 +175,7 @@ nav a:hover {
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
+
     #esempi {
         grid-template-columns: 1fr;
     }

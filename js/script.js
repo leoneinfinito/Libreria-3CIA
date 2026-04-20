@@ -16,10 +16,10 @@ async function init() {
             const card = document.createElement("div");
             card.className = "card";
 
-            // 🟦 CARD PERFETTA
+            // 🟦 CARD FINALE (con <code>)
             card.innerHTML = `
                 <h3>${es.titolo}</h3>
-                <div class="funzione">${es.nome}</div>
+                <code>${es.nome}</code>
                 <p>${es.descrizioneBreve}</p>
             `;
 
@@ -40,7 +40,7 @@ async function init() {
 
                     document.getElementById("modal-code").innerHTML = codice;
 
-                } catch {
+                } catch (err) {
                     document.getElementById("modal-code").innerText =
                         "Errore caricamento codice";
                 }
@@ -58,19 +58,17 @@ async function init() {
 }
 
 /* =========================
-   CHIUDI MODAL
+   MODAL CONTROL
 ========================= */
 function chiudiModal() {
     document.getElementById("modal").classList.add("hidden");
 }
 
-/* click fuori modal */
 document.addEventListener("click", (e) => {
     const modal = document.getElementById("modal");
     if (e.target === modal) modal.classList.add("hidden");
 });
 
-/* ESC */
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") chiudiModal();
 });
