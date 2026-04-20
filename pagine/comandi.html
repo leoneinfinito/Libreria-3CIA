@@ -1,29 +1,82 @@
-<!-- CONTENITORE CARD -->
-<section id="esempi"></section>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandi - 3CIA.h</title>
 
-<!-- MODAL (FINESTRA DETTAGLIO) -->
-<div id="modal" class="modal hidden">
-    <div class="modal-content">
+    <link rel="stylesheet" href="../css/stile_c.css">
+    <script src="../js/script.js" defer></script>
+</head>
 
-        <span class="close" onclick="chiudiModal()">×</span>
+<body>
 
-        <h2 id="modal-titolo">Titolo</h2>
+    <!-- NAV -->
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../pagine/guida.html">Guida</a>
+        <a href="../pagine/comandi.html">Comandi</a>
+        <a href="../libreria/3cia.h" download="3cia.h">Download</a>
+    </nav>
 
-        <div class="modal-grid">
+    <!-- HEADER -->
+    <header>
+        <h1>Comandi / Funzioni</h1>
+        <p>Documentazione della libreria 3CIA.h</p>
+    </header>
 
-            <!-- SINISTRA: DESCRIZIONE -->
-            <div class="modal-descrizione">
-                <h3>Descrizione</h3>
-                <p id="modal-desc"></p>
-            </div>
+    <!-- CONTENITORE CARD (JS LO RIEMPIE) -->
+    <section id="esempi">
+        <!-- Le card vengono generate dal JS -->
+    </section>
 
-            <!-- DESTRA: CODICE -->
-            <div class="modal-codice">
-                <h3>Codice</h3>
-                <pre id="modal-code"></pre>
+    <!-- =========================
+         MODAL (FINESTRA DETTAGLI)
+    ========================== -->
+    <div id="modal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <!-- CHIUDI -->
+            <span class="close" onclick="chiudiModal()">×</span>
+
+            <!-- TITOLO -->
+            <h2 id="modal-titolo">Titolo</h2>
+
+            <!-- GRID INTERNA -->
+            <div class="modal-grid">
+
+                <!-- SINISTRA: DESCRIZIONE -->
+                <div class="modal-descrizione">
+                    <h3>Descrizione</h3>
+                    <p id="modal-desc"></p>
+                </div>
+
+                <!-- DESTRA: CODICE -->
+                <div class="modal-codice">
+                    <h3>Codice</h3>
+                    <pre id="modal-code"></pre>
+                </div>
+
             </div>
 
         </div>
 
     </div>
-</div>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>© Classe 3CIA - Polo Manetti Porciatti</p>
+
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../pagine/guida.html">Guida</a>
+            <a href="../pagine/comandi.html">Comandi</a>
+            <a href="../libreria/3cia.h" download>Download</a>
+        </div>
+
+    </footer>
+
+</body>
+</html>
