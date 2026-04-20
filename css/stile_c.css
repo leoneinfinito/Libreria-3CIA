@@ -124,9 +124,9 @@ nav a:hover {
 
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center; /* 👈 CENTRATO VERO */
 
-    overflow-y: auto;
+    padding: 20px; /* 👈 evita che tocchi i bordi su mobile */
     z-index: 9999;
 }
 
