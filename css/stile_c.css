@@ -114,7 +114,7 @@ nav a:hover {
 }
 
 /* =========================
-   MODAL
+   MODAL (FIX GIUSTO)
 ========================= */
 .modal {
     position: fixed;
@@ -124,23 +124,25 @@ nav a:hover {
 
     display: flex;
     justify-content: center;
-
     align-items: flex-start;
-    padding-top: 180px;  /* più distanza */
-    overflow-y: auto;
 
+    overflow-y: auto;
     z-index: 9999;
 }
 
+/* chiuso */
 .hidden {
     display: none;
 }
 
-/* animazione apertura */
+/* contenuto modal */
 .modal-content {
     background: #1e293b;
     width: 85%;
     max-width: 950px;
+
+    margin-top: 140px; /* 👈 DISTANZA GIUSTA DALL’HEADER */
+
     padding: 25px;
     border-radius: 16px;
     border: 1px solid #334155;
@@ -148,6 +150,7 @@ nav a:hover {
     animation: pop 0.2s ease;
 }
 
+/* animazione */
 @keyframes pop {
     from {
         transform: scale(0.95);
@@ -167,7 +170,7 @@ nav a:hover {
     margin-top: 20px;
 }
 
-/* SINISTRA */
+/* DESCRIZIONE */
 .modal-descrizione {
     background: #0f172a;
     padding: 15px;
@@ -176,7 +179,7 @@ nav a:hover {
     color: #cbd5e1;
 }
 
-/* DESTRA CODICE */
+/* CODICE */
 .modal-codice pre {
     background: #020617;
     padding: 15px;
@@ -196,7 +199,7 @@ nav a:hover {
 }
 
 /* =========================
-   FOOTER (COERENTE SITO)
+   FOOTER
 ========================= */
 footer {
     background: #020617;
@@ -206,10 +209,6 @@ footer {
     text-align: center;
     color: #94a3b8;
     font-size: 0.95em;
-}
-
-footer p {
-    margin-bottom: 18px;
 }
 
 footer a {
@@ -236,11 +235,11 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 
-    .modal-grid {
-        grid-template-columns: 1fr;
+    .modal-content {
+        margin-top: 90px;
     }
 
-    .modal {
-        padding-top: 80px;
+    .modal-grid {
+        grid-template-columns: 1fr;
     }
 }
