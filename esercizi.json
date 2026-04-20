@@ -2,6 +2,8 @@
     {
         "id": "code-es1",
         "titolo": "1. Prezzo Scontato",
+        "nome": "PrezzoScontato(prezzo, sconto)",
+        "descrizioneBreve": "Calcola il prezzo scontato",
         "fileC": "../file.c/prezzo.c",
         "fileTxt": "../descrizioni/sconto.txt",
         "descrizione": "Calcolo dello sconto percentuale."
@@ -9,13 +11,17 @@
     {
         "id": "code-es2",
         "titolo": "2. Differenza Assoluta",
+        "nome": "DifferenzaAssoluta(a, b)",
+        "descrizioneBreve": "Calcola la differenza assoluta tra due numeri",
         "fileC": "../file.c/diferenza.c",
         "fileTxt": "../descrizioni/diferenza_asoluta.txt",
         "descrizione": "Calcolo distanza tra due numeri."
     },
     {
         "id": "code-es3",
-        "titolo": "3. Palindroma e funzione input stringa (LeggiStringa)",
+        "titolo": "3. Palindroma",
+        "nome": "Palindroma(stringa)",
+        "descrizioneBreve": "Verifica se una stringa è palindroma",
         "fileC": "../file.c/palindroma.c",
         "fileTxt": "../descrizioni/palindroma_e_leggi.txt",
         "descrizione": "Controllo stringhe palindrome."
@@ -23,6 +29,8 @@
     {
         "id": "code-es4",
         "titolo": "4. Somma e Fattoriale",
+        "nome": "SommaFattoriale(n)",
+        "descrizioneBreve": "Calcola la somma e il fattoriale di un numero",
         "fileC": "../file.c/somma_fattoriale.c",
         "fileTxt": "../descrizioni/somma_e_fattoriale.txt",
         "descrizione": "Operazioni matematiche."
