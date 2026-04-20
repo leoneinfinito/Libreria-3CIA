@@ -47,16 +47,16 @@ nav a:hover {
 }
 
 /* =========================
-   GRID CARD
+   GRID
 ========================= */
 #esempi {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 18px;
 }
 
 /* =========================
-   CARD (QUADRATI)
+   CARD
 ========================= */
 .card {
     background: #1e293b;
@@ -66,6 +66,10 @@ nav a:hover {
     cursor: pointer;
     transition: 0.25s ease;
     box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .card:hover {
@@ -75,17 +79,18 @@ nav a:hover {
 
 .card h3 {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    color: #7dd3fc;
 }
 
-.card code {
-    display: block;
-    margin: 8px 0;
-    color: #7dd3fc;
+.funzione {
+    font-family: monospace;
+    color: #93c5fd;
     font-weight: bold;
 }
 
 .card p {
+    margin: 0;
     font-size: 0.9rem;
     color: #cbd5e1;
 }
@@ -124,15 +129,14 @@ nav a:hover {
     margin-top: 20px;
 }
 
-/* SINISTRA */
 .modal-descrizione {
     background: #0f172a;
     padding: 15px;
     border-radius: 12px;
     border: 1px solid #334155;
+    color: #cbd5e1;
 }
 
-/* DESTRA */
 .modal-codice pre {
     background: #020617;
     padding: 15px;
@@ -143,7 +147,7 @@ nav a:hover {
     margin: 0;
 }
 
-/* CHIUDI */
+/* chiudi */
 .close {
     float: right;
     font-size: 28px;
