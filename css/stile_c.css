@@ -55,7 +55,7 @@ nav a:hover {
 }
 
 /* =========================
-   GRID
+   GRID CARD
 ========================= */
 #esempi {
     max-width: 1200px;
@@ -114,7 +114,7 @@ nav a:hover {
 }
 
 /* =========================
-   MODAL (FIX GIUSTO)
+   MODAL (CENTRATURA PERFETTA)
 ========================= */
 .modal {
     position: fixed;
@@ -122,15 +122,13 @@ nav a:hover {
     background: rgba(0,0,0,0.75);
     backdrop-filter: blur(6px);
 
-    display: flex;
-    justify-content: center;
-    align-items: center; /* 👈 CENTRATO VERO */
+    display: grid;
+    place-items: center; /* 👈 CENTRO PERFETTO */
 
-    padding: 20px; /* 👈 evita che tocchi i bordi su mobile */
+    padding: 20px;
     z-index: 9999;
 }
 
-/* chiuso */
 .hidden {
     display: none;
 }
@@ -145,9 +143,10 @@ nav a:hover {
     border-radius: 16px;
     border: 1px solid #334155;
 
+    max-height: 85vh;
+    overflow-y: auto;
+
     animation: pop 0.2s ease;
-    max-height: 85vh;      /* 👈 non esce dallo schermo */
-    overflow-y: auto;      /* 👈 scroll interno se serve */
 }
 
 /* animazione */
@@ -162,7 +161,7 @@ nav a:hover {
     }
 }
 
-/* GRID MODAL */
+/* GRID INTERNA MODAL */
 .modal-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -233,10 +232,6 @@ footer a:hover {
 
     #esempi {
         grid-template-columns: 1fr;
-    }
-
-    .modal-content {
-        margin-top: 90px;
     }
 
     .modal-grid {
