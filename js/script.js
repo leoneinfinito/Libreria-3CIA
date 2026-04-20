@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             <p>${es.descrizioneBreve}</p>
         `;
 
-        card.addEventListener("click", async () => {
+        card.addEventListener("click", () => {
             openModal(es);
         });
 
@@ -28,9 +28,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 /* =========================
-   MODAL OPEN
+   APERTURA MODAL
 ========================= */
 async function openModal(es) {
+
+    const modal = document.getElementById("modal");
 
     document.getElementById("modal-titolo").innerText = es.titolo;
     document.getElementById("modal-desc").innerText = es.descrizione;
@@ -51,14 +53,12 @@ async function openModal(es) {
             "Errore caricamento codice";
     }
 
-    document.getElementById("modal").classList.remove("hidden");
-
-    // reset scroll
-    window.scrollTo(0, 0);
+    // 👇 IMPORTANTISSIMO: NON toccare posizione o style
+    modal.classList.remove("hidden");
 }
 
 /* =========================
-   CLOSE MODAL
+   CHIUSURA MODAL
 ========================= */
 function chiudiModal() {
     document.getElementById("modal").classList.add("hidden");
