@@ -124,13 +124,19 @@ nav a:hover {
 
     display: flex;
     justify-content: center;
-    align-items: center;
+
+    align-items: flex-start;   /* 👈 distanza dall’header */
+    padding-top: 120px;        /* 👈 spazio sopra */
+    overflow-y: auto;
+
+    z-index: 9999;
 }
 
 .hidden {
     display: none;
 }
 
+/* animazione apertura */
 .modal-content {
     background: #1e293b;
     width: 85%;
@@ -138,6 +144,19 @@ nav a:hover {
     padding: 25px;
     border-radius: 16px;
     border: 1px solid #334155;
+
+    animation: pop 0.2s ease;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* GRID MODAL */
@@ -177,7 +196,7 @@ nav a:hover {
 }
 
 /* =========================
-   FOOTER (UGUALE AL RESTO SITO)
+   FOOTER (COERENTE SITO)
 ========================= */
 footer {
     background: #020617;
@@ -219,5 +238,9 @@ footer a:hover {
 
     .modal-grid {
         grid-template-columns: 1fr;
+    }
+
+    .modal {
+        padding-top: 80px;
     }
 }
