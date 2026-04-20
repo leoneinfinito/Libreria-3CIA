@@ -1,74 +1,66 @@
 
-document.addEventListener("DOMContentLoaded", init);
-
-async function init() {
+document.addEventListener("DOMContentLoaded", async () => {
 
     const container = document.getElementById("esempi");
 
-    try {
-        const res = await fetch("../esercizi.json");
-        const dati = await res.json();
+    const res = await fetch("../esercizi.json");
+    const dati = await res.json();
 
-        container.innerHTML = "";
+    container.innerHTML = "";
 
-        dati.forEach(es => {
+    dati.forEach(es => {
 
-            const card = document.createElement("div");
-            card.className = "card";
+        const card = document.createElement("div");
+        card.className = "card";
 
-            // 🟦 CARD FINALE (con <code>)
-            card.innerHTML = `
-                <h3>${es.titolo}</h3>
-                <code>${es.nome}</code>
-                <p>${es.descrizioneBreve}</p>
-            `;
+        // 🟦 STRUTTURA CARD CORRETTA
+        card.innerHTML = `
+            <h3>${es.titolo}</h3>
+            <code>${es.nome}</code>
+            <p>${es.descrizioneBreve}</p>
+        `;
 
-            // CLICK → MODAL
-            card.addEventListener("click", async () => {
+        // CLICK → MODAL
+        card.addEventListener("click", async () => {
 
-                document.getElementById("modal-titolo").innerText = es.titolo;
-                document.getElementById("modal-desc").innerText = es.descrizione;
+            document.getElementById("modal-titolo").innerText = es.titolo;
+            document.getElementById("modal-desc").innerText = es.descrizione;
 
-                try {
-                    const resC = await fetch(es.fileC);
-                    let codice = await resC.text();
+            try {
+                const resC = await fetch(es.fileC);
+                let codice = await resC.text();
 
-                    codice = codice
-                        .replace(/&/g, "&amp;")
-                        .replace(/</g, "&lt;")
-                        .replace(/>/g, "&gt;");
+                codice = codice
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;");
 
-                    document.getElementById("modal-code").innerHTML = codice;
+                document.getElementById("modal-code").innerHTML = codice;
 
-                } catch (err) {
-                    document.getElementById("modal-code").innerText =
-                        "Errore caricamento codice";
-                }
+            } catch (err) {
+                document.getElementById("modal-code").innerText =
+                    "Errore caricamento codice";
+            }
 
-                document.getElementById("modal").classList.remove("hidden");
-            });
-
-            container.appendChild(card);
+            document.getElementById("modal").classList.remove("hidden");
         });
 
-    } catch (err) {
-        console.error(err);
-        container.innerHTML = "<p>Errore caricamento dati</p>";
-    }
-}
+        container.appendChild(card);
+    });
+});
 
-/* =========================
-   MODAL CONTROL
-========================= */
+// CHIUDI MODAL
 function chiudiModal() {
     document.getElementById("modal").classList.add("hidden");
 }
 
+// ESC
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") chiudiModal();
+});
+
+// click fuori
 document.addEventListener("click", (e) => {
     const modal = document.getElementById("modal");
     if (e.target === modal) modal.classList.add("hidden");
-});
-
-document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") chiudiModal();
 });
