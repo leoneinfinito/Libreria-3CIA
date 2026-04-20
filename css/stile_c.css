@@ -10,21 +10,23 @@ body {
     line-height: 1.6;
 }
 
-/* contenuti centrati */
-header,
-section {
-    max-width: 1150px;
-    margin: auto;
-    padding: 40px 20px;
-}
-
-/* titolo centrato */
+/* =========================
+   HEADER
+========================= */
 header {
     text-align: center;
+    padding: 60px 20px 30px 20px;
 }
 
-h1, h2, h3 {
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
     color: #7dd3fc;
+}
+
+header p {
+    margin-top: 10px;
+    color: #cbd5e1;
 }
 
 /* =========================
@@ -34,11 +36,11 @@ nav {
     position: sticky;
     top: 0;
     background: rgba(15, 23, 42, 0.95);
-    padding: 18px;
+    padding: 15px;
     text-align: center;
     backdrop-filter: blur(8px);
-    z-index: 1000;
     border-bottom: 1px solid #1e293b;
+    z-index: 1000;
 }
 
 nav a {
@@ -56,13 +58,17 @@ nav a:hover {
    GRID CARD
 ========================= */
 #esempi {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 18px;
 }
 
 /* =========================
-   CARD
+   CARD (QUADRATI)
 ========================= */
 .card {
     background: #1e293b;
@@ -75,7 +81,7 @@ nav a:hover {
 
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
 }
 
 .card:hover {
@@ -85,11 +91,11 @@ nav a:hover {
 
 .card h3 {
     margin: 0;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     color: #7dd3fc;
 }
 
-/* 👇 FUNZIONE CON <code> */
+/* FUNZIONE */
 .card code {
     display: block;
     font-family: monospace;
@@ -102,6 +108,7 @@ nav a:hover {
     border: 1px solid #334155;
 }
 
+/* DESCRIZIONE BREVE */
 .card p {
     margin: 0;
     font-size: 0.9rem;
@@ -116,10 +123,10 @@ nav a:hover {
     inset: 0;
     background: rgba(0,0,0,0.75);
     backdrop-filter: blur(6px);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
 }
 
 .hidden {
@@ -135,7 +142,7 @@ nav a:hover {
     border: 1px solid #334155;
 }
 
-/* layout modal */
+/* GRID MODAL */
 .modal-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -143,7 +150,7 @@ nav a:hover {
     margin-top: 20px;
 }
 
-/* sinistra */
+/* SINISTRA */
 .modal-descrizione {
     background: #0f172a;
     padding: 15px;
@@ -152,7 +159,7 @@ nav a:hover {
     color: #cbd5e1;
 }
 
-/* destra codice */
+/* DESTRA CODICE */
 .modal-codice pre {
     background: #020617;
     padding: 15px;
@@ -163,7 +170,7 @@ nav a:hover {
     margin: 0;
 }
 
-/* chiudi */
+/* CHIUDI */
 .close {
     float: right;
     font-size: 28px;
@@ -172,9 +179,35 @@ nav a:hover {
 }
 
 /* =========================
+   FOOTER
+========================= */
+footer {
+    margin-top: 80px;
+    padding: 30px 20px;
+    text-align: center;
+    background: #020617;
+    border-top: 1px solid #1e293b;
+    color: #94a3b8;
+}
+
+footer a {
+    color: #7dd3fc;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
 
     #esempi {
         grid-template-columns: 1fr;
