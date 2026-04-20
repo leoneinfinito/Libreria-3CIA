@@ -12,7 +12,8 @@
     printf("dammi il secondo numero: ");
     scanf("%d", &num2);
 
-    printf("la differenza assoluta tra %d e %d e' : %d\n", num1, num2, DifferenzaAssoluta(num1, num2));
+    printf("la differenza assoluta tra %d e %d e' : %d\n"
+        , num1, num2, DifferenzaAssoluta(num1, num2));
 
     return 0;
 }
