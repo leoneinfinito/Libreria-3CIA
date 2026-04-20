@@ -16,34 +16,29 @@
         <a href="../index.html">Home</a>
         <a href="../pagine/guida.html">Guida</a>
         <a href="../pagine/comandi.html">Comandi</a>
-        <a href="../libreria/3cia.h" download="3cia.h">Download</a>
+        <a href="../libreria/3cia.h" download>Download</a>
     </nav>
 
     <!-- HEADER -->
     <header>
-        <h1>Comandi / Funzioni</h1>
-        <p>Documentazione della libreria 3CIA.h</p>
+        <h1>Comandi della libreria</h1>
+        <p>Clicca su una funzione per vedere dettagli ed esempio</p>
     </header>
 
-    <!-- CONTENITORE CARD (JS LO RIEMPIE) -->
+    <!-- GRIGLIA FUNZIONI (RIEMPITA DA JS) -->
     <section id="esempi">
-        <!-- Le card vengono generate dal JS -->
+        <!-- QUI JS CREA I QUADRATI -->
     </section>
 
-    <!-- =========================
-         MODAL (FINESTRA DETTAGLI)
-    ========================== -->
+    <!-- MODAL -->
     <div id="modal" class="modal hidden">
 
         <div class="modal-content">
 
-            <!-- CHIUDI -->
             <span class="close" onclick="chiudiModal()">×</span>
 
-            <!-- TITOLO -->
-            <h2 id="modal-titolo">Titolo</h2>
+            <h2 id="modal-titolo"></h2>
 
-            <!-- GRID INTERNA -->
             <div class="modal-grid">
 
                 <!-- SINISTRA: DESCRIZIONE -->
@@ -54,7 +49,7 @@
 
                 <!-- DESTRA: CODICE -->
                 <div class="modal-codice">
-                    <h3>Codice</h3>
+                    <h3>Esempio</h3>
                     <pre id="modal-code"></pre>
                 </div>
 
@@ -69,11 +64,10 @@
 
         <p>© Classe 3CIA - Polo Manetti Porciatti</p>
 
-        <div class="footer-links">
+        <div>
             <a href="../index.html">Home</a>
             <a href="../pagine/guida.html">Guida</a>
             <a href="../pagine/comandi.html">Comandi</a>
-            <a href="../libreria/3cia.h" download>Download</a>
         </div>
 
     </footer>
