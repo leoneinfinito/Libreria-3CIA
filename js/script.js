@@ -3,50 +3,61 @@ document.addEventListener("DOMContentLoaded", init);
 
 async function init() {
 
-    const container = document.getElementById("esempi-container");
+    const container = document.getElementById("esempi");
 
     const res = await fetch("../esercizi.json");
     const dati = await res.json();
 
     container.innerHTML = "";
 
-    for (const es of dati) {
+    dati.forEach(es => {
 
-        const box = document.createElement("div");
-        box.className = "esempio";
+        const card = document.createElement("div");
+        card.className = "card";
 
-        // struttura base
-        box.innerHTML = `
-            <pre id="code-${es.id}">Caricamento codice...</pre>
-            <div class="desc" id="desc-${es.id}">Caricamento descrizione...</div>
+        // 🔥 SOLO INFO BASE NEL QUADRATINO
+        card.innerHTML = `
+            <h3>${es.titolo}</h3>
+            <p>${es.descrizione}</p>
         `;
 
-        container.appendChild(box);
+        // CLICK → MODAL
+        card.onclick = async () => {
 
-        // carica file C
-        caricaFile(es.fileC, `code-${es.id}`, true);
+            document.getElementById("modal-titolo").innerText = es.titolo;
 
-        // carica descrizione TXT
-        caricaFile(es.fileTxt, `desc-${es.id}`, false);
-    }
-}
+            // DESCRIZIONE (DESTRA)
+            document.getElementById("modal-desc").innerText = es.descrizione;
 
-async function caricaFile(path, id, isCode) {
+            // CODICE (SINISTRA)
+            let codice = await fetch(es.fileC).then(r => r.text());
 
-    try {
-        const res = await fetch(path);
-        let text = await res.text();
-
-        if (isCode) {
-            text = text
+            codice = codice
                 .replace(/&/g, "&amp;")
                 .replace(/</g, "&lt;")
                 .replace(/>/g, "&gt;");
-        }
 
-        document.getElementById(id).innerHTML = text;
+            document.getElementById("modal-code").innerHTML = codice;
 
-    } catch {
-        document.getElementById(id).innerText = "Errore caricamento file";
-    }
+            document.getElementById("modal").classList.remove("hidden");
+        };
+
+        container.appendChild(card);
+    });
 }
+
+// CHIUDI MODAL
+function chiudiModal() {
+    document.getElementById("modal").classList.add("hidden");
+}
+
+// click fuori
+document.addEventListener("click", (e) => {
+    const modal = document.getElementById("modal");
+    if (e.target === modal) modal.classList.add("hidden");
+});
+
+// ESC
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") chiudiModal();
+});
