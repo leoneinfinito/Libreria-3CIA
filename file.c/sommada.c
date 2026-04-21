@@ -11,7 +11,8 @@ int main() {
     /* chiama la funzione SommaDa per calcolare
     la somma da 1 a numero e la stampa*/
     
-    printf("La somma da 1 a %d e' : %d\n", numero, SommaDa(numero));
+    printf("La somma da 1 a %d e' : %d\n", 
+        numero, SommaDa(numero));
 
     return 0;
 }

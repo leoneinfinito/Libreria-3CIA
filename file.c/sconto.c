@@ -12,8 +12,9 @@ int main() {
     printf("Dammi lo sconto in percentuale\n > ");
     scanf("%d", &sconto);
 
-        /* chiama la funzione PrezzoScontato per calcolare
-        il prezzo scontato e lo stampa*/
+    /* chiama la funzione PrezzoScontato per calcolare
+    il prezzo scontato e lo stampa*/
+    
     prezzo_scontato = PrezzoScontato(prezzo, sconto);
 
     printf("Il prezzo scontato e' : %.2f\n", prezzo_scontato);

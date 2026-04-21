@@ -11,7 +11,8 @@ int main() {
     /* chiama la funzione Fattoriale per calcolare
      il fattoriale del numero inserito e lo stampa*/
      
-    printf("Il fattoriale di %d e' : %d\n", numero, Fattoriale(numero));
+    printf("Il fattoriale di %d e' : %d\n", 
+        numero, Fattoriale(numero));
        
     return 0;
 }
