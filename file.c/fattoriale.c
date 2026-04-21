@@ -8,6 +8,9 @@ int main() {
     printf("Inserisci un numero: ");
     scanf("%d", &numero);
     
+    /* chiama la funzione Fattoriale per calcolare
+     il fattoriale del numero inserito e lo stampa*/
+     
     printf("Il fattoriale di %d e' : %d\n", numero, Fattoriale(numero));
        
     return 0;

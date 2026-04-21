@@ -7,8 +7,11 @@ int main(){
     char stringa[100];
 
     printf("Inserisci una stringa: ");
-    LeggiStringa(stringa, 100);
+    scanf("%[^\n]", stringa); 
 
+    /* chiama la funzione Palindroma per verificare
+     se la stringa inserita è palindroma */
+     
     if (Palindroma(stringa)) {
         printf("La stringa e' palindroma.\n");
     } else {
