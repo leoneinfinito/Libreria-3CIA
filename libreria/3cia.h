@@ -1,3 +1,4 @@
+//definizione instruzioni per la cpu e dichiarazione di funzioni che possono essere utilizzate in altri file .c
 #ifndef CIA_H
 #define CIA_H
 
