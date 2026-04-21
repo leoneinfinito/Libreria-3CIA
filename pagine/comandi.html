@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -12,52 +11,67 @@
 
 <body>
 
-<nav>
-    <a href="../index.html">Home</a>
-    <a href="../pagine/guida.html">Guida</a>
-    <a href="../pagine/comandi.html">Comandi</a>
-    <a href="../libreria/3cia.h" download>Download</a>
-</nav>
+    <!-- NAV -->
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../pagine/guida.html">Guida</a>
+        <a href="../pagine/comandi.html">Comandi</a>
+        <a href="../libreria/3cia.h" download>Download</a>
+    </nav>
 
-<header>
-    <h1>Comandi della libreria</h1>
-    <p>Clicca su una funzione per vedere dettagli ed esempio</p>
-</header>
+    <!-- HEADER -->
+    <header>
+        <h1>Comandi della libreria</h1>
+        <p>Clicca su una funzione per vedere dettagli ed esempio</p>
+    </header>
 
-<section id="esempi"></section>
+    <!-- GRIGLIA FUNZIONI (RIEMPITA DA JS) -->
+    <section id="esempi">
+        <!-- QUI JS CREA I QUADRATI -->
+    </section>
 
-<!-- MODAL -->
-<div id="modal" class="modal hidden">
+    <!-- MODAL -->
+    <div id="modal" class="modal hidden">
 
-    <div class="modal-content">
+        <div class="modal-content">
 
-        <span class="close" onclick="chiudiModal()">×</span>
+            <span class="close" onclick="chiudiModal()">×</span>
 
-        <h2 id="modal-titolo"></h2>
+            <h2 id="modal-titolo"></h2>
 
-        <div class="modal-grid">
+            <div class="modal-grid">
 
-            <!-- SINISTRA -->
-            <div class="modal-col">
-                <h3>Descrizione</h3>
-                <p id="modal-desc"></p>
-            </div>
+                <!-- SINISTRA: DESCRIZIONE -->
+                <div class="modal-descrizione">
+                    <h3>Descrizione</h3>
+                    <p id="modal-desc"></p>
+                </div>
 
-            <!-- DESTRA -->
-            <div class="modal-col">
-                <h3>Esempio</h3>
-                <pre id="modal-code"></pre>
+                <!-- DESTRA: CODICE -->
+                <div class="modal-codice">
+                    <h3>Esempio</h3>
+                    <pre id="modal-code"></pre>
+                </div>
+
             </div>
 
         </div>
 
     </div>
 
-</div>
+    <!-- FOOTER -->
+    <footer>
 
-<footer>
-    <p>© Classe 3CIA - 2025/2026 - Polo Manetti Porciatti</p>
-</footer>
+        <p>© Classe 3CIA - 2025/2026 - Polo Manetti Porciatti</p>
+
+        <div>
+            <a href="../index.html">Home</a>
+            <a href="../pagine/guida.html">Guida</a>
+            <a href="../pagine/comandi.html">Comandi</a>
+            <a href="../libreria/3cia.h" download="3cia.h">Download</a>
+        </div>
+
+    </footer>
 
 </body>
 </html>
