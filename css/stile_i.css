@@ -239,13 +239,23 @@ footer a:hover {
 /* mobile */
 @media (max-width: 768px) {
 
-    header h1 {
-        font-size: 2.4rem;
+   @media (max-width: 768px) {
+
+    header > div {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
     }
 
+    header h1,
     header p {
-        font-size: 1rem;
+        text-align: center;
     }
+
+    .button-container {
+        align-items: center;
+    }
+}
 
     .btn,
     .btn-download {
