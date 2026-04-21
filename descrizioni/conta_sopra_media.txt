@@ -1,0 +1,24 @@
+La funzione conta quanti elementi di un array sono superiori alla media dei valori contenuti nello stesso array.<br><br>
+
+Serve per analizzare un insieme di numeri e determinare quanti di essi superano il valore medio calcolato.<br><br>
+
+Ad esempio, può essere utilizzata per contare quanti voti sono sopra la media della classe oppure quanti valori superano una soglia media in un dataset.<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>int ContaSopraMedia(int numeri[], int dimensione);</code><br><br>
+
+Dove:<br>
+- <code>numeri[]</code> è l’array di valori da analizzare<br>
+- <code>dimensione</code> è il numero di elementi presenti nell’array<br><br>
+
+<b>Logica della funzione:</b><br>
+1. Calcola la media dell’array<br>
+2. Scorre tutti gli elementi<br>
+3. Conta quelli maggiori della media<br><br>
+
+<b>Esempio di utilizzo:</b><br>
+<code>int risultato = ContaSopraMedia(voti, 5);</code><br><br>
+
+La funzione restituisce il numero di elementi che sono maggiori della media dell’array.<br><br>
+
+Buon coding! :)

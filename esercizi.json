@@ -5,7 +5,7 @@
         "nome": "PrezzoScontato(prezzo, sconto)",
         "descrizioneBreve": "Calcola il prezzo scontato",
         "fileC": "../file.c/prezzo.c",
-        "fileTxt": "../descrizioni/sconto.txt",
+        "fileTxt": "../descrizioni/prezzo.txt",
         "descrizione": "Calcolo dello sconto percentuale."
     },
     {
@@ -14,7 +14,7 @@
         "nome": "DifferenzaAssoluta(a, b)",
         "descrizioneBreve": "Calcola la differenza assoluta tra due numeri",
         "fileC": "../file.c/diferenza.c",
-        "fileTxt": "../descrizioni/diferenza_asoluta.txt",
+        "fileTxt": "../descrizioni/diferenza.txt",
         "descrizione": "Calcolo distanza tra due numeri."
     },
     {
@@ -23,7 +23,7 @@
         "nome": "Palindroma(stringa)",
         "descrizioneBreve": "Verifica se una stringa è palindroma",
         "fileC": "../file.c/palindroma.c",
-        "fileTxt": "../descrizioni/parola_palindroma.txt",
+        "fileTxt": "../descrizioni/palindroma.txt",
         "descrizione": "Controllo stringhe palindrome."
     },
     {
@@ -32,7 +32,7 @@
         "nome": "Fattoriale(n)",
         "descrizioneBreve": "Calcolail fattoriale di un numero",
         "fileC": "../file.c/fattoriale.c",
-        "fileTxt": "../descrizioni/fattorialenum.txt",
+        "fileTxt": "../descrizioni/fattoriale.txt",
         "descrizione": "Operazioni matematiche."
     },
     {
@@ -41,7 +41,7 @@
         "nome": "LeggiStringa(stringa, dimensione)",
         "descrizioneBreve": "Legge una stringa da input",
         "fileC": "../file.c/leggi.c",
-        "fileTxt": "../descrizioni/leggi_stringa.txt",
+        "fileTxt": "../descrizioni/leggi.txt",
         "descrizione": "Lettura di stringhe da input."
     },
     {
@@ -50,7 +50,7 @@
         "nome": "SommaDa(n)",
         "descrizioneBreve": "Calcola la somma dei numeri da 1 a n",
         "fileC": "../file.c/sommada.c",
-        "fileTxt": "../descrizioni/sommadanum.txt",
+        "fileTxt": "../descrizioni/sommada.txt",
         "descrizione": "Somma sequenziale."
         
     },
@@ -60,8 +60,17 @@
         "nome": "media(numeri[], dimensione)",
         "descrizioneBreve": "Calcola la media dei numeri in un array",
         "fileC": "../file.c/media.c",
-        "fileTxt": "../descrizioni/media_vettore.txt",
+        "fileTxt": "../descrizioni/media.txt",
         "descrizione":  "calcolo della media di un insieme di numeri memorizzati in un array."
+    },
+    {
+        "id": "code-es8",
+        "titolo": "8. Conta nummeri sopra la media arrey",
+        "nome": "contaSopraMedia(numeri[], dimensione)",
+        "descrizioneBreve": "Conta i numeri in un array che sono superiori alla media",
+        "fileC": "../file.c/conta_sopra_media.c",
+        "fileTxt": "../descrizioni/conta_sopra_media.txt",
+        "descrizione":  "Conteggio degli elementi di un array che superano la media."
     }
 
 
