@@ -53,7 +53,7 @@ async function openModal(es) {
             "Errore caricamento codice";
     }
 
-    // 
+
     modal.classList.remove("hidden");
 }
 
