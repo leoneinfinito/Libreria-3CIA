@@ -92,16 +92,14 @@ static int Palindroma(char stringa[]) {
 }
 
 //----------------Media Dentro Un Vettore-------------------------
-
 static float media(int numeri[], int dimensione){
-    int somma = 0;
-    int i;
+    float somma = 0;
 
-    for(i = 0; i < dimensione; i++){
-        somma = somma + numeri[i];
+    for(int i = 0; i < dimensione; i++){
+        somma += numeri[i];
     }
 
-    return somma / dimensione; 
+    return somma / dimensione;
 }
 
 //-------------------------Conta Numeri Sopra La Media-----------------------------------------
