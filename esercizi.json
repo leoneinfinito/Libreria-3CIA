@@ -51,8 +51,19 @@
         "descrizioneBreve": "Calcola la somma dei numeri da 1 a n",
         "fileC": "../file.c/sommada.c",
         "fileTxt": "../descrizioni/sommadanum.txt",
-        "descrizione": "Operazione matematica di somma sequenziale."
+        "descrizione": "Somma sequenziale."
+        
+    },
+    {
+        "id": "code-es7",
+        "titolo": "7. Media nummeri dentro un array",
+        "nome": "media(numeri[], dimensione)",
+        "descrizioneBreve": "Calcola la media dei numeri in un array",
+        "fileC": "../file.c/media.c",
+        "fileTxt": "../descrizioni/media_vettore.txt",
+        "descrizione":  "calcolo della media di un insieme di numeri memorizzati in un array."
     }
+
 
 
 
