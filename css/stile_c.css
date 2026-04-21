@@ -166,11 +166,12 @@ nav a:hover {
 /* =========================
    MODAL GRID (SINISTRA / DESTRA)
 ========================= */
-
 .modal-grid {
-    display: flex;
-    flex-direction: row-reverse; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
+    margin-top: 20px;
+    align-items: start;
 }
 
 /* SINISTRA → descrizione */
