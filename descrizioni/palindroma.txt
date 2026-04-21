@@ -1,0 +1,17 @@
+La funzione legge una stringa inserita dall’utente da tastiera e la memorizza in un array di caratteri.<br><br>
+Serve per acquisire input testuali in modo sicuro, limitando la dimensione massima della stringa per evitare overflow del buffer.<br><br>
+Ad esempio, può essere utilizzata per leggere parole, nomi o frasi inserite dall’utente.<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code> LeggiStringa(char stringa[], int dimensione);</code><br><br>
+
+Dove:<br>
+- <code>stringa</code> è il vettore di caratteri dove salvare il testo<br>
+- <code>dimensione</code> è la lunghezza massima consentita della stringa<br><br>
+
+<b>Esempio di utilizzo:</b><br>
+<code>LeggiStringa(stringa, 100);</code><br><br>
+
+La funzione modifica direttamente la variabile passata riempiendola con l’input dell’utente.<br><br>
+
+

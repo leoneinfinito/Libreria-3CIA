@@ -1,0 +1,21 @@
+La funzione verifica se una stringa è palindroma, cioè se si legge nello stesso modo da sinistra verso destra e da destra verso sinistra.<br><br>
+Serve per controllare la simmetria di una parola o di una sequenza di caratteri.<br><br>
+Ad esempio, stringhe come "anna", "otto" o "radar" sono palindrome, mentre "ciao" non lo è.<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>int Palindroma(char stringa[]);</code><br><br>
+
+Dove:<br>
+- <code>stringa</code> è la stringa da analizzare<br><br>
+
+La funzione restituisce:<br>
+- <code>1</code> se la stringa è palindroma<br>
+- <code>0</code> se la stringa non è palindroma<br><br>
+
+<b>Esempio di utilizzo:</b><br>
+<code>risultato = Palindroma(stringa);</code><br><br>
+
+Oppure direttamente in una condizione:<br>
+<code>if (Palindroma(stringa)) printf("Palindroma");</code><br><br>
+
+Buon coding! :)

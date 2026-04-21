@@ -23,7 +23,7 @@
         "nome": "Palindroma(stringa)",
         "descrizioneBreve": "Verifica se una stringa è palindroma",
         "fileC": "../file.c/palindroma.c",
-        "fileTxt": "../descrizioni/palindroma_e_leggi.txt",
+        "fileTxt": "../descrizioni/palindroma.txt",
         "descrizione": "Controllo stringhe palindrome."
     },
     {
@@ -34,5 +34,16 @@
         "fileC": "../file.c/somma_fattoriale.c",
         "fileTxt": "../descrizioni/somma_e_fattoriale.txt",
         "descrizione": "Operazioni matematiche."
+    },
+    {
+        "id": "code-es5",
+        "titolo": "5. Leggi Stringa",
+        "nome": "LeggiStringa(stringa, dimensione)",
+        "descrizioneBreve": "Legge una stringa da input",
+        "fileC": "../file.c/leggi.c",
+        "fileTxt": "../descrizioni/leggi.txt",
+        "descrizione": "Lettura di stringhe da input."
     }
+
+
 ]
