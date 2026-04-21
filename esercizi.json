@@ -4,8 +4,8 @@
         "titolo": "1. Prezzo Scontato",
         "nome": "PrezzoScontato(prezzo, sconto)",
         "descrizioneBreve": "Calcola il prezzo scontato",
-        "fileC": "../file.c/prezzo.c",
-        "fileTxt": "../descrizioni/prezzo.txt",
+        "fileC": "../file.c/sconto.c",
+        "fileTxt": "../descrizioni/sconto.txt",
         "descrizione": "Calcolo dello sconto percentuale."
     },
     {
