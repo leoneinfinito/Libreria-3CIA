@@ -41,7 +41,7 @@
         "nome": "LeggiStringa(stringa, dimensione)",
         "descrizioneBreve": "Legge una stringa da input",
         "fileC": "../file.c/leggi.c",
-        "fileTxt": "../descrizioni/leggi.txt",
+        "fileTxt": "../descrizioni/leggi_stringa.txt",
         "descrizione": "Lettura di stringhe da input."
     }
 
