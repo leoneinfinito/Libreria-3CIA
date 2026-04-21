@@ -1,0 +1,20 @@
+La funzione calcola il valore massimo presente all’interno di un array di numeri interi.<br><br>
+Serve per analizzare un insieme di valori e restituire quello più grande tra tutti gli elementi inseriti.<br><br>
+Ad esempio, se l’array contiene i valori 3, 7, 2, 9, 5, la funzione restituirà 9.<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>int massimo(int numeri[], int dimensione);</code><br><br>
+
+Dove:<br>
+- <code>numeri</code> è l’array di interi da analizzare<br>
+- <code>dimensione</code> è il numero di elementi presenti nell’array<br><br>
+
+La funzione restituisce un intero che rappresenta il valore massimo trovato nell’array.<br><br>
+
+<b>Esempio di utilizzo:</b><br>
+<code>risultato = massimo(numeri, 5);</code><br><br>
+
+Oppure direttamente in stampa:<br>
+<code>printf("%d", massimo(numeri, 5));</code><br><br>
+
+Buon coding! :)

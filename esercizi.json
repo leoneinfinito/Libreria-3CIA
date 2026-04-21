@@ -71,7 +71,17 @@
         "fileC": "../file.c/conta_sopra_media.c",
         "fileTxt": "../descrizioni/conta_sopra_media.txt",
         "descrizione":  "Conteggio degli elementi di un array che superano la media."
+    },
+    {
+        "id": "code-es9",
+        "titolo": "9. numero più grande in un array",
+        "nome": "massimo(numeri[], dimensione)",
+        "descrizioneBreve": "Trova il numero più grande in un array",
+        "fileC": "../file.c/massimo.c",
+        "fileTxt": "../descrizioni/massimo.txt",
+        "descrizione":  "Ricerca dell'elemento di valore massimo in un array."
     }
+
 
 
 
