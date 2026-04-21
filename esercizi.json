@@ -2,7 +2,7 @@
     {
         "id": "code-es1",
         "titolo": "1. Prezzo Scontato",
-        "nome": "PrezzoScontato(prezzo, sconto)",
+        "nome": "PrezzoScontato(prezzo, sconto",
         "descrizioneBreve": "Calcola il prezzo scontato",
         "fileC": "../file.c/prezzo.c",
         "fileTxt": "../descrizioni/sconto.txt",
