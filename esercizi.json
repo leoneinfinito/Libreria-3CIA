@@ -23,7 +23,7 @@
         "nome": "Palindroma(stringa)",
         "descrizioneBreve": "Verifica se una stringa è palindroma",
         "fileC": "../file.c/palindroma.c",
-        "fileTxt": "../descrizioni/palindroma.txt",
+        "fileTxt": "../descrizioni/parola_palindroma.txt",
         "descrizione": "Controllo stringhe palindrome."
     },
     {
