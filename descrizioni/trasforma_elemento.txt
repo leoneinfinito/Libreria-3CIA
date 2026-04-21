@@ -1,0 +1,17 @@
+La funzione trasforma un numero intero in base alla sua parità.<br><br>
+Se il numero è pari viene elevato al quadrato, mentre se è dispari viene elevato al cubo.<br><br>
+Serve per applicare una trasformazione matematica diversa a seconda della condizione del numero in input.<br><br>
+Ad esempio, il numero 4 diventa 16 (4²), mentre il numero 3 diventa 27 (3³).<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>static int trasformaElemento(int numero);</code><br><br>
+
+Dove:<br>
+- <code>numero</code> è il valore intero da trasformare<br><br>
+
+La funzione restituisce un intero che rappresenta il numero trasformato (quadrato se pari, cubo se dispari).<br><br>
+
+<b>Esempio rapido:</b><br>
+<code>risultato = trasformaElemento(numero);</code><br><br>
+
+Buon coding! :)

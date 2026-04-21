@@ -1,0 +1,18 @@
+La funzione calcola il valore massimo presente in una riga specifica di una matrice di numeri interi.<br><br>
+Serve per individuare l’elemento più grande contenuto nella riga selezionata confrontando tutti i valori presenti.<br><br>
+Ad esempio, se una riga contiene i valori 4, 9, 2, la funzione restituirà 9.<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>static int maxRiga(int rigaScelta, int colonne, int matrice[][colonne]);</code><br><br>
+
+Dove:<br>
+- <code>rigaScelta</code> è l’indice della riga da analizzare<br>
+- <code>colonne</code> è il numero totale di colonne della matrice<br>
+- <code>matrice</code> è la matrice contenente valori interi<br><br>
+
+La funzione restituisce un intero che rappresenta il valore massimo trovato nella riga scelta.<br><br>
+
+<b>Esempio rapido:</b><br>
+<code>risultato = maxRiga(1, 3, matrice);</code><br><br>
+
+Buon coding! :)

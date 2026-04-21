@@ -1,0 +1,19 @@
+La funzione trasforma tutti i valori presenti in un array di numeri interi nei rispettivi valori assoluti.<br><br>
+Serve per eliminare il segno negativo dagli elementi del vettore, rendendo ogni numero positivo o uguale a zero.<br><br>
+Ad esempio, se l’array contiene i valori -4, 7, -2, 0, la funzione lo trasformerà in 4, 7, 2, 0.<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>static void TrasformaAssoluto(int num[], int dimensione);</code><br><br>
+
+Dove:<br>
+- <code>num</code> è l’array di numeri interi da modificare<br>
+- <code>dimensione</code> è il numero di elementi presenti nell’array<br><br>
+
+La funzione non restituisce alcun valore, ma modifica direttamente il contenuto dell’array passato come parametro.<br><br>
+
+<b>Esempio di utilizzo:</b><br>
+<code>TrasformaAssoluto(num, 5);</code><br><br>
+
+Dopo l’esecuzione, tutti gli elementi negativi dell’array saranno convertiti nei corrispondenti valori positivi.<br><br>
+
+Buon coding! :)

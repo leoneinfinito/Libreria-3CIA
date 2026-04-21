@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "3cia.h"
 
 int main() {
     int numeri[5];

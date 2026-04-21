@@ -1,0 +1,18 @@
+La funzione verifica se un numero intero è pari.<br><br>
+Un numero è considerato pari quando è divisibile per 2 senza resto.<br><br>
+Ad esempio, i numeri 4, 10 e 28 sono pari, mentre 3, 7 e 15 non lo sono.<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>static int pari(int num);</code><br><br>
+
+Dove:<br>
+- <code>num</code> è il numero intero da controllare<br><br>
+
+La funzione restituisce:<br>
+- <code>1</code> se il numero è pari<br>
+- <code>0</code> se il numero è dispari<br><br>
+
+<b>Esempio rapido:</b><br>
+<code>risultato = pari(8);</code><br><br>
+
+Buon coding! :)

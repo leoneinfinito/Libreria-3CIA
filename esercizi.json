@@ -80,7 +80,80 @@
         "fileC": "../file.c/massimo.c",
         "fileTxt": "../descrizioni/massimo.txt",
         "descrizione":  "Ricerca dell'elemento di valore massimo in un array."
+    },
+    {
+        "id": "code-es10",
+        "titolo": "10. Trasforma numeri negativi in positivi",
+        "nome": "TrasformaAssoluto(numeri[], dimensione)",
+        "descrizioneBreve": "Trasforma i numeri negativi in positivi",
+        "fileC": "../file.c/trasforma.c",
+        "fileTxt": "../descrizioni/trasforma.txt",
+        "descrizione":  "Trasformazione dei valori negativi in valori assoluti."
+    },
+    {
+        "id": "code-es11",
+        "titolo": "11. Somma elementi di una riga in una matrice",
+        "nome": "sommaRiga(riga, colonne, matrice)",
+        "descrizioneBreve": "Calcola la somma degli elementi di una riga in una matrice",
+        "fileC": "../file.c/somma_riga.c",
+        "fileTxt": "../descrizioni/somma_riga.txt",
+        "descrizione":  "Calcolo della somma degli elementi di una riga specifica in una matrice."
+    },
+    {
+        "id": "code-es12",
+        "titolo": "12. Media elementi di una riga in una matrice",
+        "nome": "mediaRiga(riga, colonne, matrice)",
+        "descrizioneBreve": "Calcola la media degli elementi di una riga in una matrice",
+        "fileC": "../file.c/media_riga.c",
+        "fileTxt": "../descrizioni/media_riga.txt",
+        "descrizione":  "Calcolo della media degli elementi di una riga specifica in una matrice."
+    },
+    {
+        "id": "code-es13",
+        "titolo": "13. Massimo elementi di una riga in una matrice",
+        "nome": "maxRiga(riga, colonne, matrice)",
+        "descrizioneBreve": "trova l'elemento di valore massimo di una riga in una matrice",
+        "fileC": "../file.c/max_riga.c",
+        "fileTxt": "../descrizioni/max_riga.txt",
+        "descrizione":  "Calcolo del valore massimo degli elementi di una riga specifica in una matrice."
+    },
+    {
+        "id": "code-es14",
+        "titolo": "14. trova pari o dispari",
+        "nome": "pari(numero)",
+        "descrizioneBreve": "verifica se un numero è pari o dispari",
+        "fileC": "../file.c/pari.c",
+        "fileTxt": "../descrizioni/pari.txt",
+        "descrizione":  "Verifica se un numero è pari o dispari."
+    },
+    {
+        "id": "code-es15",
+        "titolo": "15. Trasforma un numero intero in base alla sua parità",
+        "nome": "trasformaElemento(numero)",
+        "descrizioneBreve": "trasforma un numero in base alla sua parità",
+        "fileC": "../file.c/trasforma_elemento.c",
+        "fileTxt": "../descrizioni/trasforma_elemento.txt",
+        "descrizione":  "Trasformazione di un numero in base alla sua parità."
+    },
+    {
+        "id": "code-es16",
+        "titolo": "16. Trasforma una matrice in base alla parità degli elementi",
+        "nome": "trasformaMatrice(righe, colonne, matrice)",
+        "descrizioneBreve": "trasforma una matrice in base alla parità degli elementi",
+        "fileC": "../file.c/trasforma_matrice.c",
+        "fileTxt": "../descrizioni/trasforma_matrice.txt",
+        "descrizione":  "Trasformazione di una matrice in base alla sua parità."
+    },
+    {
+        "id": "code-es17",
+        "titolo": "17. Somma degli elementi sulla diagonale principale di una matrice",
+        "nome": "sommaDiagonale(righe, colonne, matrice)",
+        "descrizioneBreve": "calcola la somma degli elementi sulla diagonale principale di una matrice",
+        "fileC": "../file.c/somma_diagonale.c",
+        "fileTxt": "../descrizioni/somma_diagonale.txt",
+        "descrizione":  "Calcolo della somma degli elementi sulla diagonale principale di una matrice."
     }
+
 
 
 

@@ -1,0 +1,18 @@
+La funzione calcola la media aritmetica dei valori presenti in una riga specifica di una matrice di numeri interi.<br><br>
+Per ottenere il risultato utilizza la somma degli elementi della riga selezionata e divide il totale per il numero delle colonne.<br><br>
+Ad esempio, se una riga contiene i valori 3, 6, 9, la funzione restituirà 6.<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>static float mediaRiga(int rigaScelta, int colonne, int matrice[][colonne]);</code><br><br>
+
+Dove:<br>
+- <code>rigaScelta</code> è l’indice della riga da analizzare<br>
+- <code>colonne</code> è il numero totale di colonne della matrice<br>
+- <code>matrice</code> è la matrice contenente i valori interi<br><br>
+
+La funzione restituisce un valore <code>float</code> che rappresenta la media degli elementi presenti nella riga scelta.<br><br>
+
+<b>Esempio rapido:</b><br>
+<code>risultato = mediaRiga(0, 3, matrice);</code><br><br>
+
+Buon coding! :)

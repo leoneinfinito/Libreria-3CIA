@@ -1,0 +1,18 @@
+La funzione calcola la somma degli elementi presenti sulla diagonale principale di una matrice quadrata di numeri interi.<br><br>
+La diagonale principale è composta dagli elementi in cui l’indice di riga e l’indice di colonna sono uguali (matrice[i][i]).<br><br>
+Ad esempio, in una matrice 3x3, verranno sommati gli elementi in posizione (0,0), (1,1) e (2,2).<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>static int sommaDiagonale(int righe, int colonne, int matrice[righe][colonne]);</code><br><br>
+
+Dove:<br>
+- <code>righe</code> è il numero di righe della matrice<br>
+- <code>colonne</code> è il numero di colonne della matrice<br>
+- <code>matrice</code> è la matrice contenente i valori interi<br><br>
+
+La funzione restituisce un intero che rappresenta la somma degli elementi della diagonale principale.<br><br>
+
+<b>Esempio rapido:</b><br>
+<code>risultato = sommaDiagonale(3, 3, matrice);</code><br><br>
+
+Buon coding! :)

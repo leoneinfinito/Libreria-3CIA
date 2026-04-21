@@ -1,0 +1,19 @@
+La funzione trasforma tutti gli elementi di una matrice di numeri interi applicando una regola matematica definita dalla funzione <code>trasformaElemento</code>.<br><br>
+In particolare, ogni elemento della matrice viene modificato: se è pari viene elevato al quadrato, se è dispari viene elevato al cubo.<br><br>
+Serve per applicare una trasformazione globale su tutti i valori di una matrice in modo automatico.<br><br>
+Ad esempio, una matrice con valori {{2, 3}, {4, 5}} diventerà {{4, 27}, {16, 125}}.<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>static void trasformaMatrice(int righe, int colonne, int matrice[righe][colonne]);</code><br><br>
+
+Dove:<br>
+- <code>righe</code> è il numero di righe della matrice<br>
+- <code>colonne</code> è il numero di colonne della matrice<br>
+- <code>matrice</code> è la matrice da modificare direttamente<br><br>
+
+La funzione non restituisce alcun valore, ma modifica direttamente la matrice passata come parametro.<br><br>
+
+<b>Esempio rapido:</b><br>
+<code>trasformaMatrice(righe, colonne, matrice);</code><br><br>
+
+Buon coding! :)
