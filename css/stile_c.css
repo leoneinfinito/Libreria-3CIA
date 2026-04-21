@@ -1,7 +1,4 @@
-
-/* =========================
-   BASE
-========================= */
+/* ========================= BASE ========================= */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,9 +7,7 @@ body {
     line-height: 1.6;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* ========================= HEADER ========================= */
 header {
     text-align: center;
     padding: 70px 20px 40px 20px;
@@ -29,9 +24,7 @@ header p {
     color: #cbd5e1;
 }
 
-/* =========================
-   NAV
-========================= */
+/* ========================= NAV ========================= */
 nav {
     position: sticky;
     top: 0;
@@ -54,9 +47,7 @@ nav a:hover {
     color: #7dd3fc;
 }
 
-/* =========================
-   GRID CARD
-========================= */
+/* ========================= GRID CARD ========================= */
 #esempi {
     max-width: 1200px;
     margin: auto;
@@ -67,17 +58,15 @@ nav a:hover {
     gap: 18px;
 }
 
-/* =========================
-   CARD
-========================= */
+/* ========================= CARD ========================= */
 .card {
     background: #1e293b;
     padding: 18px;
     border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     cursor: pointer;
     transition: 0.25s ease;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 
     display: flex;
     flex-direction: column;
@@ -86,7 +75,7 @@ nav a:hover {
 
 .card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 18px 35px rgba(56,189,248,0.15);
+    box-shadow: 0 18px 35px rgba(56, 189, 248, 0.15);
 }
 
 .card h3 {
@@ -113,17 +102,15 @@ nav a:hover {
     color: #cbd5e1;
 }
 
-/* =========================
-   MODAL (CENTRATURA PERFETTA)
-========================= */
+/* ========================= MODAL (CENTRATURA PERFETTA) ========================= */
 .modal {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.75);
+    background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(6px);
 
     display: grid;
-    place-items: center; /* 👈 CENTRO PERFETTO */
+    place-items: center;
 
     padding: 20px;
     z-index: 9999;
@@ -197,9 +184,7 @@ nav a:hover {
     color: #7dd3fc;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ========================= FOOTER ========================= */
 footer {
     background: #020617;
     border-top: 1px solid #1e293b;
@@ -221,9 +206,7 @@ footer a:hover {
     color: white;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* ========================= RESPONSIVE ========================= */
 @media (max-width: 768px) {
 
     header h1 {
