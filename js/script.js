@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const res = await fetch("../esercizi.json");
     const dati = await res.json();
 
-    container.innerHTML = "";
-
     dati.forEach(es => {
 
         const card = document.createElement("div");
@@ -19,58 +17,50 @@ document.addEventListener("DOMContentLoaded", async () => {
             <p>${es.descrizioneBreve}</p>
         `;
 
-        card.addEventListener("click", () => {
-            openModal(es);
-        });
+        card.addEventListener("click", () => openModal(es));
 
         container.appendChild(card);
     });
 });
 
-/* =========================
-   APERTURA MODAL
-========================= */
+
 async function openModal(es) {
 
-    const modal = document.getElementById("modal");
-
     document.getElementById("modal-titolo").innerText = es.titolo;
-    document.getElementById("modal-desc").innerText = es.descrizione;
 
+    /* =========================
+       DESCRIZIONE DA .TXT
+    ========================= */
     try {
-        const res = await fetch(es.fileC);
-        let codice = await res.text();
+        const desc = await fetch(es.fileTxt);
+        const testo = await desc.text();
+        document.getElementById("modal-desc").innerHTML = testo;
+    } catch {
+        document.getElementById("modal-desc").innerText = "Descrizione non trovata";
+    }
 
-        codice = codice
+    /* =========================
+       CODICE DA .C
+    ========================= */
+    try {
+        const code = await fetch(es.fileC);
+        let testo = await code.text();
+
+        testo = testo
             .replace(/&/g, "&amp;")
             .replace(/</g, "&lt;")
             .replace(/>/g, "&gt;");
 
-        document.getElementById("modal-code").innerHTML = codice;
+        document.getElementById("modal-code").innerHTML = testo;
 
-    } catch (e) {
-        document.getElementById("modal-code").innerText =
-            "Errore caricamento codice";
+    } catch {
+        document.getElementById("modal-code").innerText = "Codice non trovato";
     }
 
-
-    modal.classList.remove("hidden");
+    document.getElementById("modal").classList.remove("hidden");
 }
 
-/* =========================
-   CHIUSURA MODAL
-========================= */
+
 function chiudiModal() {
     document.getElementById("modal").classList.add("hidden");
 }
-
-/* ESC */
-document.addEventListener("keydown", e => {
-    if (e.key === "Escape") chiudiModal();
-});
-
-/* click fuori */
-document.addEventListener("click", e => {
-    const modal = document.getElementById("modal");
-    if (e.target === modal) chiudiModal();
-});
