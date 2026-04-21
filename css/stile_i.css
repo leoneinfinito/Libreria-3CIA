@@ -226,13 +226,19 @@ footer a:hover {
 /* tablet */
 @media (max-width: 1024px) {
 
-    header h1 {
-        font-size: 3rem;
+ .btn {
+        display: block;
+        margin: 10px auto;
+        max-width: 280px;
     }
 
-    header,
-    section {
-        padding: 50px 20px;
+    .link-container {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    header h1 {
+        font-size: 2.4rem;
     }
 }
 
@@ -240,16 +246,19 @@ footer a:hover {
 @media (max-width: 768px) {
 
    @media (max-width: 768px) {
-
-    header > div {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
+ .btn {
+        display: block;
+        margin: 10px auto;
+        max-width: 280px;
     }
 
-    header h1,
-    header p {
+    .link-container {
         text-align: center;
+        padding-left: 0;
+    }
+
+    header h1 {
+        font-size: 2.4rem;
     }
 
     .button-container {
@@ -273,20 +282,18 @@ footer a:hover {
 /* small phone */
 @media (max-width: 480px) {
 
+    .btn {
+        display: block;
+        margin: 10px auto;
+        max-width: 280px;
+    }
+
+    .link-container {
+        text-align: center;
+        padding-left: 0;
+    }
+
     header h1 {
-        font-size: 2rem;
-    }
-
-    header,
-    section {
-        padding: 40px 15px;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
-    pre {
-        font-size: 0.85rem;
+        font-size: 2.4rem;
     }
 }
