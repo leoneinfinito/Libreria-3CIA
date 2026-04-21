@@ -6,10 +6,11 @@ int main() {
     char stringa[100];
 
     printf("Inserisci una stringa: ");
-    LeggiStringa(stringa, 100);	// chiama la funzione LeggiStringa per leggere una stringa da input
+    // chiama la funzione LeggiStringa per leggere una stringa da input
+    LeggiStringa(stringa, 100);	
  
-
-    printf("La stringa inserita e': %s\n", stringa);	// stampa la stringa inserita
+    // stampa la stringa inserita
+    printf("La stringa inserita e': %s\n", stringa);	
 
     return 0;
 }
