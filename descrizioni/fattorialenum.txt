@@ -1,0 +1,19 @@
+La funzione calcola il fattoriale di un numero intero positivo.<br><br>
+Il fattoriale di un numero è il prodotto di tutti i numeri interi da 1 fino al numero stesso.<br><br>
+Ad esempio, il fattoriale di 5 è: 5 × 4 × 3 × 2 × 1 = 120.<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>int Fattoriale(int numero);</code><br><br>
+
+Dove:<br>
+- <code>numero</code> è il valore di cui calcolare il fattoriale<br><br>
+
+La funzione restituisce un intero che rappresenta il risultato del fattoriale del numero inserito.<br><br>
+
+<b>Esempio di utilizzo:</b><br>
+<code>risultato = Fattoriale(numero);</code><br><br>
+
+Oppure direttamente in output:<br>
+<code>printf("%d", Fattoriale(numero));</code><br><br>
+
+Buon coding! :)

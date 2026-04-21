@@ -1,0 +1,17 @@
+La funzione calcola la somma di tutti i numeri interi da 1 fino al numero inserito.<br><br>
+Serve per ottenere la somma progressiva di una sequenza numerica crescente.<br><br>
+Ad esempio, se il numero inserito è 5, la funzione calcolerà: 1 + 2 + 3 + 4 + 5 = 15.<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>int SommaDa(int numero);</code><br><br>
+
+Dove:<br>
+- <code>numero</code> è il valore massimo fino al quale effettuare la somma<br><br>
+
+La funzione restituisce un intero che rappresenta la somma di tutti i valori da 1 fino al numero indicato.<br><br>
+
+<b>Esempio di utilizzo:</b><br>
+<code>risultato = SommaDa(numero);</code><br><br>
+
+Oppure direttamente in stampa:<br>
+<code>printf("%d", SommaDa(numero));</code><br><br>

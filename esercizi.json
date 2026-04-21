@@ -28,11 +28,11 @@
     },
     {
         "id": "code-es4",
-        "titolo": "4. Somma e Fattoriale",
-        "nome": "SommaFattoriale(n)",
-        "descrizioneBreve": "Calcola la somma e il fattoriale di un numero",
-        "fileC": "../file.c/somma_fattoriale.c",
-        "fileTxt": "../descrizioni/somma_e_fattoriale.txt",
+        "titolo": "4. Fattoriale",
+        "nome": "Fattoriale(n)",
+        "descrizioneBreve": "Calcolail fattoriale di un numero",
+        "fileC": "../file.c/fattoriale.c",
+        "fileTxt": "../descrizioni/fattorialenum.txt",
         "descrizione": "Operazioni matematiche."
     },
     {
@@ -43,7 +43,17 @@
         "fileC": "../file.c/leggi.c",
         "fileTxt": "../descrizioni/leggi_stringa.txt",
         "descrizione": "Lettura di stringhe da input."
+    },
+    {
+        "id": "code-es6",
+        "titolo": "6. somma da 1 a n",
+        "nome": "SommaDa(n)",
+        "descrizioneBreve": "Calcola la somma dei numeri da 1 a n",
+        "fileC": "../file.c/sommada.c",
+        "fileTxt": "../descrizioni/sommadanum.txt",
+        "descrizione": "Operazione matematica di somma sequenziale."
     }
+
 
 
 ]
