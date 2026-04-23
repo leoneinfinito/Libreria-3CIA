@@ -212,7 +212,7 @@ static float trasformaElemento(int numero){
    float risultato;
 
     if(numero % 2 == 0){
-        risultato = numero * numero;;  // se è pari -> quadrato
+        risultato = numero * numero;  // se è pari -> quadrato
     }else{
     
         risultato = numero * numero * numero;  // se è dispari -> cubo
