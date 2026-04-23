@@ -5,7 +5,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <math.h>
 
 //--------------------------Prezzo Scontato---------------------------------
 
@@ -47,13 +46,15 @@ static int SommaDa(int n) {
     return somma;
 }
 //---------------------------------Fattoriale-------------------------------------
-
-static int Fattoriale ( int n){
-    if (n == 0) {		// se n è 0, il fattoriale è 1
-        return 1; 	
-    } else {
-        return n * Fattoriale(n - 1);	// altrimenti, il fattoriale di n è n moltiplicato per il fattoriale di n-1
+static int Fattoriale(int n) {
+    int risultato = 1;
+    int i;
+    
+    for ( i = 1; i <= n; i++) {
+        risultato = risultato * i;
     }
+    
+    return risultato;
 }
 
 
@@ -106,15 +107,22 @@ static float media(int numeri[], int dimensione){
 
 //-------------------------Conta Numeri Sopra La Media-----------------------------------------
 
-static int contaSopraMedia(int numeri[], int dimensione){
+static int contaSopraMedia(int numeri[], int dimensione) {
     int i;
-    int conta = 0;
     float Media;
+    int somma = 0;
+    int conta = 0;
 
-    Media = media(numeri, dimensione);
+    // calcolo della somma
+    for(i = 0; i < dimensione; i++) {
+        somma = somma + numeri[i];
+    }
 
-    for(i = 0; i < dimensione; i++){
-        if(numeri[i] > Media){
+    Media = somma / dimensione;
+
+    // conto i numeri sopra la media
+    for(i = 0; i < dimensione; i++) {
+        if(numeri[i] > Media) {
             conta++;
         }
     }
@@ -164,13 +172,18 @@ static int sommaRiga(int rigaScelta, int colonne, int matrice[][colonne]){
 static float mediaRiga(int rigaScelta, int colonne, int matrice[][colonne]){
     int somma;
     float media;
+    int i;
 
-    somma = sommaRiga(rigaScelta, colonne, matrice);
-    
+    somma = 0;
+
+    for(i = 0; i < colonne; i++) {
+        somma = somma + matrice[rigaScelta][i];
+    }
+
     media = somma / colonne;
+
     return media;
 }
-
 
 //-------------------------Numero Massimo Dentro Riga--------------------------------
 
@@ -195,24 +208,31 @@ static int pari(int num){
 
 //-------------------Trasforma Elemento------------------------------
 
-static int trasformaElemento(int numero){
+static float trasformaElemento(int numero){
+   float risultato;
+
     if(numero % 2 == 0){
-        return pow(numero, 2);  // se è pari -> quadrato
+        risultato = numero * numero;;  // se è pari -> quadrato
     }else{
     
-        return pow(numero, 3);  // se è dispari -> cubo
+        risultato = numero * numero * numero;  // se è dispari -> cubo
     }
+    return risultato;
 }
 
 //-------------------Trasforma Matrice------------------------------
 
-static void trasformaMatrice(int righe, int colonne, int matrice[righe][colonne]){
-    int i;
-    int j;
+static void trasformaMatrice(int righe, int colonne, int matrice[][colonne]) {
+    int i , j;
 
-    for(i = 0; i < righe; i++){
-        for(j = 0; j < colonne; j++){
-            matrice[i][j] = trasformaElemento(matrice[i][j]);
+    for(i = 0; i < righe; i++) {
+        for(j = 0; j < colonne; j++) {
+
+            if(matrice[i][j] % 2 == 0) {
+                matrice[i][j] = matrice[i][j] * 2;
+            } else {
+                matrice[i][j] = matrice[i][j] + 1;
+            }
         }
     }
 }
@@ -222,8 +242,15 @@ static void trasformaMatrice(int righe, int colonne, int matrice[righe][colonne]
 static int sommaDiagonale(int righe, int colonne, int matrice[righe][colonne]){
     int i;
     int somma = 0;
+    int min;
 
-    for(i = 0; i < righe; i++){
+    if(righe < colonne){
+        min = righe;
+    }else{
+        min = colonne;
+    }
+
+    for(i = 0; i < min; i++){
         somma = somma + matrice[i][i];
     }
 
