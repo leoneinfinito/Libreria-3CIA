@@ -208,7 +208,7 @@ static int pari(int num){
 
 //-------------------Trasforma Elemento------------------------------
 
-static float trasformaElemento(int numero){
+static int trasformaElemento(int numero){
    float risultato;
 
     if(numero % 2 == 0){
