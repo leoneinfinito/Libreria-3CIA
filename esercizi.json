@@ -37,7 +37,7 @@
     },
     {
         "id": "code-es5",
-        "categoria": "Utilità",
+        "categoria": "Stringhe",
         "titolo": "5. Leggi Stringa",
         "nome": "LeggiStringa(stringa, dimensione)",
         "descrizioneBreve": "Legge una stringa da input",
@@ -127,7 +127,7 @@
     },
     {
         "id": "code-es15",
-        "categoria": "Utilità",
+        "categoria": "Matematica",
         "titolo": "15. Trasforma elemento",
         "nome": "TrasformaElemento(numero)",
         "descrizioneBreve": "Trasforma un numero in base alla parità",

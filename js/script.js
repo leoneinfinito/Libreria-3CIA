@@ -2,19 +2,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const container = document.getElementById("esempi");
 
-    // Carica JSON
     const res = await fetch("../esercizi.json");
     const dati = await res.json();
 
-    // Oggetto che tiene memoria delle categorie create
     const categorie = {};
 
-    // Creo tutte le card
     dati.forEach(es => {
 
         const nomeCategoria = es.categoria || "Altro";
 
-        // Se la categoria non esiste, la creo
         if (!categorie[nomeCategoria]) {
 
             const bloccoCategoria = document.createElement("div");
@@ -25,7 +21,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h2 class="categoria-titolo">
                     ${nomeCategoria}
                 </h2>
-
                 <div class="categoria-grid"></div>
             `;
 
@@ -35,12 +30,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                 bloccoCategoria.querySelector(".categoria-grid");
         }
 
-        // Creo la card
         const card = document.createElement("div");
 
         card.className = "card";
 
-        // Per la ricerca
         card.dataset.search = `
             ${es.titolo}
             ${es.nome}
@@ -54,41 +47,46 @@ document.addEventListener("DOMContentLoaded", async () => {
             <p>${es.descrizioneBreve}</p>
         `;
 
-        // Click card
-        card.addEventListener("click", () => {
-            openModal(es);
-        });
+        card.addEventListener("click", () => openModal(es));
 
-        // Inserisco nella categoria giusta
         categorie[nomeCategoria].appendChild(card);
 
     });
 
 
-    const barraRicerca =
-        document.getElementById("barra-ricerca");
+    const barraRicerca = document.getElementById("barra-ricerca");
 
     barraRicerca.addEventListener("input", () => {
 
-        const testoRicerca =
-            barraRicerca.value.toLowerCase();
+        const testo = barraRicerca.value.toLowerCase();
 
-        const tutteLeCard =
-            document.querySelectorAll(".card");
+        const categorieDOM =
+            document.querySelectorAll(".categoria-blocco");
 
-        tutteLeCard.forEach(card => {
+        categorieDOM.forEach(cat => {
 
-            const contenuto =
-                card.dataset.search;
+            const cards = cat.querySelectorAll(".card");
 
-            if (contenuto.includes(testoRicerca)) {
+            let visibili = 0;
 
-                card.style.display = "flex";
+            cards.forEach(card => {
 
+                const contenuto = card.dataset.search;
+
+                if (contenuto.includes(testo)) {
+                    card.style.display = "flex";
+                    visibili++;
+                } else {
+                    card.style.display = "none";
+                }
+
+            });
+
+            // NASCONDE CATEGORIA SE VUOTA
+            if (visibili === 0) {
+                cat.style.display = "none";
             } else {
-
-                card.style.display = "none";
-
+                cat.style.display = "block";
             }
 
         });
@@ -101,32 +99,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function openModal(es) {
 
-    document.getElementById("modal-titolo").innerText =
-        es.titolo;
+    document.getElementById("modal-titolo").innerText = es.titolo;
 
-    // DESCRIZIONE DA TXT
     try {
-
         const desc = await fetch(es.fileTxt);
-
         const testo = await desc.text();
-
-        document.getElementById("modal-desc").innerHTML =
-            testo;
-
+        document.getElementById("modal-desc").innerHTML = testo;
     } catch {
-
         document.getElementById("modal-desc").innerText =
             "Descrizione non trovata";
-
     }
 
-
-    // CODICE DA C
     try {
-
         const code = await fetch(es.fileC);
-
         let testo = await code.text();
 
         testo = testo
@@ -134,26 +119,17 @@ async function openModal(es) {
             .replace(/</g, "&lt;")
             .replace(/>/g, "&gt;");
 
-        document.getElementById("modal-code").innerHTML =
-            testo;
+        document.getElementById("modal-code").innerHTML = testo;
 
     } catch {
-
         document.getElementById("modal-code").innerText =
             "Codice non trovato";
-
     }
 
-    document.getElementById("modal")
-        .classList
-        .remove("hidden");
-
+    document.getElementById("modal").classList.remove("hidden");
 }
 
+
 function chiudiModal() {
-
-    document.getElementById("modal")
-        .classList
-        .add("hidden");
-
+    document.getElementById("modal").classList.add("hidden");
 }
