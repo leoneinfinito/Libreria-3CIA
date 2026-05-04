@@ -44,20 +44,21 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 16px;
 }
 
 nav a {
     color: #e2e8f0;
     text-decoration: none;
     font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 6px;
     white-space: nowrap;
 }
 
 nav a:hover {
     color: #7dd3fc;
 }
-
 /* ==========================================
    3. HEADER (UNICO E STABILE)
 ========================================== */

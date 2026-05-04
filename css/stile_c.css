@@ -45,7 +45,7 @@ nav {
     position: sticky;
     top: 0;
     background: rgba(15, 23, 42, 0.95);
-    padding: 15px;
+    padding: 12px 10px;
     text-align: center;
     backdrop-filter: blur(8px);
     border-bottom: 1px solid #1e293b;
@@ -54,13 +54,14 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 14px;
 }
 
 nav a {
     color: #e2e8f0;
     text-decoration: none;
     font-weight: 600;
+    padding: 6px 10px;
     white-space: nowrap;
 }
 
