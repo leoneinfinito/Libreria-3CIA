@@ -189,29 +189,64 @@ pre {
 /* ==========================================
    FOOTER
 ========================================== */
-
 footer {
     background: #020617;
     border-top: 1px solid #1e293b;
+
     margin-top: 80px;
     padding: 40px 20px;
-    text-align: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
     color: #94a3b8;
 }
 
+
 footer p {
-    margin-bottom: 18px;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
+
+footer .footer-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex: 1;
 }
 
 footer a {
     color: #7dd3fc;
     text-decoration: none;
-    margin: 0 12px;
     font-weight: 600;
+    transition: 0.2s ease;
 }
 
 footer a:hover {
     color: white;
+}
+
+.footer-qr {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-qr img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+    transition: 0.3s ease;
+}
+
+.footer-qr img:hover {
+    transform: scale(1.1);
 }
 
 /* ==========================================
@@ -237,5 +272,19 @@ footer a:hover {
     nav a {
         display: inline-block;
         margin: 8px 10px;
+    }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    footer p,
+    footer .footer-links,
+    .footer-qr {
+        justify-content: center;
+        text-align: center;
+        flex: unset;
     }
 }
