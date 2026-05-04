@@ -49,6 +49,10 @@ static int SommaDa(int n) {
 static int Fattoriale(int n) {
     int risultato = 1;
     int i;
+
+    if(n == 0){
+       return 1;     // il fattoriale di 0 è 1
+    }
     
     for ( i = 1; i <= n; i++) {
         risultato = risultato * i;
