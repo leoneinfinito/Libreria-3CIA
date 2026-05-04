@@ -93,7 +93,7 @@ nav a:hover {
     color: #7dd3fc;
 }
 
-/* 🔥 CARD IN RIGA (COME VOLEVI TU) */
+/* CARD IN RIGA  */
 .categoria-grid {
     display: flex;
     flex-wrap: wrap;
@@ -109,6 +109,8 @@ nav a:hover {
     cursor: pointer;
     transition: 0.25s ease;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+     box-sizing: border-box;
+
 
     display: flex;
     flex-direction: column;
@@ -265,27 +267,35 @@ footer a:hover {
 }
 
 /* ========================= RESPONSIVE ========================= */
+/* ========================= RESPONSIVE ========================= */
 @media (max-width: 768px) {
 
     header h1 {
         font-size: 2rem;
     }
 
+    /* ===== GRID CATEGORIE ===== */
     .categoria-grid {
         justify-content: center;
     }
 
+    /* card full responsive */
     .card {
         width: 100%;
+        max-width: 420px;
     }
 
+    /* modal */
     .modal-grid {
         grid-template-columns: 1fr;
     }
-        .footer-qr {
+
+    /* footer QR */
+    .footer-qr {
         position: static;
         margin-top: 20px;
-        text-align: center;
+        display: flex;
+        justify-content: center;
     }
 
     .footer-qr img {
