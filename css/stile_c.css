@@ -235,6 +235,8 @@ footer {
     text-align: center;
     color: #94a3b8;
     font-size: 0.95em;
+    position: relative;
+
 }
 
 footer a {
@@ -246,6 +248,20 @@ footer a {
 
 footer a:hover {
     color: white;
+}
+
+.footer-qr {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.footer-qr img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+    background: #020617;
 }
 
 /* ========================= RESPONSIVE ========================= */
