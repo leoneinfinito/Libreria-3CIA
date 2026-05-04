@@ -1,4 +1,4 @@
-/* ========================= BASE ========================= */
+ /* ========================= BASE ========================= */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -47,14 +47,54 @@ nav a:hover {
     color: #7dd3fc;
 }
 
-/* ========================= GRID CARD ========================= */
+/* ========================= SEARCH BAR ========================= */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 10px 0;
+}
+
+#barra-ricerca {
+    width: 60%;
+    max-width: 500px;
+    padding: 12px 15px;
+
+    border-radius: 10px;
+    border: 1px solid #334155;
+
+    background: #1e293b;
+    color: #e2e8f0;
+
+    outline: none;
+    font-size: 1rem;
+}
+
+#barra-ricerca:focus {
+    border-color: #7dd3fc;
+}
+
+/* ========================= CONTAINER ========================= */
 #esempi {
     max-width: 1200px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 30px 20px;
+}
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+/* ========================= CATEGORIE ========================= */
+.categoria-blocco {
+    margin-bottom: 45px;
+}
+
+.categoria-titolo {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #7dd3fc;
+}
+
+/* 🔥 CARD IN RIGA (COME VOLEVI TU) */
+.categoria-grid {
+    display: flex;
+    flex-wrap: wrap;
     gap: 18px;
 }
 
@@ -71,6 +111,8 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    width: 260px;
 }
 
 .card:hover {
@@ -102,7 +144,7 @@ nav a:hover {
     color: #cbd5e1;
 }
 
-/* ========================= MODAL (CENTRATURA PERFETTA) ========================= */
+/* ========================= MODAL ========================= */
 .modal {
     position: fixed;
     inset: 0;
@@ -120,7 +162,6 @@ nav a:hover {
     display: none;
 }
 
-/* contenuto modal */
 .modal-content {
     background: #1e293b;
     width: 85%;
@@ -136,7 +177,6 @@ nav a:hover {
     animation: pop 0.2s ease;
 }
 
-/* animazione */
 @keyframes pop {
     from {
         transform: scale(0.95);
@@ -148,7 +188,7 @@ nav a:hover {
     }
 }
 
-/* GRID INTERNA MODAL */
+/* GRID MODAL */
 .modal-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -213,8 +253,12 @@ footer a:hover {
         font-size: 2rem;
     }
 
-    #esempi {
-        grid-template-columns: 1fr;
+    .categoria-grid {
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
     }
 
     .modal-grid {
