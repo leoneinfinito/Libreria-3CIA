@@ -1,162 +1,155 @@
 [
     {
         "id": "code-es1",
+        "categoria": "Matematica",
         "titolo": "1. Prezzo Scontato",
         "nome": "PrezzoScontato(prezzo, sconto)",
         "descrizioneBreve": "Calcola il prezzo scontato",
         "fileC": "../file.c/sconto.c",
-        "fileTxt": "../descrizioni/sconto.txt",
-        "descrizione": "Calcolo dello sconto percentuale."
+        "fileTxt": "../descrizioni/sconto.txt"
     },
     {
         "id": "code-es2",
+        "categoria": "Matematica",
         "titolo": "2. Differenza Assoluta",
         "nome": "DifferenzaAssoluta(a, b)",
         "descrizioneBreve": "Calcola la differenza assoluta tra due numeri",
         "fileC": "../file.c/diferenza.c",
-        "fileTxt": "../descrizioni/diferenza.txt",
-        "descrizione": "Calcolo distanza tra due numeri."
+        "fileTxt": "../descrizioni/diferenza.txt"
     },
     {
         "id": "code-es3",
+        "categoria": "Stringhe",
         "titolo": "3. Palindroma",
         "nome": "Palindroma(stringa)",
         "descrizioneBreve": "Verifica se una stringa è palindroma",
         "fileC": "../file.c/palindroma.c",
-        "fileTxt": "../descrizioni/palindroma.txt",
-        "descrizione": "Controllo stringhe palindrome."
+        "fileTxt": "../descrizioni/palindroma.txt"
     },
     {
         "id": "code-es4",
+        "categoria": "Matematica",
         "titolo": "4. Fattoriale",
         "nome": "Fattoriale(n)",
-        "descrizioneBreve": "Calcolail fattoriale di un numero",
+        "descrizioneBreve": "Calcola il fattoriale di un numero",
         "fileC": "../file.c/fattoriale.c",
-        "fileTxt": "../descrizioni/fattoriale.txt",
-        "descrizione": "Operazioni matematiche."
+        "fileTxt": "../descrizioni/fattoriale.txt"
     },
     {
         "id": "code-es5",
+        "categoria": "Utilità",
         "titolo": "5. Leggi Stringa",
         "nome": "LeggiStringa(stringa, dimensione)",
         "descrizioneBreve": "Legge una stringa da input",
         "fileC": "../file.c/leggi.c",
-        "fileTxt": "../descrizioni/leggi.txt",
-        "descrizione": "Lettura di stringhe da input."
+        "fileTxt": "../descrizioni/leggi.txt"
     },
     {
         "id": "code-es6",
-        "titolo": "6. somma da 1 a n",
+        "categoria": "Matematica",
+        "titolo": "6. Somma da 1 a n",
         "nome": "SommaDa(n)",
         "descrizioneBreve": "Calcola la somma dei numeri da 1 a n",
         "fileC": "../file.c/sommada.c",
-        "fileTxt": "../descrizioni/sommada.txt",
-        "descrizione": "Somma sequenziale."
-        
+        "fileTxt": "../descrizioni/sommada.txt"
     },
     {
         "id": "code-es7",
-        "titolo": "7. Media nummeri dentro un array",
-        "nome": "media(numeri[], dimensione)",
+        "categoria": "Array",
+        "titolo": "7. Media numeri dentro un array",
+        "nome": "Media(numeri[], dimensione)",
         "descrizioneBreve": "Calcola la media dei numeri in un array",
         "fileC": "../file.c/media.c",
-        "fileTxt": "../descrizioni/media.txt",
-        "descrizione":  "calcolo della media di un insieme di numeri memorizzati in un array."
+        "fileTxt": "../descrizioni/media.txt"
     },
     {
         "id": "code-es8",
-        "titolo": "8. Conta nummeri sopra la media arrey",
-        "nome": "contaSopraMedia(numeri[], dimensione)",
-        "descrizioneBreve": "Conta i numeri in un array che sono superiori alla media",
+        "categoria": "Array",
+        "titolo": "8. Conta numeri sopra la media",
+        "nome": "ContaSopraMedia(numeri[], dimensione)",
+        "descrizioneBreve": "Conta i numeri sopra la media",
         "fileC": "../file.c/conta_sopra_media.c",
-        "fileTxt": "../descrizioni/conta_sopra_media.txt",
-        "descrizione":  "Conteggio degli elementi di un array che superano la media."
+        "fileTxt": "../descrizioni/conta_sopra_media.txt"
     },
     {
         "id": "code-es9",
-        "titolo": "9. numero più grande in un array",
-        "nome": "massimo(numeri[], dimensione)",
-        "descrizioneBreve": "Trova il numero più grande in un array",
+        "categoria": "Array",
+        "titolo": "9. Numero più grande in un array",
+        "nome": "Massimo(numeri[], dimensione)",
+        "descrizioneBreve": "Trova il numero più grande",
         "fileC": "../file.c/massimo.c",
-        "fileTxt": "../descrizioni/massimo.txt",
-        "descrizione":  "Ricerca dell'elemento di valore massimo in un array."
+        "fileTxt": "../descrizioni/massimo.txt"
     },
     {
         "id": "code-es10",
-        "titolo": "10. Trasforma numeri negativi in positivi",
+        "categoria": "Array",
+        "titolo": "10. Trasforma numeri negativi",
         "nome": "TrasformaAssoluto(numeri[], dimensione)",
-        "descrizioneBreve": "Trasforma i numeri negativi in positivi",
+        "descrizioneBreve": "Trasforma numeri negativi in positivi",
         "fileC": "../file.c/trasforma.c",
-        "fileTxt": "../descrizioni/trasforma.txt",
-        "descrizione":  "Trasformazione dei valori negativi in valori assoluti."
+        "fileTxt": "../descrizioni/trasforma.txt"
     },
     {
         "id": "code-es11",
-        "titolo": "11. Somma elementi di una riga in una matrice",
-        "nome": "sommaRiga(riga, colonne, matrice)",
-        "descrizioneBreve": "Calcola la somma degli elementi di una riga in una matrice",
+        "categoria": "Matrici",
+        "titolo": "11. Somma elementi riga",
+        "nome": "SommaRiga(riga, colonne, matrice)",
+        "descrizioneBreve": "Somma elementi di una riga",
         "fileC": "../file.c/somma_riga.c",
-        "fileTxt": "../descrizioni/somma_riga.txt",
-        "descrizione":  "Calcolo della somma degli elementi di una riga specifica in una matrice."
+        "fileTxt": "../descrizioni/somma_riga.txt"
     },
     {
         "id": "code-es12",
-        "titolo": "12. Media elementi di una riga in una matrice",
-        "nome": "mediaRiga(riga, colonne, matrice)",
-        "descrizioneBreve": "Calcola la media degli elementi di una riga in una matrice",
+        "categoria": "Matrici",
+        "titolo": "12. Media elementi riga",
+        "nome": "MediaRiga(riga, colonne, matrice)",
+        "descrizioneBreve": "Media elementi di una riga",
         "fileC": "../file.c/media_riga.c",
-        "fileTxt": "../descrizioni/media_riga.txt",
-        "descrizione":  "Calcolo della media degli elementi di una riga specifica in una matrice."
+        "fileTxt": "../descrizioni/media_riga.txt"
     },
     {
         "id": "code-es13",
-        "titolo": "13. Massimo elementi di una riga in una matrice",
-        "nome": "maxRiga(riga, colonne, matrice)",
-        "descrizioneBreve": "trova l'elemento di valore massimo di una riga in una matrice",
+        "categoria": "Matrici",
+        "titolo": "13. Massimo elementi riga",
+        "nome": "MaxRiga(riga, colonne, matrice)",
+        "descrizioneBreve": "Trova il massimo della riga",
         "fileC": "../file.c/max_riga.c",
-        "fileTxt": "../descrizioni/max_riga.txt",
-        "descrizione":  "Calcolo del valore massimo degli elementi di una riga specifica in una matrice."
+        "fileTxt": "../descrizioni/max_riga.txt"
     },
     {
         "id": "code-es14",
-        "titolo": "14. trova pari o dispari",
-        "nome": "pari(numero)",
-        "descrizioneBreve": "verifica se un numero è pari o dispari",
+        "categoria": "Matematica",
+        "titolo": "14. Pari o dispari",
+        "nome": "Pari(numero)",
+        "descrizioneBreve": "Verifica se un numero è pari",
         "fileC": "../file.c/pari.c",
-        "fileTxt": "../descrizioni/pari.txt",
-        "descrizione":  "Verifica se un numero è pari o dispari."
+        "fileTxt": "../descrizioni/pari.txt"
     },
     {
         "id": "code-es15",
-        "titolo": "15. Trasforma un numero intero in base alla sua parità",
-        "nome": "trasformaElemento(numero)",
-        "descrizioneBreve": "trasforma un numero in base alla sua parità",
+        "categoria": "Utilità",
+        "titolo": "15. Trasforma elemento",
+        "nome": "TrasformaElemento(numero)",
+        "descrizioneBreve": "Trasforma un numero in base alla parità",
         "fileC": "../file.c/trasforma_elemento.c",
-        "fileTxt": "../descrizioni/trasforma_elemento.txt",
-        "descrizione":  "Trasformazione di un numero in base alla sua parità."
+        "fileTxt": "../descrizioni/trasforma_elemento.txt"
     },
     {
         "id": "code-es16",
-        "titolo": "16. Trasforma una matrice in base alla parità degli elementi",
-        "nome": "trasformaMatrice(righe, colonne, matrice)",
-        "descrizioneBreve": "trasforma una matrice in base alla parità degli elementi",
+        "categoria": "Matrici",
+        "titolo": "16. Trasforma matrice",
+        "nome": "TrasformaMatrice(righe, colonne, matrice)",
+        "descrizioneBreve": "Trasforma una matrice",
         "fileC": "../file.c/trasforma_matrice.c",
-        "fileTxt": "../descrizioni/trasforma_matrice.txt",
-        "descrizione":  "Trasformazione di una matrice in base alla sua parità."
+        "fileTxt": "../descrizioni/trasforma_matrice.txt"
     },
     {
         "id": "code-es17",
-        "titolo": "17. Somma degli elementi sulla diagonale principale di una matrice",
-        "nome": "sommaDiagonale(righe, colonne, matrice)",
-        "descrizioneBreve": "calcola la somma degli elementi sulla diagonale principale di una matrice",
+        "categoria": "Matrici",
+        "titolo": "17. Somma diagonale",
+        "nome": "SommaDiagonale(righe, colonne, matrice)",
+        "descrizioneBreve": "Somma diagonale principale",
         "fileC": "../file.c/somma_diagonale.c",
-        "fileTxt": "../descrizioni/somma_diagonale.txt",
-        "descrizione":  "Calcolo della somma degli elementi sulla diagonale principale di una matrice."
+        "fileTxt": "../descrizioni/somma_diagonale.txt"
     }
-
-
-
-
-
-
 ]

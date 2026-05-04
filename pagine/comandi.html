@@ -12,7 +12,7 @@
 
 <body>
 
-    <!-- NAV -->
+
     <nav>
         <a href="../index.html">Home</a>
         <a href="../pagine/guida.html">Guida</a>
@@ -20,15 +20,24 @@
         <a href="../libreria/3cia.h" download>Download</a>
     </nav>
 
-    <!-- HEADER -->
     <header>
         <h1>Comandi della libreria</h1>
         <p>Clicca su una funzione per vedere dettagli ed esempio</p>
     </header>
 
-    <!-- GRIGLIA FUNZIONI (RIEMPITA DA JS) -->
+    <!-- BARRA RICERCA -->
+    <div class="search-container">
+
+        <input
+            type="text"
+            id="barra-ricerca"
+            placeholder="Cerca una funzione..."
+        >
+
+    </div>
+
+    <!-- QUI JS CREA CATEGORIE + CARD -->
     <section id="esempi">
-        <!-- QUI JS CREA I QUADRATI -->
     </section>
 
     <!-- MODAL -->
@@ -41,18 +50,18 @@
             <h2 id="modal-titolo"></h2>
 
             <div class="modal-grid">
-                
+
             
                 <div class="modal-codice">
                     <h3>Esempio</h3>
                     <pre id="modal-code"></pre>
                 </div>
 
+             
                 <div class="modal-descrizione">
                     <h3>Descrizione</h3>
                     <p id="modal-desc"></p>
                 </div>
-
 
             </div>
 
@@ -60,8 +69,8 @@
 
     </div>
 
-    <!-- FOOTER -->
     <footer>
+
         <p>© Classe 3CIA - 2025/2026 - Polo Manetti Porciatti</p>
 
         <div>
@@ -70,6 +79,7 @@
             <a href="../pagine/comandi.html">Comandi</a>
             <a href="../libreria/3cia.h" download="3cia.h">Download</a>
         </div>
+
     </footer>
 
 </body>
