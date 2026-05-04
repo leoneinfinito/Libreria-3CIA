@@ -1,4 +1,4 @@
- /* ========================= BASE ========================= */
+/* ========================= BASE ========================= */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,12 +12,21 @@ header {
     text-align: center;
     padding-top: 70px;
     padding-bottom: 70px;
+
+    /* FIX: evita comportamenti diversi tra pagine */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header h1 {
     font-size: 3.5rem;
     margin-bottom: 10px;
     text-shadow: 0 0 20px rgba(125, 211, 252, 0.15);
+
+    /* FIX: evita spezzamento strano su mobile */
+    word-break: keep-all;
+    overflow-wrap: normal;
 }
 
 header p {
@@ -36,6 +45,12 @@ nav {
     backdrop-filter: blur(8px);
     border-bottom: 1px solid #1e293b;
     z-index: 1000;
+
+    /* FIX: comportamento coerente su mobile */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 nav a {
@@ -43,6 +58,9 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
     font-weight: 600;
+
+    /* FIX */
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -98,6 +116,9 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
+
+    /* FIX: centratura mobile */
+    justify-content: flex-start;
 }
 
 /* ========================= CARD ========================= */
@@ -109,8 +130,7 @@ nav a:hover {
     cursor: pointer;
     transition: 0.25s ease;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-     box-sizing: border-box;
-
+    box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
@@ -238,7 +258,6 @@ footer {
     color: #94a3b8;
     font-size: 0.95em;
     position: relative;
-
 }
 
 footer a {
@@ -267,30 +286,25 @@ footer a:hover {
 }
 
 /* ========================= RESPONSIVE ========================= */
-/* ========================= RESPONSIVE ========================= */
 @media (max-width: 768px) {
 
     header h1 {
         font-size: 2rem;
     }
 
-    /* ===== GRID CATEGORIE ===== */
     .categoria-grid {
         justify-content: center;
     }
 
-    /* card full responsive */
     .card {
         width: 100%;
         max-width: 420px;
     }
 
-    /* modal */
     .modal-grid {
         grid-template-columns: 1fr;
     }
 
-    /* footer QR */
     .footer-qr {
         position: static;
         margin-top: 20px;

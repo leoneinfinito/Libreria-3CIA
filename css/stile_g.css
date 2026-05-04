@@ -54,18 +54,22 @@ nav a:hover {
 }
 
 /* ==========================================
-   3. HEADER (HERO INDEX)
+   3. HEADER (FIX RESPONSIVE COERENTE)
 ========================================== */
 
 header {
     text-align: center;
     padding: 80px 20px;
+    width: 100%;
 }
 
 header h1 {
     font-size: 3.5rem;
     margin-bottom: 10px;
     text-shadow: 0 0 20px rgba(125, 211, 252, 0.15);
+
+    /* FIX IMPORTANTE: evita rotture strane su mobile */
+    word-break: break-word;
 }
 
 header p {
@@ -159,7 +163,7 @@ code, pre {
 }
 
 /* ==========================================
-   7. FOOTER + QR
+   7. FOOTER + QR (FIX STABILE)
 ========================================== */
 
 footer {
@@ -170,6 +174,9 @@ footer {
     text-align: center;
     color: #94a3b8;
     position: relative;
+
+    /* FIX: evita overflow strani su mobile */
+    overflow: hidden;
 }
 
 footer p {
@@ -187,7 +194,7 @@ footer a:hover {
     color: white;
 }
 
-/* QR A DESTRA */
+/* QR A DESTRA (DESKTOP) */
 .footer-qr {
     position: absolute;
     right: 20px;
@@ -203,13 +210,17 @@ footer a:hover {
 }
 
 /* ==========================================
-   8. RESPONSIVE
+   8. RESPONSIVE UNIFICATO
 ========================================== */
 
 @media (max-width: 768px) {
 
     header h1 {
         font-size: 2.4rem;
+    }
+
+    header p {
+        font-size: 1rem;
     }
 
     .btn {
