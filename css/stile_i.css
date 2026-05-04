@@ -44,11 +44,11 @@ nav {
     position: sticky;
     top: 0;
     background: rgba(15, 23, 42, 0.95);
-    padding: 18px;
+    padding: 15px;
     text-align: center;
     backdrop-filter: blur(8px);
-    z-index: 1000;
     border-bottom: 1px solid #1e293b;
+    z-index: 1000;
 }
 
 nav a {
@@ -56,12 +56,12 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.2s;
 }
 
 nav a:hover {
     color: #7dd3fc;
 }
+
 
 /* ==========================================
    HEADER (COME IL TUO ESEMPIO)
