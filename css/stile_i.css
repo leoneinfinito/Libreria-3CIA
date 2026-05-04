@@ -231,18 +231,16 @@ footer a:hover {
 }
 
 .footer-qr {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .footer-qr img {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 10px;
     border: 1px solid #1e293b;
-    transition: 0.3s ease;
+    display: inline-block;
 }
 
 .footer-qr img:hover {
@@ -281,10 +279,14 @@ footer a:hover {
     }
 
     footer p,
-    footer .footer-links,
-    .footer-qr {
+    footer .footer-links {
         justify-content: center;
         text-align: center;
         flex: unset;
+    }
+  
+     .footer-qr img {
+        width: 70px;
+        height: 70px;
     }
 }
