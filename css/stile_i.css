@@ -14,7 +14,7 @@ body {
     line-height: 1.6;
 }
 
-/* contenitori centrati (coerente su tutte le pagine) */
+/* contenitori centrati coerenti */
 header,
 section {
     max-width: 1000px;
@@ -40,14 +40,19 @@ nav {
     backdrop-filter: blur(8px);
     border-bottom: 1px solid #1e293b;
     z-index: 1000;
+
+    /* FIX IMPORTANTISSIMO: evita rotture su mobile */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 nav a {
     color: #e2e8f0;
-    margin: 0 15px;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.2s;
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -55,19 +60,25 @@ nav a:hover {
 }
 
 /* ==========================================
-   3. HEADER (UNIFICATO TUTTE LE PAGINE)
+   3. HEADER (UNICO PER TUTTE LE PAGINE)
 ========================================== */
 
 header {
     text-align: center;
     padding: 70px 20px;
-    width: 100%;
+
+    /* FIX: evita comportamenti diversi tra pagine */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header h1 {
     font-size: 3.5rem;
     margin-bottom: 10px;
     text-shadow: 0 0 20px rgba(125, 211, 252, 0.15);
+
+    /* FIX MOBILE */
     word-break: break-word;
 }
 
@@ -77,13 +88,12 @@ header p {
     margin: 8px 0;
 }
 
-/* hero opzionale (home) */
+/* hero (solo se esiste, non rompe altre pagine) */
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
 /* ==========================================
@@ -92,6 +102,12 @@ header p {
 
 .button-container {
     margin-top: 25px;
+
+    /* FIX: evita wrap strano su mobile */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .btn,
@@ -100,9 +116,9 @@ header p {
     padding: 12px 24px;
     border-radius: 10px;
     font-weight: bold;
-    margin: 8px;
     text-decoration: none;
     transition: 0.25s ease;
+    white-space: nowrap;
 }
 
 /* colori */
@@ -206,7 +222,7 @@ footer a:hover {
     color: white;
 }
 
-/* QR FOOTER */
+/* QR desktop */
 .footer-qr {
     position: absolute;
     right: 20px;
@@ -222,7 +238,7 @@ footer a:hover {
 }
 
 /* ==========================================
-   8. RESPONSIVE UNICO (TUTTE LE PAGINE)
+   8. RESPONSIVE UNICO (FIX DEFINITIVO)
 ========================================== */
 
 @media (max-width: 768px) {
@@ -235,10 +251,15 @@ footer a:hover {
         font-size: 1rem;
     }
 
+    /* bottoni sempre ordinati */
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .btn,
     .btn-download {
-        display: block;
-        margin: 10px auto;
+        width: 100%;
         max-width: 280px;
     }
 
@@ -246,9 +267,9 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 8px 10px;
+    /* navbar mai rotta */
+    nav {
+        gap: 8px;
     }
 
     /* QR sotto footer */

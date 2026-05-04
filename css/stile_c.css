@@ -1,4 +1,5 @@
 /* ========================= BASE ========================= */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,34 +9,38 @@ body {
 }
 
 /* ========================= HEADER ========================= */
+
 header {
     text-align: center;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding: 70px 20px;
 
-    /* FIX: evita comportamenti diversi tra pagine */
+    /* FIX importante: stesso comportamento ovunque */
+    max-width: 1000px;
+    margin: auto;
+
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 header h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     margin-bottom: 10px;
     text-shadow: 0 0 20px rgba(125, 211, 252, 0.15);
 
-    /* FIX: evita spezzamento strano su mobile */
+    /* FIX mobile (evita spezzamenti strani) */
     word-break: keep-all;
     overflow-wrap: normal;
 }
 
 header p {
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
     color: #cbd5e1;
     margin: 8px 0;
 }
 
 /* ========================= NAV ========================= */
+
 nav {
     position: sticky;
     top: 0;
@@ -46,7 +51,6 @@ nav {
     border-bottom: 1px solid #1e293b;
     z-index: 1000;
 
-    /* FIX: comportamento coerente su mobile */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -55,11 +59,8 @@ nav {
 
 nav a {
     color: #e2e8f0;
-    margin: 0 15px;
     text-decoration: none;
     font-weight: 600;
-
-    /* FIX */
     white-space: nowrap;
 }
 
@@ -68,6 +69,7 @@ nav a:hover {
 }
 
 /* ========================= SEARCH BAR ========================= */
+
 .search-container {
     display: flex;
     justify-content: center;
@@ -78,13 +80,10 @@ nav a:hover {
     width: 60%;
     max-width: 500px;
     padding: 12px 15px;
-
     border-radius: 10px;
     border: 1px solid #334155;
-
     background: #1e293b;
     color: #e2e8f0;
-
     outline: none;
     font-size: 1rem;
 }
@@ -94,6 +93,7 @@ nav a:hover {
 }
 
 /* ========================= CONTAINER ========================= */
+
 #esempi {
     max-width: 1200px;
     margin: auto;
@@ -101,6 +101,7 @@ nav a:hover {
 }
 
 /* ========================= CATEGORIE ========================= */
+
 .categoria-blocco {
     margin-bottom: 45px;
 }
@@ -111,17 +112,17 @@ nav a:hover {
     color: #7dd3fc;
 }
 
-/* CARD IN RIGA  */
+/* ========================= GRID CARD ========================= */
+
 .categoria-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
-
-    /* FIX: centratura mobile */
     justify-content: flex-start;
 }
 
 /* ========================= CARD ========================= */
+
 .card {
     background: #1e293b;
     padding: 18px;
@@ -130,13 +131,13 @@ nav a:hover {
     cursor: pointer;
     transition: 0.25s ease;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-    box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
     gap: 8px;
 
     width: 260px;
+    box-sizing: border-box;
 }
 
 .card:hover {
@@ -147,19 +148,15 @@ nav a:hover {
 .card h3 {
     margin: 0;
     font-size: 1.1rem;
-    color: #7dd3fc;
 }
 
 .card code {
-    display: block;
-    font-family: monospace;
-    color: #93c5fd;
-    font-weight: bold;
-
     background: #0f172a;
     padding: 6px 8px;
     border-radius: 8px;
     border: 1px solid #334155;
+    font-family: monospace;
+    color: #93c5fd;
 }
 
 .card p {
@@ -169,15 +166,14 @@ nav a:hover {
 }
 
 /* ========================= MODAL ========================= */
+
 .modal {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(6px);
-
     display: grid;
     place-items: center;
-
     padding: 20px;
     z-index: 9999;
 }
@@ -190,57 +186,41 @@ nav a:hover {
     background: #1e293b;
     width: 85%;
     max-width: 950px;
-
     padding: 25px;
     border-radius: 16px;
     border: 1px solid #334155;
-
     max-height: 85vh;
     overflow-y: auto;
-
-    animation: pop 0.2s ease;
-}
-
-@keyframes pop {
-    from {
-        transform: scale(0.95);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
 }
 
 /* GRID MODAL */
+
 .modal-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin-top: 20px;
 }
 
 /* DESCRIZIONE */
+
 .modal-descrizione {
     background: #0f172a;
     padding: 15px;
     border-radius: 12px;
-    border: 1px solid #334155;
-    color: #cbd5e1;
 }
 
 /* CODICE */
+
 .modal-codice pre {
     background: #020617;
     padding: 15px;
     border-radius: 12px;
-    color: #93c5fd;
     overflow-x: auto;
-    border: 1px solid #334155;
     margin: 0;
 }
 
 /* CHIUDI */
+
 .close {
     float: right;
     font-size: 28px;
@@ -249,6 +229,7 @@ nav a:hover {
 }
 
 /* ========================= FOOTER ========================= */
+
 footer {
     background: #020617;
     border-top: 1px solid #1e293b;
@@ -256,7 +237,6 @@ footer {
     padding: 40px 20px;
     text-align: center;
     color: #94a3b8;
-    font-size: 0.95em;
     position: relative;
 }
 
@@ -265,10 +245,6 @@ footer a {
     text-decoration: none;
     margin: 0 12px;
     font-weight: 600;
-}
-
-footer a:hover {
-    color: white;
 }
 
 .footer-qr {
@@ -282,14 +258,18 @@ footer a:hover {
     height: 90px;
     border-radius: 10px;
     border: 1px solid #1e293b;
-    background: #020617;
 }
 
 /* ========================= RESPONSIVE ========================= */
+
 @media (max-width: 768px) {
 
     header h1 {
         font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
     }
 
     .categoria-grid {

@@ -14,7 +14,8 @@ body {
     line-height: 1.6;
 }
 
-/* SOLO SECTION centrata (NON header) */
+/* contenitori centrati coerenti */
+header,
 section {
     max-width: 1000px;
     margin: auto;
@@ -34,19 +35,23 @@ nav {
     position: sticky;
     top: 0;
     background: rgba(15, 23, 42, 0.95);
-    padding: 18px;
+    padding: 15px;
     text-align: center;
     backdrop-filter: blur(8px);
-    z-index: 1000;
     border-bottom: 1px solid #1e293b;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 nav a {
     color: #e2e8f0;
-    margin: 0 15px;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.2s;
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -54,26 +59,29 @@ nav a:hover {
 }
 
 /* ==========================================
-   3. HEADER (FIX RESPONSIVE COERENTE)
+   3. HEADER (UNICO E STABILE)
 ========================================== */
 
 header {
     text-align: center;
     padding: 80px 20px;
-    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     margin-bottom: 10px;
     text-shadow: 0 0 20px rgba(125, 211, 252, 0.15);
 
-    /* FIX IMPORTANTE: evita rotture strane su mobile */
-    word-break: break-word;
+    word-break: keep-all;
+    overflow-wrap: normal;
 }
 
 header p {
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
     color: #cbd5e1;
     margin: 8px 0;
 }
@@ -82,33 +90,37 @@ header p {
    4. BOTTONI
 ========================================== */
 
-.btn {
+.btn,
+.btn-download {
     display: inline-block;
     padding: 12px 24px;
-    background: #38bdf8;
-    color: #00111a;
-    text-decoration: none;
     border-radius: 10px;
     font-weight: bold;
     margin: 8px;
+    text-decoration: none;
     transition: 0.25s ease;
 }
 
-.btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.35);
+/* blu */
+.btn {
+    background: #38bdf8;
+    color: #00111a;
 }
 
+/* verde */
 .btn-download {
     background: #22c55e;
     color: #052e16;
 }
 
+/* hover */
+.btn:hover,
 .btn-download:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(34, 197, 94, 0.35);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.25);
 }
 
+/* bottone piccolo */
 .btn-sm {
     display: inline-block;
     padding: 8px 16px;
@@ -141,12 +153,12 @@ header p {
     background: #1e293b;
     padding: 25px;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* ==========================================
-   6. CODE
+   6. CODE BLOCK
 ========================================== */
 
 code, pre {
@@ -163,7 +175,7 @@ code, pre {
 }
 
 /* ==========================================
-   7. FOOTER + QR (FIX STABILE)
+   7. FOOTER + QR
 ========================================== */
 
 footer {
@@ -174,13 +186,7 @@ footer {
     text-align: center;
     color: #94a3b8;
     position: relative;
-
-    /* FIX: evita overflow strani su mobile */
     overflow: hidden;
-}
-
-footer p {
-    margin-bottom: 18px;
 }
 
 footer a {
@@ -194,7 +200,7 @@ footer a:hover {
     color: white;
 }
 
-/* QR A DESTRA (DESKTOP) */
+/* QR desktop */
 .footer-qr {
     position: absolute;
     right: 20px;
@@ -210,20 +216,21 @@ footer a:hover {
 }
 
 /* ==========================================
-   8. RESPONSIVE UNIFICATO
+   8. RESPONSIVE UNICO
 ========================================== */
 
 @media (max-width: 768px) {
 
     header h1 {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 
     header p {
         font-size: 1rem;
     }
 
-    .btn {
+    .btn,
+    .btn-download {
         display: block;
         margin: 10px auto;
         max-width: 280px;
@@ -231,6 +238,10 @@ footer a:hover {
 
     .grid {
         grid-template-columns: 1fr;
+    }
+
+    nav a {
+        margin: 6px 8px;
     }
 
     /* QR sotto footer */
