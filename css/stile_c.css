@@ -282,4 +282,14 @@ footer a:hover {
     .modal-grid {
         grid-template-columns: 1fr;
     }
+        .footer-qr {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .footer-qr img {
+        width: 70px;
+        height: 70px;
+    }
 }

@@ -217,4 +217,15 @@ footer a:hover {
     header h1 {
         font-size: 2.4rem;
     }
+
+        .footer-qr {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .footer-qr img {
+        width: 70px;
+        height: 70px;
+    }
 }
