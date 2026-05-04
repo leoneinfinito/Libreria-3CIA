@@ -209,6 +209,23 @@ footer a {
 footer a:hover {
     color: white;
 }
+.footer-qr {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+footer {
+    position: relative;
+}
+
+.footer-qr img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+    background: #020617;
+}
 
 /* ==========================================
    RESPONSIVE
@@ -235,21 +252,15 @@ footer a:hover {
         margin: 8px 10px;
     }
 
-      footer {
-        flex-direction: column;
+     .footer-qr {
+        position: static;
+        margin-top: 20px;
         text-align: center;
-        gap: 20px;
     }
 
-    footer p,
-    footer .footer-links {
-        justify-content: center;
-        text-align: center;
-        flex: unset;
-    }
-  
-     .footer-qr img {
+    .footer-qr img {
         width: 70px;
         height: 70px;
     }
+    
 }
