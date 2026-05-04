@@ -14,7 +14,7 @@ body {
     line-height: 1.6;
 }
 
-/* contenitori centrati coerenti */
+/* contenitori coerenti */
 header,
 section {
     max-width: 1000px;
@@ -28,14 +28,14 @@ h1, h2, h3 {
 }
 
 /* ==========================================
-   2. NAV
+   2. NAV (UGUALE A TUTTI GLI ALTRI FILE)
 ========================================== */
 
 nav {
     position: sticky;
     top: 0;
     background: rgba(15, 23, 42, 0.95);
-    padding: 15px;
+    padding: 14px 10px;
     text-align: center;
     backdrop-filter: blur(8px);
     border-bottom: 1px solid #1e293b;
@@ -44,29 +44,28 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 18px;
 }
 
 nav a {
     color: #e2e8f0;
     text-decoration: none;
     font-weight: 600;
-    padding: 5px 12px;
-    border-radius: 6px;
+    padding: 6px 10px;
     white-space: nowrap;
 }
 
 nav a:hover {
     color: #7dd3fc;
 }
+
 /* ==========================================
-   3. HEADER (UNICO E STABILE)
+   3. HEADER (UGUALE SU TUTTE LE PAGINE)
 ========================================== */
 
 header {
     text-align: center;
-    padding: 80px 20px;
-
+    padding: 70px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,9 +75,7 @@ header h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
     margin-bottom: 10px;
     text-shadow: 0 0 20px rgba(125, 211, 252, 0.15);
-
-    word-break: keep-all;
-    overflow-wrap: normal;
+    word-break: break-word;
 }
 
 header p {
@@ -102,26 +99,22 @@ header p {
     transition: 0.25s ease;
 }
 
-/* blu */
 .btn {
     background: #38bdf8;
     color: #00111a;
 }
 
-/* verde */
 .btn-download {
     background: #22c55e;
     color: #052e16;
 }
 
-/* hover */
 .btn:hover,
 .btn-download:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 20px rgba(56, 189, 248, 0.25);
 }
 
-/* bottone piccolo */
 .btn-sm {
     display: inline-block;
     padding: 8px 16px;
@@ -141,7 +134,7 @@ header p {
 }
 
 /* ==========================================
-   5. GRID + CARD
+   5. GRID + CARD (COERENTE CON ALTRI FILE)
 ========================================== */
 
 .grid {
@@ -154,12 +147,12 @@ header p {
     background: #1e293b;
     padding: 25px;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* ==========================================
-   6. CODE BLOCK
+   6. CODE
 ========================================== */
 
 code, pre {
@@ -176,7 +169,7 @@ code, pre {
 }
 
 /* ==========================================
-   7. FOOTER + QR
+   7. FOOTER + QR (UGUALE A TUTTI)
 ========================================== */
 
 footer {
@@ -217,7 +210,7 @@ footer a:hover {
 }
 
 /* ==========================================
-   8. RESPONSIVE UNICO
+   8. RESPONSIVE IDENTICO
 ========================================== */
 
 @media (max-width: 768px) {
@@ -245,7 +238,6 @@ footer a:hover {
         margin: 6px 8px;
     }
 
-    /* QR sotto footer */
     .footer-qr {
         position: static;
         margin-top: 20px;
