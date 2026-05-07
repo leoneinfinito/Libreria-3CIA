@@ -143,6 +143,7 @@ header p {
 .btn-sm {
     display: inline-block;
     padding: 8px 16px;
+    margin: 25px 0 10px 0;
     background: transparent;
     color: #7dd3fc;
     border: 1px solid #38bdf8;
