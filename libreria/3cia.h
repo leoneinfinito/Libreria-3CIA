@@ -26,6 +26,29 @@ static void LeggiStringa(char frase[], int dimensione) {
     }
 }
 
+//--------------------------Input Generico-----------------------------------
+
+void input(void *v, int righe, int colonne, char tipo) {
+    int i, j;
+
+    for(i = 0; i < righe; i++) {
+        for(j = 0; j < colonne; j++) {
+
+            if(tipo == 'd') {
+                scanf("%d", &((int*)v)[i * colonne + j]);
+            }
+
+            else if(tipo == 'f') {
+                scanf("%f", &((float*)v)[i * colonne + j]);
+            }
+
+            else if(tipo == 's') {
+                scanf(" %[^\n]", ((char (*)[100])v)[i * colonne + j]);
+            }
+        }
+    }
+}
+
 //-------------------------------Differenza Assoluta---------------------------
 
 static int DifferenzaAssoluta (int a , int b ){

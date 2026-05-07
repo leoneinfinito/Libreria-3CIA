@@ -37,7 +37,7 @@
     },
     {
         "id": "code-es5",
-        "categoria": "Stringhe",
+        "categoria": "Input/Output",
         "titolo": "Leggi Stringa",
         "nome": "LeggiStringa(stringa, dimensione)",
         "descrizioneBreve": "Legge una stringa da input",
@@ -160,6 +160,15 @@
         "descrizioneBreve": "Trova il valore minimo dentro di un array",
         "fileC": "../file.c/minimo.c",
         "fileTxt": "../descrizioni/minimo.txt"
+    },
+    {
+        "id": "code-es19",
+        "categoria": "Input/Output",
+        "titolo": " Input generico",
+        "nome": "InputGenerico()",
+        "descrizioneBreve": "Legge un qualunque tipo di dato da input",
+        "fileC": "../file.c/input.c",
+        "fileTxt": "../descrizioni/input.txt"
     }
 
 

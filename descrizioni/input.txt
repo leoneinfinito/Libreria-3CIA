@@ -1,0 +1,24 @@
+La funzione legge i valori inseriti dall’utente e li memorizza in una struttura bidimensionale (matrice) utilizzando un puntatore generico <code>void*</code>.<br><br>
+Serve per gestire l’input di matrici di diversi tipi di dato (interi, float o stringhe) in modo flessibile tramite un parametro che indica il tipo.<br><br>
+In base al valore del parametro <code>tipo</code>, la funzione interpreta il puntatore e acquisisce i dati nel formato corretto.<br><br>
+
+Ad esempio, se <code>tipo = 'd'</code> vengono letti interi, se <code>'f'</code> numeri decimali, se <code>'s'</code> stringhe.<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>void input(void *v, int righe, int colonne, char tipo);</code><br><br>
+
+Dove:<br>
+- <code>v</code> è il puntatore alla matrice generica da riempire<br>
+- <code>righe</code> è il numero di righe della matrice<br>
+- <code>colonne</code> è il numero di colonne della matrice<br>
+- <code>tipo</code> indica il tipo di dato da leggere:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- <code>'d'</code> = int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- <code>'f'</code> = float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- <code>'s'</code> = stringa<br><br>
+
+La funzione non restituisce alcun valore ma riempie direttamente la struttura passata come parametro.<br><br>
+
+<b>Esempio rapido:</b><br>
+<code>input(matrice, 3, 3, 'd');</code><br><br>
+
+Buon coding! :)
