@@ -1,0 +1,17 @@
+La funzione calcola il valore minimo presente all’interno di un array di numeri interi.<br><br>
+Serve per analizzare tutti gli elementi del vettore e individuare il numero più piccolo tra quelli presenti.<br><br>
+Ad esempio, se l’array contiene i valori 8, 3, 12, 1, 6, la funzione restituirà 1.<br><br>
+
+<b>La funzione è definita come segue:</b><br>
+<code>static int minimo(int vettore[], int dimensione);</code><br><br>
+
+Dove:<br>
+- <code>vettore</code> è l’array di numeri interi da analizzare<br>
+- <code>dimensione</code> è il numero totale di elementi presenti nel vettore<br><br>
+
+La funzione restituisce un intero che rappresenta il valore minimo trovato nell’array.<br><br>
+
+<b>Esempio rapido:</b><br>
+<code>risultato = minimo(vettore, 5);</code><br><br>
+
+Buon coding! :)

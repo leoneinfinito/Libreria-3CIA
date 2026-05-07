@@ -149,6 +149,21 @@ static int massimo(int vettore[], int dimensione){
     return max;
 }
 
+//----------------Numero Minimo In Un Vettore-----------------
+static int minimo(int vettore[], int dimensione){
+    int i;
+    int min = vettore[0];
+
+    for(i = 1; i < dimensione; i++){
+        if(vettore[i] < min){
+            min = vettore[i];
+        }
+    }
+
+    return min;
+}
+
+
 //-------------------------Trasforma In Numero Assoluto------------------------------------
 
 static void TrasformaAssoluto(int num[], int dimensione){
