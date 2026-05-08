@@ -1,11 +1,17 @@
+// SCRIPT PRINCIPALE PER LA GESTIONE DEGLI ESERCIZI E DEA RICERCA
+
 document.addEventListener("DOMContentLoaded", async () => {
 
     const container = document.getElementById("esempi");
+
+    // RECUPERA I DATI DAL FILE JSON
 
     const res = await fetch("../esercizi.json");
     const dati = await res.json();
 
     const categorie = {};
+
+    // CREA LE CARD DEGLI ESERCIZI
 
     dati.forEach(es => {
 
@@ -30,6 +36,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                 bloccoCategoria.querySelector(".categoria-grid");
         }
 
+        // CREA IL TESTO DELLA CARD E LO ASSEGNA A UNA CATEGORIA PER FACILITARE LA RICERCA
+
         const card = document.createElement("div");
 
         card.className = "card";
@@ -53,6 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     });
 
+    // FILTRA GLI ESERCIZI IN BASE ALLA RICERCA
 
     const barraRicerca = document.getElementById("barra-ricerca");
 
@@ -72,6 +81,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             cards.forEach(card => {
 
                 const contenuto = card.dataset.search;
+
+                // SE IL TESTO DI RICERCA È PRESENTE NEL CONTENUTO DELLA CARD, LA MOSTRA, ALTRIMENTI LA NASCONDE
 
                 if (contenuto.includes(testo)) {
                     card.style.display = "flex";
@@ -95,20 +106,24 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 });
 
-
+// APRE IL MODAL E CARICA I CONTENUTI
 
 async function openModal(es) {
 
     document.getElementById("modal-titolo").innerText = es.titolo;
 
+    // CARICA DESCRIZIONE
+
     try {
-        const desc = await fetch(es.fileTxt);
+        const desc = await fetch(es.fileTxt);  //
         const testo = await desc.text();
         document.getElementById("modal-desc").innerHTML = testo;
     } catch {
         document.getElementById("modal-desc").innerText =
             "Descrizione non trovata";
     }
+
+    // CARICA IL CODICE
 
     try {
         const code = await fetch(es.fileC);
@@ -129,7 +144,7 @@ async function openModal(es) {
     document.getElementById("modal").classList.remove("hidden");
 }
 
-
+//
 function chiudiModal() {
     document.getElementById("modal").classList.add("hidden");
 }

@@ -165,7 +165,7 @@
         "id": "code-es19",
         "categoria": "Input/Output",
         "titolo": " Input generico",
-        "nome": "InputGenerico()",
+        "nome": "Input()",
         "descrizioneBreve": "Legge un qualunque tipo di dato da input",
         "fileC": "../file.c/input.c",
         "fileTxt": "../descrizioni/input.txt"

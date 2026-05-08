@@ -53,9 +53,9 @@ void input(void *v, int righe, int colonne, char tipo) {
 
 static int DifferenzaAssoluta (int a , int b ){
     if (a > b) {
-        return a - b;		// se a è maggiore di b, la differenza assoluta è a - b
+        return a - b;		// se a e' maggiore di b, la differenza assoluta e' a - b
     } else {
-        return b - a;		// altrimenti, la differenza assoluta è b - a
+        return b - a;		// altrimenti, la differenza assoluta e' b - a
     }
 }
 
