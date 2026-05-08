@@ -1,4 +1,6 @@
-/* ========================= BASE ========================= */
+/* ========================= 
+    1.  BASE 
+========================= */
 
 body {
     font-family: Arial, sans-serif;
@@ -8,13 +10,14 @@ body {
     line-height: 1.6;
 }
 
-/* ========================= HEADER ========================= */
+/* =========================
+    2.  HEADER
+  ========================= */
 
 header {
     text-align: center;
     padding: 70px 20px;
 
-    /* FIX importante: stesso comportamento ovunque */
     max-width: 1000px;
     margin: auto;
 
@@ -28,7 +31,6 @@ header h1 {
     margin-bottom: 10px;
     text-shadow: 0 0 20px rgba(125, 211, 252, 0.15);
 
-    /* FIX mobile (evita spezzamenti strani) */
     word-break: keep-all;
     overflow-wrap: normal;
 }
@@ -39,7 +41,9 @@ header p {
     margin: 8px 0;
 }
 
-/* ========================= NAV ========================= */
+/* =========================
+        3.  NAV 
+========================== */
 
 nav {
     position: sticky;
@@ -69,7 +73,9 @@ nav a:hover {
     color: #7dd3fc;
 }
 
-/* ========================= SEARCH BAR ========================= */
+/* =========================    
+        4.  SEARCH BAR 
+    ========================= */
 
 .search-container {
     display: flex;
@@ -93,7 +99,9 @@ nav a:hover {
     border-color: #7dd3fc;
 }
 
-/* ========================= CONTAINER ========================= */
+/* ========================= 
+    5. CONTAINER 
+ ========================= */
 
 #esempi {
     max-width: 1200px;
@@ -101,7 +109,9 @@ nav a:hover {
     padding: 30px 20px;
 }
 
-/* ========================= CATEGORIE ========================= */
+/* =========================    
+    6. CATEGORIE 
+ ========================= */
 
 .categoria-blocco {
     margin-bottom: 45px;
@@ -113,7 +123,9 @@ nav a:hover {
     color: #7dd3fc;
 }
 
-/* ========================= GRID CARD ========================= */
+/* =========================
+    7. GRID CARD
+  ========================= */
 
 .categoria-grid {
     display: flex;
@@ -122,7 +134,9 @@ nav a:hover {
     justify-content: flex-start;
 }
 
-/* ========================= CARD ========================= */
+/* ========================= 
+        8. CARD 
+    ========================= */
 
 .card {
     background: #1e293b;
@@ -166,7 +180,9 @@ nav a:hover {
     color: #cbd5e1;
 }
 
-/* ========================= MODAL ========================= */
+/* ========================= 
+    9. MODAL 
+========================= */
 
 .modal {
     position: fixed;
@@ -194,7 +210,7 @@ nav a:hover {
     overflow-y: auto;
 }
 
-/* GRID MODAL */
+
 
 .modal-grid {
     display: grid;
@@ -202,7 +218,6 @@ nav a:hover {
     gap: 20px;
 }
 
-/* DESCRIZIONE */
 
 .modal-descrizione {
     background: #0f172a;
@@ -210,7 +225,7 @@ nav a:hover {
     border-radius: 12px;
 }
 
-/* CODICE */
+
 
 .modal-codice pre {
     background: #020617;
@@ -220,7 +235,6 @@ nav a:hover {
     margin: 0;
 }
 
-/* CHIUDI */
 
 .close {
     float: right;
@@ -229,7 +243,9 @@ nav a:hover {
     color: #7dd3fc;
 }
 
-/* ========================= FOOTER ========================= */
+/* =========================
+    10. FOOTER 
+ ========================= */
 
 footer {
     background: #020617;
@@ -261,7 +277,9 @@ footer a {
     border: 1px solid #1e293b;
 }
 
-/* ========================= RESPONSIVE ========================= */
+/* ========================= 
+    11. RESPONSIVE 
+ ========================= */
 
 @media (max-width: 768px) {
 
